@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Dec 16 23:32:48 2021
+# Process ID: 34380
+# Current directory: F:/MSI-Work/myip/MJ_IBUFG_DS/MJ_IBUFG_DS.runs/synth_1
+# Command line: vivado.exe -log MJ_IBUFG_DS.vds -mode batch -messageDb vivado.pb -notrace -source MJ_IBUFG_DS.tcl
+# Log file: F:/MSI-Work/myip/MJ_IBUFG_DS/MJ_IBUFG_DS.runs/synth_1/MJ_IBUFG_DS.vds
+# Journal file: F:/MSI-Work/myip/MJ_IBUFG_DS/MJ_IBUFG_DS.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source MJ_IBUFG_DS.tcl -notrace

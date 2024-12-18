@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="DAQ_Z30_Top_hw_platform_0-device"/>
+	<item value="false" key="DAQ_Z30_Top_hw_platform_0-partial_bit"/>
+	<item value="F:\MSI-Work\DAQ_Z30\DAQ_Z30.runs\impl_1\DAQ_Z30_Top.bit" key="DAQ_Z30_Top_hw_platform_0-bitFile"/>
+	<item value="DAQ_Z30_Top_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Local" key="DAQ_Z30_Top_hw_platform_0-target"/>
+	<item value="" key="DAQ_Z30_Top_hw_platform_0-bmmFile"/>
+</section>

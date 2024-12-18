@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/12554/Desktop/spline/DAQ_Z30/DAQ_Z30.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6561fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="254"></NameColumnWidth>
+      <ValueColumnWidth column_width="103"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="design_1_i/ADS4249_Decode_0_daout" type="array">
+      <obj_property name="ElementShortName">design_1_i/ADS4249_Decode_0_daout[13:0]</obj_property>
+      <obj_property name="ObjectShortName">ADS4249_Decode_0_daout[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_SIGN_CNTC" type="logic">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_SIGN_CNTC</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_SIGN_CNTC</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/Data_FIFO_WREn_1" type="logic">
+      <obj_property name="ElementShortName">design_1_i/Data_FIFO_WREn_1</obj_property>
+      <obj_property name="ObjectShortName">Data_FIFO_WREn_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/Net1" type="logic">
+      <obj_property name="ElementShortName">design_1_i/Net1</obj_property>
+      <obj_property name="ObjectShortName">Net1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/DataA_FIFO_RDEn_1" type="logic">
+      <obj_property name="ElementShortName">design_1_i/DataA_FIFO_RDEn_1</obj_property>
+      <obj_property name="ObjectShortName">DataA_FIFO_RDEn_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/DataB_FIFO_RDEn_1" type="logic">
+      <obj_property name="ElementShortName">design_1_i/DataB_FIFO_RDEn_1</obj_property>
+      <obj_property name="ObjectShortName">DataB_FIFO_RDEn_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/Data_FIFO_Rst_1" type="logic">
+      <obj_property name="ElementShortName">design_1_i/Data_FIFO_Rst_1</obj_property>
+      <obj_property name="ObjectShortName">Data_FIFO_Rst_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_SIGN_CNTB" type="logic">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_SIGN_CNTB</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_SIGN_CNTB</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_SIGN_CNTA" type="logic">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_SIGN_CNTA</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_SIGN_CNTA</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_OUT_CNTEN" type="logic">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_OUT_CNTEN</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_OUT_CNTEN</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_OUT_START" type="logic">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_OUT_START</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_OUT_START</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_OUT_STOP" type="logic">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_OUT_STOP</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_OUT_STOP</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_OUT_CNTC" type="array">
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_OUT_CNTC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_OUT_CNTC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_OUT_CNTB" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_OUT_CNTB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_OUT_CNTB[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/CNTtest_0_OUT_CNTA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/CNTtest_0_OUT_CNTA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CNTtest_0_OUT_CNTA[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

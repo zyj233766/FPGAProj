@@ -1,0 +1,8 @@
+16:39:42 **** Auto Build of configuration Debug for project DAQ_Z30 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+16:39:44 Build Finished (took 1s.891ms)
+

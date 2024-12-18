@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Dec 17 21:46:16 2024
+# Process ID: 26896
+# Current directory: D:/FPGAproj/spline/DAQ_Z30/DAQ_Z30.runs/design_1_auto_pc_1_synth_1
+# Command line: vivado.exe -log design_1_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_pc_1.tcl
+# Log file: D:/FPGAproj/spline/DAQ_Z30/DAQ_Z30.runs/design_1_auto_pc_1_synth_1/design_1_auto_pc_1.vds
+# Journal file: D:/FPGAproj/spline/DAQ_Z30/DAQ_Z30.runs/design_1_auto_pc_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_auto_pc_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGAproj/spline/myip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 37b3ab8c1289d566.
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 21:46:19 2024...
