@@ -4,6 +4,7 @@ Running: E:/vivado/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 3cc06c5e03
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 80 for port 'DebugOutput' [D:/Git/spline/DAQ_Z30/DAQ_Z30.sim/tb_test.v:43]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

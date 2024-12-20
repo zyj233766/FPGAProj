@@ -11,15 +11,25 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="32000001fs"></ZoomEndTime>
-      <Cursor1Time time="7275000fs"></Cursor1Time>
+      <ZoomStartTime time="11273345000fs"></ZoomStartTime>
+      <ZoomEndTime time="11332845001fs"></ZoomEndTime>
+      <Cursor1Time time="11295845000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="266"></NameColumnWidth>
-      <ValueColumnWidth column_width="122"></ValueColumnWidth>
+      <NameColumnWidth column_width="291"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="27" />
+   <wave_markers>
+      <marker time="47975000" label="" />
+      <marker time="57975000" label="" />
+      <marker time="67975000" label="" />
+      <marker time="77975000" label="" />
+      <marker time="87975000" label="" />
+      <marker time="97975000" label="" />
+      <marker time="107975000" label="" />
+      <marker time="117975000" label="" />
+   </wave_markers>
    <wvobject fp_name="/tb_test/sys_clk" type="logic">
       <obj_property name="ElementShortName">sys_clk</obj_property>
       <obj_property name="ObjectShortName">sys_clk</obj_property>
@@ -35,10 +45,6 @@
    <wvobject fp_name="/tb_test/MaxIndex2" type="array">
       <obj_property name="ElementShortName">MaxIndex2[31:0]</obj_property>
       <obj_property name="ObjectShortName">MaxIndex2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/MaxIndex3" type="array">
-      <obj_property name="ElementShortName">MaxIndex3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MaxIndex3[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_test/PERIOD" type="array">
       <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
@@ -74,72 +80,87 @@
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+      <obj_property name="AnalogYRangeMin">-9.22337e+18</obj_property>
+      <obj_property name="AnalogYRRangeMax">-9.22337e+18</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test/u_test/dout2" type="array">
+      <obj_property name="ElementShortName">dout2[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dout2[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+      <obj_property name="AnalogYRangeMin">-9.22337e+18</obj_property>
+      <obj_property name="AnalogYRRangeMax">-9.22337e+18</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_test/u_test/\BLOCK[0].CntVal " type="array">
       <obj_property name="ElementShortName">\BLOCK[0].CntVal [31:0]</obj_property>
       <obj_property name="ObjectShortName">\BLOCK[0].CntVal [31:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeMin">5.48271e+18</obj_property>
+      <obj_property name="AnalogYRRangeMax">7.98479e+18</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].state " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].state [2:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].state [2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].a " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].a [0:239][19:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].a [0:239][19:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].b " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].b [0:239][19:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].b [0:239][19:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].c " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].c [0:239][19:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].c [0:239][19:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].y " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].y [0:239][19:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].y [0:239][19:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].k " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].k [0:239][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].k [0:239][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].i " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].i [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].i [31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].MaxIndex " type="array">
+      <obj_property name="ElementShortName">\BLOCK[0].MaxIndex [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\BLOCK[0].MaxIndex [31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].r " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].r [0:239][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].r [0:239][31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\BLOCK[1].CntVal " type="array">
+      <obj_property name="ElementShortName">\BLOCK[1].CntVal [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\BLOCK[1].CntVal [31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].m " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].m [0:239][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].m [0:239][31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\BLOCK[1].MaxIndex " type="array">
+      <obj_property name="ElementShortName">\BLOCK[1].MaxIndex [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\BLOCK[1].MaxIndex [31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].Ai " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].Ai [0:238][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].Ai [0:238][31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].enable " type="logic">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].enable </obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].enable </obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].Bi " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].Bi [0:238][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].Bi [0:238][31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].j " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].j [19:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].j [19:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].Ci " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].Ci [0:238][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].Ci [0:238][31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].k " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].k [9:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].k [9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].Di " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].Di [0:238][31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].Di [0:238][31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].temp " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].temp [79:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].temp [79:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].CntVal " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].CntVal [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].CntVal [31:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].temp_sum " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].temp_sum [63:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].temp_sum [63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_test/u_test/\BLOCK[0].temp " type="array">
-      <obj_property name="ElementShortName">\BLOCK[0].temp [63:0]</obj_property>
-      <obj_property name="ObjectShortName">\BLOCK[0].temp [63:0]</obj_property>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].ready " type="logic">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].ready </obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].ready </obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].DebugOutput " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].DebugOutput [79:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].DebugOutput [79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].MaxValue " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].MaxValue [79:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].MaxValue [79:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].i " type="array">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].i [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].i [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test/u_test/\CrossCorrelation[0].state " type="logic">
+      <obj_property name="ElementShortName">\CrossCorrelation[0].state </obj_property>
+      <obj_property name="ObjectShortName">\CrossCorrelation[0].state </obj_property>
    </wvobject>
 </wave_config>

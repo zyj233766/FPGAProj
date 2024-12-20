@@ -10,7 +10,7 @@
     input sys_rst_n,
     output [31:0] MaxIndex1,
     output [31:0] MaxIndex2,
-    output [31:0] MaxIndex3
+    output [79:0] DebugOutput
 );
 
          
@@ -45,7 +45,7 @@ generate
         localparam OutputNum = (POINT_NUM_X - POINT_NUM_Y + 1) * INSERT_NUM;
         
         (*ram_style="block"*)reg signed [13: 0] SampleX[0 : POINT_NUM - 1];
-        (*ram_style="block"*)reg [31:0] DataX[0 : POINT_NUM * INSERT_NUM - 1];
+        (*ram_style="block"*)reg [31:0] DataX[0 : (POINT_NUM - 1) * INSERT_NUM - 1];
         reg enable;
         reg ready;
         (*ram_style="block"*)reg [31: 0] m [0 : POINT_NUM - 1];
@@ -174,7 +174,7 @@ generate
                                 state <= state;
                         end
                         GETMAX: begin
-                            if(i < MAXINSERTINDEX + 1) begin
+                            if(i < MAXINSERTINDEX + 2) begin
                                 temp <= (i) / INSERT_NUM;
                                 temp1 <= $signed(Bi[temp]) * $signed(CntX);
                                 temp2 <= $signed(Ci[temp]) * $signed(CntX) * $signed(CntX);
@@ -232,7 +232,7 @@ generate
                                 i <= 32'd0;
                         end
                         GETMAX: begin
-                            if(i < MAXINSERTINDEX + 1)
+                            if(i < MAXINSERTINDEX + 2)
                                 i <= i + 1'b1;
                             else
                                 i <= 32'd0;
@@ -248,13 +248,15 @@ genvar k2;
     generate
         for(k2 = 0; k2 < 1; k2 = k2 + 1) begin:CrossCorrelation
             localparam OnceTimes = 1;
-            localparam JMax = POINT_NUM_Y * INSERT_NUM / OnceTimes;
+            localparam JMax = ((POINT_NUM_Y - 1) * INSERT_NUM - 1) / OnceTimes;
             localparam Wait = 0;
             localparam Culculate = 1;
             localparam OutputNum = (POINT_NUM_X - POINT_NUM_Y + 1) * INSERT_NUM;
+            reg enable;
             reg enable_d0, enable_d1;
             reg state;
-            reg [9:0] j,k,k_d0,kk;
+            reg [9:0] k,k_d0,kk;
+            reg [19:0] j;
             reg [79:0] temp;
             reg [64 * OnceTimes - 1 : 0] temp_sum;
             reg ready;
@@ -264,13 +266,14 @@ genvar k2;
             assign start_flag = ~enable_d1 & enable_d0;
             reg [7:0] i;
             reg [79 : 0] StoredValue[0 : 5];
+
             always @(posedge sys_clk) begin
                 if (!sys_rst_n) begin
                     enable_d0 <= 1'b0;
                     enable_d1 <= 1'b0;
                 end
                 else begin
-                    enable_d0 <= enable3;
+                    enable_d0 <= enable;
                     enable_d1 <= enable_d0;
                 end
             end
@@ -300,7 +303,7 @@ genvar k2;
             // 计数器模块
             always @(posedge sys_clk) begin
                 if (!sys_rst_n) begin
-                    j <= 10'd0;
+                    j <= 20'd0;
                     k <= 10'd0;
                     k_d0 <= 10'd0;
                 end
@@ -310,7 +313,7 @@ genvar k2;
                             j <= j + 1'b1;
                         else begin  // j == JMax
                             k_d0 <= k;
-                            j <= 10'b0;
+                            j <= 20'b0;
                             if (k < OutputNum - 1)
                                 k <= k + 1'b1;
                             else
@@ -327,16 +330,17 @@ genvar k2;
                     temp <= 64'd0;
                     temp_sum <= 0;
                     DebugOutput <= 0;
+                    MaxValue <= 0;
                 end
                 else begin
                     if (state == Culculate) begin
                         for (i = 0; i < OnceTimes; i = i + 1) begin
-                            temp_sum[(i * 64) +: 64] <= $signed(BLOCK[0].DataX[j * OnceTimes + i]) * 
-                                            $signed(BLOCK[1].DataX[j * OnceTimes + i + k]);
+                            temp_sum[(i * 64) +: 64] <= $signed(BLOCK[1].DataX[j * OnceTimes + i]) * 
+                                            $signed(BLOCK[0].DataX[j * OnceTimes + i + k]);
                         end    
                         if (j > 0 && j <= JMax) begin
                             if (j > 0) begin
-                                temp <= $signed(temp_sum[63:12])/* + $signed(temp_sum[127:76]) + $signed(temp_sum[191:140]) + $signed(temp_sum[255:204]) +
+                                temp <= $signed(temp) + $signed(temp_sum[63:12])/* + $signed(temp_sum[127:76]) + $signed(temp_sum[191:140]) + $signed(temp_sum[255:204]) +
                                         $signed(temp_sum[319:268]) + $signed(temp_sum[383:332]) + $signed(temp_sum[447:396]) + $signed(temp_sum[511:460]) +
                                         $signed(temp_sum[575:524]) + $signed(temp_sum[639:588]) + $signed(temp_sum[703:652]) + $signed(temp_sum[767:716]) +
                                         $signed(temp_sum[831:780]) + $signed(temp_sum[895:844]) + $signed(temp_sum[959:908]) + $signed(temp_sum[1023:972])*/;
@@ -350,9 +354,9 @@ genvar k2;
                         else
                             temp <= temp;
                         
-                        if (j == 0 && k <= OutputNum - 1 && ((k > 0) || (k_d0 > 0))) begin
+                        if ((j == 0 || j == 1) && k <= OutputNum - 1 && ((k > 0) || (k_d0 > 0))) begin
                             DebugOutput <= temp;
-                            if(DebugOutput > MaxValue) begin
+                            if($signed(DebugOutput) > $signed(MaxValue) && j == 1) begin
                                 MaxValue <= DebugOutput;
                                 kk <= k;                              
                                 BLOCK[2].SampleX[0] <= StoredValue[0];
@@ -381,11 +385,11 @@ genvar k2;
         end
     endgenerate
 
-                integer aaa;
+integer aaa;
 always @(posedge sys_clk) begin
     BLOCK[2].enable <= CrossCorrelation[0].ready;
     BLOCK[3].enable <= BLOCK[2].ready;
-    
+    CrossCorrelation[0].enable <= BLOCK[0].ready & BLOCK[1].ready;
     if (BLOCK[2].MaxIndex > 5) begin
         for(aaa = 0; aaa < 10; aaa = aaa + 1) begin
             BLOCK[3].SampleX[aaa] <= BLOCK[2].DataX[BLOCK[2].MaxIndex - 4 + aaa];
@@ -395,14 +399,14 @@ end
 
 assign MaxIndex1 = BLOCK[0].MaxIndex;
 assign MaxIndex2 = BLOCK[1].MaxIndex;
-assign MaxIndex3 = CrossCorrelation[0].kk;
-assign enable3 = BLOCK[0].ready & BLOCK[1].ready; 
+assign DebugOutput = CrossCorrelation[0].DebugOutput;
 
 // ROM读取到BLOCK[0]和BLOCK[1]的SampleX当中
 reg [7:0] addr1;
 reg [7:0] addr2;
 wire [13:0] dout1;
 wire [13:0] dout2;
+
 
 always @(posedge sys_clk) begin
     if(!sys_rst_n) begin
@@ -413,8 +417,10 @@ always @(posedge sys_clk) begin
         if (addr1 < POINT_NUM_X + 1 && addr1 > 0 && BLOCK[0].enable == 1'b0)
             BLOCK[0].SampleX[addr1 - 1] <= $signed(dout1);
 
+
         if (addr2 < POINT_NUM_Y + 1 && addr2 > 0 && BLOCK[1].enable == 1'b0)
             BLOCK[1].SampleX[addr2 - 1] <= $signed(dout2);
+
     end
 end
 

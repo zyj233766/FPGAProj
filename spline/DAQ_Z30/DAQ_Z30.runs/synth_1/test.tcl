@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache C:/Users/ZhangYijie/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-75780-DESKTOP-V402F34/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z030ffg676-2
 
@@ -93,12 +90,14 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files D:/Git/spline/mycoe/test.coe
 add_files D:/Git/spline/mycoe/test1.coe
+add_files D:/Git/spline/mycoe/test2.coe
+add_files D:/Git/spline/mycoe/test3.coe
 read_verilog -library xil_defaultlib D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v
-read_ip -quiet D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-
 read_ip -quiet D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+
+read_ip -quiet D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,6 +108,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental D:/Git/spline/DAQ_Z30/test.dcp

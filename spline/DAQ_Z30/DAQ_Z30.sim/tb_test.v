@@ -16,7 +16,7 @@ reg   sys_rst_n                            = 0 ;
 // DAQ_Z30_Top Outputs
 wire  [31:0]  MaxIndex1                    ;
 wire  [31:0]  MaxIndex2                    ;
-wire  [31:0]  MaxIndex3                    ;
+wire  [79:0]  DebugOutput                    ;
 
 
 initial
@@ -40,12 +40,12 @@ test #(
 
     .MaxIndex1               ( MaxIndex1  [31:0] ),
     .MaxIndex2               ( MaxIndex2  [31:0] ),
-    .MaxIndex3               ( MaxIndex3  [31:0] )
+    .DebugOutput             ( DebugOutput  [31:0] )
 );
 
 initial
 begin
-    #1000000
+    #100000000
     $finish;
 end
 
