@@ -1,0 +1,5 @@
+set_property OFFCHIP_TERM NONE [get_ports uart_tx]
+set_property PACKAGE_PIN AF25 [get_ports uart_tx]
+set_property IOSTANDARD LVCMOS25 [get_ports uart_tx]
+set_property PACKAGE_PIN AF24 [get_ports uart_rx]
+set_property IOSTANDARD LVCMOS25 [get_ports uart_rx]

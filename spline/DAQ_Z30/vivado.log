@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Dec 20 10:21:22 2024
+# Process ID: 5276
+# Current directory: C:/Users/12554/Desktop/test7/DAQ_Z30
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21692 C:\Users\12554\Desktop\test7\DAQ_Z30\DAQ_Z30.xpr
+# Log file: C:/Users/12554/Desktop/test7/DAQ_Z30/vivado.log
+# Journal file: C:/Users/12554/Desktop/test7/DAQ_Z30\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/12554/Desktop/test7/DAQ_Z30/DAQ_Z30.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/12554/Desktop/test7/myip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2017.4/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1076.805 ; gain = 297.281
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 10:22:01 2024...
