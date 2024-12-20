@@ -1,7 +1,0 @@
-//arch = zynq; split = false; format = BIN
-the_ROM_image:
-{
-	[bootloader]C:\Users\12554\Desktop\DAQ\DAQ_Z30\DAQ_Z30.sdk\FSBL\Debug\FSBL.elf
-	C:\Users\12554\Desktop\DAQ\DAQ_Z30\DAQ_Z30.sdk\DAQ_Z30_Top_hw_platform_0\DAQ_Z30_Top.bit
-	C:\Users\12554\Desktop\DAQ\DAQ_Z30\DAQ_Z30.sdk\DAQ_Z30\Debug\DAQ_Z30.elf
-}
