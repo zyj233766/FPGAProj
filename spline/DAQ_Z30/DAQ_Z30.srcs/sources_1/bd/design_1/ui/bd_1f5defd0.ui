@@ -1,300 +1,245 @@
 {
-   ExpandedHierarchyInLayout: "",
-   guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.65222",
+   "Default View_TopLeft":"3363,1328",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port MCU_D0_ADCReset -pg 1 -y 160 -defaultsOSRD -right
-preplace port ADC_DA0N -pg 1 -y -400 -defaultsOSRD
-preplace port ADC_DB6N -pg 1 -y 170 -defaultsOSRD
-preplace port ADC_DA0P -pg 1 -y -420 -defaultsOSRD
-preplace port ADC_DA12N -pg 1 -y -30 -defaultsOSRD
-preplace port ADC_DB6P -pg 1 -y 150 -defaultsOSRD
-preplace port ADC_DA12P -pg 1 -y -50 -defaultsOSRD
-preplace port ADC_DB10N -pg 1 -y 280 -defaultsOSRD
-preplace port Data_FIFO_WREn_A -pg 1 -y -140 -defaultsOSRD -right
-preplace port ADC_DB2N -pg 1 -y 80 -defaultsOSRD
-preplace port Data_FIFO_WREn_B -pg 1 -y -110 -defaultsOSRD -right
-preplace port stop -pg 1 -y 2100 -defaultsOSRD
-preplace port ADC_DB10P -pg 1 -y 260 -defaultsOSRD
-preplace port ADC_DB2P -pg 1 -y 60 -defaultsOSRD
-preplace port gate_out -pg 1 -y 2080 -defaultsOSRD
-preplace port ADC_DA8N -pg 1 -y -150 -defaultsOSRD
-preplace port ADC_DA8P -pg 1 -y -130 -defaultsOSRD
-preplace port gpio_rtl -pg 1 -y 1670 -defaultsOSRD
-preplace port IN_STOP -pg 1 -y -780 -defaultsOSRD
-preplace port DataB_FIFO_ProgFull -pg 1 -y -510 -defaultsOSRD
-preplace port ADC_DB8N -pg 1 -y -10 -defaultsOSRD
-preplace port S_AXIS -pg 1 -y 1620 -defaultsOSRD
-preplace port start -pg 1 -y 2120 -defaultsOSRD
-preplace port ADC_DB8P -pg 1 -y 200 -defaultsOSRD
-preplace port Data_FIFO_Rst -pg 1 -y -70 -defaultsOSRD -right
-preplace port clkout_250M_N -pg 1 -y 650 -defaultsOSRD
-preplace port MCU_D1_ADCSCLK -pg 1 -y 180 -defaultsOSRD -right
-preplace port FIXED_IO -pg 1 -y 1340 -defaultsOSRD
-preplace port clkout_250M_P -pg 1 -y 610 -defaultsOSRD
-preplace port uart_tx -pg 1 -y 1490 -defaultsOSRD
-preplace port s_axis_aresetn -pg 1 -y 1700 -defaultsOSRD
-preplace port clkin_10MHz_N -pg 1 -y 710 -defaultsOSRD
-preplace port DataA_FIFO_ProgFull -pg 1 -y -450 -defaultsOSRD
-preplace port MCU_D3_ADCSen -pg 1 -y 240 -defaultsOSRD -right
-preplace port DDR -pg 1 -y 1300 -defaultsOSRD
-preplace port clkin_10MHz_P -pg 1 -y 690 -defaultsOSRD
-preplace port LED1 -pg 1 -y -650 -defaultsOSRD
-preplace port MCU_D2_ADCSData -pg 1 -y 210 -defaultsOSRD -right
-preplace port LED2 -pg 1 -y -620 -defaultsOSRD
-preplace port ADC_DA4N -pg 1 -y -280 -defaultsOSRD
-preplace port ADC_DB12N -pg 1 -y 340 -defaultsOSRD
-preplace port LED3 -pg 1 -y 750 -defaultsOSRD
-preplace port ADC_DA4P -pg 1 -y -300 -defaultsOSRD
-preplace port IN_START -pg 1 -y -760 -defaultsOSRD
-preplace port FCLK_CLK0 -pg 1 -y 1600 -defaultsOSRD
-preplace port ADC_DB12P -pg 1 -y 310 -defaultsOSRD
-preplace port ADC_DB4N -pg 1 -y 120 -defaultsOSRD
-preplace port FIFO_Clk -pg 1 -y -400 -defaultsOSRD -right
-preplace port input_fx -pg 1 -y 2090 -defaultsOSRD
-preplace port ADC_DA10N -pg 1 -y -80 -defaultsOSRD
-preplace port ADC_DB4P -pg 1 -y 100 -defaultsOSRD
-preplace port uart_rx -pg 1 -y 1450 -defaultsOSRD -right
-preplace port ADC_DA10P -pg 1 -y -100 -defaultsOSRD
-preplace port MainFIFO_WR_CLK -pg 1 -y -680 -defaultsOSRD
-preplace port ADC_DA2N -pg 1 -y -330 -defaultsOSRD
-preplace port ADC_DB0N -pg 1 -y 30 -defaultsOSRD
-preplace port DataA_FIFO_RDEn -pg 1 -y -550 -defaultsOSRD -right
-preplace port ADC_DA2P -pg 1 -y -360 -defaultsOSRD
-preplace port IN_CNTEN -pg 1 -y -740 -defaultsOSRD
-preplace port ADC_DB0P -pg 1 -y 10 -defaultsOSRD
-preplace port ADS_SData -pg 1 -y 30 -defaultsOSRD
-preplace port DataB_FIFO_RDEn -pg 1 -y -580 -defaultsOSRD -right
-preplace port ADC_DA6N -pg 1 -y -200 -defaultsOSRD
-preplace port ADC_CLKin_N -pg 1 -y -600 -defaultsOSRD
-preplace port ADC_DA6P -pg 1 -y -180 -defaultsOSRD
-preplace port ADC_CLKin_P -pg 1 -y -640 -defaultsOSRD
-preplace port s_axis_aclk -pg 1 -y 1660 -defaultsOSRD
-preplace portBus AuxFifo_DataAOut -pg 1 -y 350 -defaultsOSRD
-preplace portBus IN_Correction -pg 1 -y 2320 -defaultsOSRD
-preplace portBus DataA_FIFO_RDdata -pg 1 -y -200 -defaultsOSRD
-preplace portBus ADS_SCLK -pg 1 -y 60 -defaultsOSRD
-preplace portBus peripheral_aresetn -pg 1 -y 1790 -defaultsOSRD
-preplace portBus gpio_in_TimeCNT_A -pg 1 -y 1870 -defaultsOSRD -right
-preplace portBus gpio_in_TimeCNT_B -pg 1 -y 1910 -defaultsOSRD -right
-preplace portBus AuxFifo_DataBOut -pg 1 -y 400 -defaultsOSRD
-preplace portBus DataB_FIFO_RDdata -pg 1 -y -240 -defaultsOSRD
-preplace portBus ADS_Reset -pg 1 -y 0 -defaultsOSRD
-preplace portBus IN_CNTA -pg 1 -y -840 -defaultsOSRD
-preplace portBus ADS_SEN -pg 1 -y -30 -defaultsOSRD
-preplace portBus IN_spline1 -pg 1 -y 2340 -defaultsOSRD
-preplace portBus IN_CNTB -pg 1 -y -820 -defaultsOSRD
-preplace portBus IN_spline2 -pg 1 -y 2360 -defaultsOSRD
-preplace portBus IN_CNTC -pg 1 -y -800 -defaultsOSRD
-preplace inst ps7_0_axi_periph|s00_couplers|auto_pc -pg 1 -lvl 1 -y 1322 -defaultsOSRD
-preplace inst ps7_0_axi_periph|s00_couplers|s00_data_fifo -pg 1 -lvl 2 -y 1342 -defaultsOSRD
-preplace inst ps7_0_axi_periph|m03_couplers -pg 1 -lvl 3 -y 1842 -defaultsOSRD
-preplace inst ps7_0_axi_periph|m01_couplers -pg 1 -lvl 3 -y 1502 -defaultsOSRD
-preplace inst count_ip_0 -pg 1 -lvl 3 -y 2120 -defaultsOSRD
-preplace inst vio_0 -pg 1 -lvl 1 -y -430 -defaultsOSRD -orient R180
-preplace inst fifo_generator_3 -pg 1 -lvl 3 -y -10 -defaultsOSRD
-preplace inst ps7_0_axi_periph|s01_couplers|auto_pc -pg 1 -lvl 1 -y 1632 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 3 -y 1450 -defaultsOSRD
-preplace inst MJ_IBUFG_DS_0 -pg 1 -lvl 1 -y 700 -defaultsOSRD
-preplace inst ps7_0_axi_periph|m02_couplers -pg 1 -lvl 3 -y 1672 -defaultsOSRD
-preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 7 -y 870 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -y -690 -defaultsOSRD -orient R180
-preplace inst CNTtest_0 -pg 1 -lvl 3 -y -810 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 5 -y 1340 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 1890 -defaultsOSRD
-preplace inst xlconstant_3 -pg 1 -lvl 4 -y 1130 -defaultsOSRD -orient R180
-preplace inst xlconcat_0 -pg 1 -lvl 5 -y 1590 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 6 -y 1720 -defaultsOSRD
-preplace inst ps7_0_axi_periph|s01_couplers|s01_data_fifo -pg 1 -lvl 2 -y 1652 -defaultsOSRD
-preplace inst ps7_0_axi_periph|s00_couplers -pg 1 -lvl 1 -y 1312 -defaultsOSRD
-preplace inst mj_not_0 -pg 1 -lvl 3 -y 780 -defaultsOSRD -orient R180
-preplace inst MJ_inputclk_ds_gbuf_0 -pg 1 -lvl 1 -y -560 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 6 -y 1920 -defaultsOSRD
-preplace inst ps7_0_axi_periph|xbar -pg 1 -lvl 2 -y 1632 -defaultsOSRD
-preplace inst MJ_OBUFGDS_0 -pg 1 -lvl 6 -y 640 -defaultsOSRD
-preplace inst ps7_0_axi_periph|s01_couplers -pg 1 -lvl 1 -y 1622 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 4 -y -260 -defaultsOSRD
-preplace inst MaxdataTrans_ip_0 -pg 1 -lvl 3 -y 2350 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -y 1402 -defaultsOSRD
-preplace inst ADS4249_Decode_0 -pg 1 -lvl 1 -y 0 -defaultsOSRD
-preplace inst ps7_0_axi_periph|m04_couplers -pg 1 -lvl 3 -y 2012 -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 5 -y -50 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -y 660 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 2 -y -610 -defaultsOSRD
-preplace inst fifo_generator_1 -pg 1 -lvl 5 -y 420 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 1050 -defaultsOSRD
-preplace inst ps7_0_axi_periph|m00_couplers -pg 1 -lvl 3 -y 1332 -defaultsOSRD
-preplace inst clk_wiz_2 -pg 1 -lvl 3 -y 920 -defaultsOSRD
-preplace inst fifo_generator_2 -pg 1 -lvl 3 -y 410 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 6 -y 1370 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -y 2324 -defaultsOSRD
-preplace netloc ps7_0_axi_periph|S00_ARESETN_1 1 0 1 N
-preplace netloc ADC_DA8P_1 1 0 1 30J
-preplace netloc ps7_0_axi_periph|s00_couplers|S_ARESETN_1 1 0 1 N
-preplace netloc CNTtest_0_OUT_STOP 1 3 1 2720
-preplace netloc ADC_DB4N_1 1 0 1 NJ
-preplace netloc fifo_generator_2_dout 1 2 6 2200J 270 NJ 270 NJ 270 NJ 270 NJ 270 4270
-preplace netloc MCU_D0_ADCReset_1 1 7 1 4310
-preplace netloc ps7_0_axi_periph|ps7_0_axi_periph_to_s00_couplers 1 0 1 330
-preplace netloc util_vector_logic_0_Res 1 2 2 2210 1950 2630
-preplace netloc axi_dma_0_mm2s_introut 1 3 2 N 1500 3050
-preplace netloc ADC_DA6N_1 1 0 1 60J
-preplace netloc ps7_0_axi_periph|s01_couplers|M_ARESETN_1 1 0 2 520J 1702 760
-preplace netloc ps7_0_axi_periph|s00_couplers|auto_pc_to_s00_data_fifo 1 1 1 N
-preplace netloc ps7_0_axi_periph|xbar_to_m01_couplers 1 2 1 1390
-preplace netloc processing_system7_0_FIXED_IO 1 6 2 N 1310 4290
-preplace netloc CNTtest_0_OUT_START 1 3 1 2710
-preplace netloc ADC_DB10N_1 1 0 1 20J
-preplace netloc ps7_0_axi_periph|M01_ARESETN_1 1 0 3 360J 1482 NJ 1482 1400
-preplace netloc axi_smc_M00_AXI 1 5 1 N
-preplace netloc ADC_DB0P_1 1 0 1 10J
-preplace netloc ps7_0_axi_periph|M01_ACLK_1 1 0 3 NJ 1472 NJ 1472 1420
-preplace netloc ps7_0_axi_periph_M02_AXI 1 1 5 1760J 1670 NJ 1670 NJ 1670 NJ 1670 3360
-preplace netloc MCU_D1_ADCSCLK_1 1 7 1 4320
-preplace netloc s_axis_aclk_0_1 1 0 1 30J
-preplace netloc ADC_DA10P_1 1 0 1 20J
-preplace netloc ADC_DA0N_1 1 0 1 110J
-preplace netloc fifo_generator_3_dout 1 2 6 2200J 220 NJ 220 NJ 220 NJ 220 NJ 220 4280
-preplace netloc ps7_0_axi_periph|s00_couplers|M_ACLK_1 1 0 2 540J 1252 760
-preplace netloc ps7_0_axi_periph|M04_ACLK_1 1 0 3 NJ 1992 NJ 1992 N
-preplace netloc ADC_DB2P_1 1 0 1 NJ
-preplace netloc ps7_0_axi_periph_M04_AXI 1 1 2 1800J 2010 2090
-preplace netloc fifo_generator_1_dout 1 4 4 3070J -240 NJ -240 NJ -240 N
-preplace netloc ps7_0_axi_periph|s00_couplers|S_ACLK_1 1 0 1 N
-preplace netloc xlconstant_0_dout1 1 0 1 120
-preplace netloc xlconcat_0_dout 1 5 1 3400
-preplace netloc ADC_CLKin_P_1 1 0 1 110
-preplace netloc ps7_0_axi_periph|xbar_to_m00_couplers 1 2 1 1350
-preplace netloc ps7_0_axi_periph|M00_ACLK_1 1 0 3 NJ 1432 1060J 1312 N
-preplace netloc ps7_0_axi_periph|m03_couplers_to_ps7_0_axi_periph 1 3 1 N
-preplace netloc ps7_0_axi_periph_M03_AXI 1 1 2 1780J 1840 2100
-preplace netloc MCU_D3_ADCSen_1 1 7 1 4290
-preplace netloc ps7_0_axi_periph|M02_ACLK_1 1 0 3 350J 1452 NJ 1452 1410
-preplace netloc axi_gpio_0_GPIO 1 6 2 3880 1670 N
-preplace netloc ps7_0_axi_periph|s01_couplers|S_ARESETN_1 1 0 1 N
-preplace netloc processing_system7_0_DDR 1 6 2 N 1290 4290
-preplace netloc input_fx_0_1 1 0 3 60J 2130 1800J 2110 NJ
-preplace netloc ADC_DB0N_1 1 0 1 -30J
-preplace netloc ADC_DB12P_1 1 0 1 70J
-preplace netloc ps7_0_axi_periph|M02_ARESETN_1 1 0 3 380J 1492 NJ 1492 1360
-preplace netloc fifo_generator_2_prog_full 1 2 2 2210 290 2630
-preplace netloc ADC_DA6P_1 1 0 1 50J
-preplace netloc ADC_DB6N_1 1 0 1 30J
-preplace netloc ps7_0_axi_periph|xbar_to_m04_couplers 1 2 1 1340
-preplace netloc ps7_0_axi_periph|ps7_0_axi_periph_ARESETN_net 1 0 3 340 1742 1080 1722 1380
-preplace netloc ps7_0_axi_periph|ps7_0_axi_periph_ACLK_net 1 0 3 370 1462 1090 1462 1370
-preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 2 6 2180 -940 NJ -940 NJ -940 NJ -940 NJ -940 4260
-preplace netloc fifo_generator_0_dout 1 4 4 3080J -200 NJ -200 NJ -200 N
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 2 1770 1330 2140
-preplace netloc DataB_FIFO_RDEn_1 1 3 5 2780 -560 3040 -580 NJ -580 N -580 N
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 7 170 850 N 850 N 850 N 850 N 850 N 850 3880
-preplace netloc ADC_DA12N_1 1 0 1 -10J
-preplace netloc gpio_in_TimeCNT_B_1 1 6 2 3890 1910 N
-preplace netloc ps7_0_axi_periph|s01_couplers|auto_pc_to_s01_data_fifo 1 1 1 N
-preplace netloc ps7_0_axi_periph|s01_couplers|M_ACLK_1 1 0 2 540J 1562 760
-preplace netloc ps7_0_axi_periph|m04_couplers_to_ps7_0_axi_periph 1 3 1 N
-preplace netloc ps7_0_axi_periph|ps7_0_axi_periph_to_s01_couplers 1 0 1 330
-preplace netloc DataA_FIFO_RDEn_1 1 3 5 2810 -550 3060 -550 NJ -550 N -550 N
-preplace netloc ps7_0_axi_periph_M01_AXI 1 1 5 1760 1500 2120 1650 N 1650 N 1650 3380
-preplace netloc count_ip_0_start 1 3 5 2810J 2120 NJ 2120 NJ 2120 NJ 2120 N
-preplace netloc clkin_10MHz_N_1 1 0 1 NJ
-preplace netloc s_axis_aresetn_0_1 1 0 1 -30J
-preplace netloc ps7_0_axi_periph|S01_ARESETN_1 1 0 1 N
-preplace netloc rst_ps7_0_100M_peripheral_aresetn1 1 0 8 150 1150 1760 1150 2110 1260 NJ 1260 2990 1260 3370 1800 3870 1790 N
-preplace netloc Data_FIFO_Rst_1 1 2 6 2170 120 2650 20 3000J 70 3380J -70 NJ -70 N
-preplace netloc ps7_0_axi_periph|M00_ARESETN_1 1 0 3 320J 1442 1070J 1332 N
-preplace netloc ps7_0_axi_periph|S01_ACLK_1 1 0 1 N
-preplace netloc axi_dma_0_M_AXI_MM2S 1 3 2 2640 1310 N
-preplace netloc CNTtest_0_OUT_CNTA 1 3 1 2750
-preplace netloc axis_data_fifo_0_m_axis_tlast 1 1 2 1790 1430 N
-preplace netloc ADC_DA12P_1 1 0 1 0J
-preplace netloc MJ_IBUFG_DS_0_out1 1 1 2 N 700 2150
-preplace netloc ps7_0_axi_periph|m01_couplers_to_ps7_0_axi_periph 1 3 1 N
-preplace netloc ps7_0_axi_periph|M03_ACLK_1 1 0 3 NJ 1822 NJ 1822 N
-preplace netloc CNTtest_0_OUT_CNTB 1 3 1 2740
-preplace netloc fifo_generator_1_prog_full 1 3 5 2800 -510 N -510 3370J -510 N -510 N
-preplace netloc ADC_DA8N_1 1 0 1 40J
-preplace netloc ps7_0_axi_periph|xbar_to_m03_couplers 1 2 1 1350
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 2 2800 1330 N
-preplace netloc CNTtest_0_OUT_CNTC 1 3 1 2730
-preplace netloc IN_CNTA_0_1 1 0 3 NJ -840 NJ -840 NJ
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 0 2 140 960 1770
-preplace netloc MCU_D2_ADCSData_1 1 7 1 4300
-preplace netloc ADC_DB10P_1 1 0 1 -20J
-preplace netloc ps7_0_axi_periph|s01_couplers|S_ACLK_1 1 0 1 N
-preplace netloc IN_spline2_0_1 1 0 3 -30J 2440 NJ 2440 2200J
-preplace netloc ADC_DB6P_1 1 0 1 30J
-preplace netloc axis_data_fifo_0_M_AXIS 1 1 2 1770 1410 N
-preplace netloc count_ip_0_gate_out 1 3 5 2670J 2080 NJ 2080 NJ 2080 NJ 2080 N
-preplace netloc ADC_DA2P_1 1 0 1 100J
-preplace netloc ADC_DB4P_1 1 0 1 NJ
-preplace netloc ADC_DA4P_1 1 0 1 80J
-preplace netloc ps7_0_axi_periph|M04_ARESETN_1 1 0 3 NJ 2012 NJ 2012 N
-preplace netloc processing_system7_0_FCLK_CLK0 1 2 6 2160 830 N 830 N 830 N 830 3890 1430 4270
-preplace netloc Net1 1 2 6 2180J -350 2760J -480 2990J -190 N -190 N -190 4320
-preplace netloc gpio_in_TimeCNT_A_1 1 6 2 3870 1870 N
-preplace netloc ps7_0_axi_periph|xbar_to_m02_couplers 1 2 1 N
-preplace netloc S_AXIS_0_1 1 0 1 90
-preplace netloc IN_Correction_0_1 1 0 3 -10J 2420 1770J 2320 NJ
-preplace netloc Net2 1 2 6 2190 230 N 230 3050 -400 N -400 N -400 N
-preplace netloc ADC_DA4N_1 1 0 1 70J
-preplace netloc ps7_0_axi_periph|s01_couplers|s01_couplers_to_auto_pc 1 0 1 530
-preplace netloc ps7_0_axi_periph|s01_couplers|s01_data_fifo_to_s01_couplers 1 2 1 N
-preplace netloc ps7_0_axi_periph|M03_ARESETN_1 1 0 3 NJ 1842 NJ 1842 N
-preplace netloc ADC_DA10N_1 1 0 1 10J
-preplace netloc ps7_0_axi_periph|s00_couplers|s00_data_fifo_to_s00_couplers 1 2 1 N
-preplace netloc ps7_0_axi_periph|s00_couplers|M_ARESETN_1 1 0 2 520J 1392 760
-preplace netloc IN_CNTB_0_1 1 0 3 NJ -820 NJ -820 NJ
-preplace netloc clk_wiz_0_locked 1 3 5 2780 750 N 750 N 750 N 750 N
-preplace netloc ADC_DB2N_1 1 0 1 NJ
+preplace port DDR -pg 1 -lvl 8 -x 4400 -y 1300 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 4400 -y 1340 -defaultsOSRD
+preplace port S_AXIS -pg 1 -lvl 0 -x -50 -y 1620 -defaultsOSRD
+preplace port gpio_rtl -pg 1 -lvl 8 -x 4400 -y 1670 -defaultsOSRD
+preplace port LED2 -pg 1 -lvl 8 -x 4400 -y -620 -defaultsOSRD
+preplace port LED1 -pg 1 -lvl 8 -x 4400 -y -650 -defaultsOSRD
+preplace port MCU_D2_ADCSData -pg 1 -lvl 8 -x 4400 -y 210 -defaultsOSRD -right
+preplace port ADS_SData -pg 1 -lvl 8 -x 4400 -y 30 -defaultsOSRD
+preplace port clkout_250M_P -pg 1 -lvl 8 -x 4400 -y 610 -defaultsOSRD
+preplace port clkout_250M_N -pg 1 -lvl 8 -x 4400 -y 650 -defaultsOSRD
+preplace port clkin_10MHz_P -pg 1 -lvl 0 -x -50 -y 690 -defaultsOSRD
+preplace port clkin_10MHz_N -pg 1 -lvl 0 -x -50 -y 710 -defaultsOSRD
+preplace port ADC_DA0P -pg 1 -lvl 0 -x -50 -y -420 -defaultsOSRD
+preplace port ADC_DA0N -pg 1 -lvl 0 -x -50 -y -400 -defaultsOSRD
+preplace port ADC_DA2P -pg 1 -lvl 0 -x -50 -y -360 -defaultsOSRD
+preplace port ADC_DA2N -pg 1 -lvl 0 -x -50 -y -330 -defaultsOSRD
+preplace port ADC_DA4P -pg 1 -lvl 0 -x -50 -y -300 -defaultsOSRD
+preplace port ADC_DA4N -pg 1 -lvl 0 -x -50 -y -280 -defaultsOSRD
+preplace port ADC_DA6P -pg 1 -lvl 0 -x -50 -y -180 -defaultsOSRD
+preplace port ADC_DA6N -pg 1 -lvl 0 -x -50 -y -200 -defaultsOSRD
+preplace port ADC_DA8P -pg 1 -lvl 0 -x -50 -y -130 -defaultsOSRD
+preplace port ADC_DA8N -pg 1 -lvl 0 -x -50 -y -150 -defaultsOSRD
+preplace port ADC_DA10P -pg 1 -lvl 0 -x -50 -y -100 -defaultsOSRD
+preplace port ADC_DA10N -pg 1 -lvl 0 -x -50 -y -80 -defaultsOSRD
+preplace port ADC_DA12P -pg 1 -lvl 0 -x -50 -y -50 -defaultsOSRD
+preplace port ADC_DA12N -pg 1 -lvl 0 -x -50 -y -30 -defaultsOSRD
+preplace port ADC_DB0P -pg 1 -lvl 0 -x -50 -y 10 -defaultsOSRD
+preplace port ADC_DB0N -pg 1 -lvl 0 -x -50 -y 30 -defaultsOSRD
+preplace port ADC_DB2P -pg 1 -lvl 0 -x -50 -y 60 -defaultsOSRD
+preplace port ADC_DB2N -pg 1 -lvl 0 -x -50 -y 80 -defaultsOSRD
+preplace port ADC_DB4P -pg 1 -lvl 0 -x -50 -y 100 -defaultsOSRD
+preplace port ADC_DB4N -pg 1 -lvl 0 -x -50 -y 120 -defaultsOSRD
+preplace port ADC_DB6P -pg 1 -lvl 0 -x -50 -y 150 -defaultsOSRD
+preplace port ADC_DB6N -pg 1 -lvl 0 -x -50 -y 170 -defaultsOSRD
+preplace port ADC_DB8P -pg 1 -lvl 0 -x -50 -y 200 -defaultsOSRD
+preplace port ADC_DB8N -pg 1 -lvl 0 -x -50 -y -10 -defaultsOSRD
+preplace port ADC_DB10P -pg 1 -lvl 0 -x -50 -y 260 -defaultsOSRD
+preplace port ADC_DB10N -pg 1 -lvl 0 -x -50 -y 280 -defaultsOSRD
+preplace port ADC_DB12P -pg 1 -lvl 0 -x -50 -y 310 -defaultsOSRD
+preplace port ADC_DB12N -pg 1 -lvl 0 -x -50 -y 340 -defaultsOSRD
+preplace port MCU_D3_ADCSen -pg 1 -lvl 8 -x 4400 -y 240 -defaultsOSRD -right
+preplace port MCU_D0_ADCReset -pg 1 -lvl 8 -x 4400 -y 160 -defaultsOSRD -right
+preplace port MCU_D1_ADCSCLK -pg 1 -lvl 8 -x 4400 -y 180 -defaultsOSRD -right
+preplace port uart_tx -pg 1 -lvl 8 -x 4400 -y 1490 -defaultsOSRD
+preplace port s_axis_aclk -pg 1 -lvl 0 -x -50 -y 1660 -defaultsOSRD
+preplace port s_axis_aresetn -pg 1 -lvl 0 -x -50 -y 1700 -defaultsOSRD
+preplace port uart_rx -pg 1 -lvl 8 -x 4400 -y 1450 -defaultsOSRD -right
+preplace port LED3 -pg 1 -lvl 8 -x 4400 -y 750 -defaultsOSRD
+preplace port Data_FIFO_Rst -pg 1 -lvl 8 -x 4400 -y -70 -defaultsOSRD -right
+preplace port Data_FIFO_WREn_A -pg 1 -lvl 8 -x 4400 -y -140 -defaultsOSRD -right
+preplace port Data_FIFO_WREn_B -pg 1 -lvl 8 -x 4400 -y -110 -defaultsOSRD -right
+preplace port FIFO_Clk -pg 1 -lvl 8 -x 4400 -y -400 -defaultsOSRD -right
+preplace port DataA_FIFO_ProgFull -pg 1 -lvl 8 -x 4400 -y -450 -defaultsOSRD
+preplace port ADC_CLKin_P -pg 1 -lvl 0 -x -50 -y -640 -defaultsOSRD
+preplace port ADC_CLKin_N -pg 1 -lvl 0 -x -50 -y -600 -defaultsOSRD
+preplace port MainFIFO_WR_CLK -pg 1 -lvl 8 -x 4400 -y -680 -defaultsOSRD
+preplace port DataA_FIFO_RDEn -pg 1 -lvl 8 -x 4400 -y -550 -defaultsOSRD -right
+preplace port DataB_FIFO_ProgFull -pg 1 -lvl 8 -x 4400 -y -510 -defaultsOSRD
+preplace port DataB_FIFO_RDEn -pg 1 -lvl 8 -x 4400 -y -580 -defaultsOSRD -right
+preplace port FCLK_CLK0 -pg 1 -lvl 8 -x 4400 -y 1600 -defaultsOSRD
+preplace port input_fx -pg 1 -lvl 0 -x -50 -y 2090 -defaultsOSRD
+preplace port gate_out -pg 1 -lvl 8 -x 4400 -y 2080 -defaultsOSRD
+preplace port stop -pg 1 -lvl 8 -x 4400 -y 2100 -defaultsOSRD
+preplace port start -pg 1 -lvl 8 -x 4400 -y 2120 -defaultsOSRD
+preplace port IN_STOP -pg 1 -lvl 0 -x -50 -y -780 -defaultsOSRD
+preplace port IN_START -pg 1 -lvl 0 -x -50 -y -760 -defaultsOSRD
+preplace port IN_CNTEN -pg 1 -lvl 0 -x -50 -y -740 -defaultsOSRD
+preplace portBus ADS_SEN -pg 1 -lvl 8 -x 4400 -y -30 -defaultsOSRD
+preplace portBus ADS_Reset -pg 1 -lvl 8 -x 4400 -y 0 -defaultsOSRD
+preplace portBus ADS_SCLK -pg 1 -lvl 8 -x 4400 -y 60 -defaultsOSRD
+preplace portBus DataA_FIFO_RDdata -pg 1 -lvl 8 -x 4400 -y -200 -defaultsOSRD
+preplace portBus DataB_FIFO_RDdata -pg 1 -lvl 8 -x 4400 -y -240 -defaultsOSRD
+preplace portBus AuxFifo_DataBOut -pg 1 -lvl 8 -x 4400 -y 400 -defaultsOSRD
+preplace portBus AuxFifo_DataAOut -pg 1 -lvl 8 -x 4400 -y 350 -defaultsOSRD
+preplace portBus gpio_in_TimeCNT_A -pg 1 -lvl 8 -x 4400 -y 1870 -defaultsOSRD -right
+preplace portBus gpio_in_TimeCNT_B -pg 1 -lvl 8 -x 4400 -y 1910 -defaultsOSRD -right
+preplace portBus peripheral_aresetn -pg 1 -lvl 8 -x 4400 -y 1790 -defaultsOSRD
+preplace portBus IN_CNTA -pg 1 -lvl 0 -x -50 -y -840 -defaultsOSRD
+preplace portBus IN_CNTB -pg 1 -lvl 0 -x -50 -y -820 -defaultsOSRD
+preplace portBus IN_CNTC -pg 1 -lvl 0 -x -50 -y -800 -defaultsOSRD
+preplace portBus IN_Correction -pg 1 -lvl 0 -x -50 -y 2320 -defaultsOSRD
+preplace portBus IN_spline1 -pg 1 -lvl 0 -x -50 -y 2340 -defaultsOSRD
+preplace portBus IN_spline2 -pg 1 -lvl 0 -x -50 -y 2360 -defaultsOSRD
+preplace inst MJ_OBUFGDS_0 -pg 1 -lvl 6 -x 3720 -y 640 -defaultsOSRD
+preplace inst MJ_IBUFG_DS_0 -pg 1 -lvl 1 -x 390 -y 700 -defaultsOSRD
+preplace inst ADS4249_Decode_0 -pg 1 -lvl 1 -x 390 -y 0 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -x 3720 -y 1370 -defaultsOSRD
+preplace inst MJ_inputclk_ds_gbuf_0 -pg 1 -lvl 1 -x 390 -y -570 -defaultsOSRD
+preplace inst mj_not_0 -pg 1 -lvl 3 -x 2450 -y 770 -defaultsOSRD -orient R180
+preplace inst CNTtest_0 -pg 1 -lvl 3 -x 2450 -y -810 -defaultsOSRD
+preplace inst count_ip_0 -pg 1 -lvl 3 -x 2450 -y 2120 -defaultsOSRD
+preplace inst MaxdataTrans_ip_0 -pg 1 -lvl 3 -x 2450 -y 2350 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 2450 -y 1450 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 3720 -y 1720 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 6 -x 3720 -y 1920 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 3290 -y 1340 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 390 -y 2324 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 2450 -y 650 -defaultsOSRD
+preplace inst clk_wiz_2 -pg 1 -lvl 3 -x 2450 -y 920 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 2 -x 1992 -y -610 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 5 -x 3290 -y -50 -defaultsOSRD
+preplace inst fifo_generator_1 -pg 1 -lvl 5 -x 3290 -y 420 -defaultsOSRD
+preplace inst fifo_generator_2 -pg 1 -lvl 3 -x 2450 -y 410 -defaultsOSRD
+preplace inst fifo_generator_3 -pg 1 -lvl 3 -x 2450 -y -10 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 4 -x 2910 -y -260 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 390 -y 1402 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 390 -y 1050 -defaultsOSRD
+preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 7 -x 4150 -y 870 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 2450 -y 1890 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -x 390 -y -430 -defaultsOSRD -orient R180
+preplace inst xlconcat_0 -pg 1 -lvl 5 -x 3290 -y 1590 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 390 -y -710 -defaultsOSRD -orient R180
+preplace inst xlconstant_3 -pg 1 -lvl 4 -x 2910 -y 1130 -defaultsOSRD -orient R180
+preplace netloc MCU_D2_ADCSData_1 1 7 1 4360 30n
+preplace netloc MJ_IBUFG_DS_0_out1 1 1 2 N 700 2170
+preplace netloc MJ_OBUFGDS_0_sigout_P 1 6 2 NJ 630 4350
 preplace netloc MJ_OBUFGDS_0_sigout_N 1 6 2 NJ 650 N
-preplace netloc ps7_0_axi_periph|s01_couplers_to_xbar 1 1 1 1100
-preplace netloc uart_rx_1 1 6 2 N 1370 4290
-preplace netloc ADC_CLKin_N_1 1 0 1 100
-preplace netloc clkin_10MHz_P_1 1 0 1 NJ
-preplace netloc ADC_DB12N_1 1 0 1 110J
-preplace netloc IN_spline1_0_1 1 0 3 -20J 2430 1790J 2340 NJ
-preplace netloc IN_START_0_1 1 0 3 NJ -760 NJ -760 NJ
-preplace netloc clk_wiz_1_clk_out1 1 0 8 130J -330 NJ -330 2130 -540 2770 -540 3010 -540 3390 -680 N -680 N
-preplace netloc MJ_OBUFGDS_0_sigout_P 1 6 2 3890J 610 N
-preplace netloc Data_FIFO_WREn_1 1 2 6 2210 -370 2650 -500 3030J -170 NJ -170 NJ -170 4310
-preplace netloc ps7_0_axi_periph|s00_couplers|s00_couplers_to_auto_pc 1 0 1 530
-preplace netloc count_ip_0_stop 1 3 5 2770J 2100 NJ 2100 NJ 2100 NJ 2100 N
-preplace netloc ADC_DB8P_1 1 0 1 -30J
-preplace netloc ps7_0_axi_periph|S00_ACLK_1 1 0 1 N
-preplace netloc ADC_DA2N_1 1 0 1 90J
-preplace netloc ps7_0_axi_periph|m02_couplers_to_ps7_0_axi_periph 1 3 1 N
-preplace netloc ps7_0_axi_periph|s00_couplers_to_xbar 1 1 1 1080
-preplace netloc IN_STOP_0_1 1 0 3 NJ -780 NJ -780 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 7 160 1140 N 1140 N 1140 2670 1180 N 1180 N 1180 3870J
-preplace netloc clk_wiz_0_clk_out2 1 0 4 140J -380 1760J -380 N -380 2640
-preplace netloc ps7_0_axi_periph|m00_couplers_to_ps7_0_axi_periph 1 3 1 N
-preplace netloc processing_system7_0_M_AXI_GP1 1 0 7 170J 1160 NJ 1160 NJ 1160 2640J 1190 NJ 1190 NJ 1190 3860
-preplace netloc CNTtest_0_SIGN_CNTA 1 3 1 2690
-preplace netloc xlconstant_0_dout 1 3 1 2740
-preplace netloc CNTtest_0_SIGN_CNTB 1 3 1 2680
-preplace netloc fifo_generator_0_prog_full 1 3 5 2790 -520 N -520 3360J -450 N -450 N
-preplace netloc ADC_DA0P_1 1 0 1 120J
-preplace netloc ADS4249_Decode_0_daout 1 1 4 N -10 2150 -410 2660 -490 3020
-preplace netloc processing_system7_0_UART1_TX 1 6 2 N 1350 4310
-preplace netloc CNTtest_0_SIGN_CNTC 1 3 1 2670
-preplace netloc IN_CNTC_0_1 1 0 3 NJ -800 NJ -800 NJ
-preplace netloc MJ_inputclk_ds_gbuf_0_clkout_gbuf 1 1 1 1760
-preplace netloc mj_not_0_out1 1 0 3 130J -370 1770J -370 2140J
-preplace netloc axi_dma_0_s2mm_introut 1 3 2 N 1520 3000
+preplace netloc clkin_10MHz_P_1 1 0 1 NJ 690
+preplace netloc clkin_10MHz_N_1 1 0 1 NJ 710
+preplace netloc ADC_DA0P_1 1 0 1 120J -420n
+preplace netloc ADC_DA0N_1 1 0 1 110J -400n
+preplace netloc ADC_DA2P_1 1 0 1 100J -360n
+preplace netloc ADC_DA2N_1 1 0 1 90J -330n
+preplace netloc ADC_DA4P_1 1 0 1 80J -300n
+preplace netloc ADC_DA4N_1 1 0 1 70J -280n
+preplace netloc ADC_DA6P_1 1 0 1 50J -180n
+preplace netloc ADC_DA6N_1 1 0 1 60J -200n
+preplace netloc ADC_DA8P_1 1 0 1 30J -130n
+preplace netloc ADC_DA8N_1 1 0 1 40J -150n
+preplace netloc ADC_DA10P_1 1 0 1 20J -100n
+preplace netloc ADC_DA10N_1 1 0 1 10J -80n
+preplace netloc ADC_DA12P_1 1 0 1 0J -50n
+preplace netloc ADC_DA12N_1 1 0 1 -10J -30n
+preplace netloc ADC_DB0P_1 1 0 1 10J 10n
+preplace netloc ADC_DB0N_1 1 0 1 -30J 30n
+preplace netloc ADC_DB2P_1 1 0 1 NJ 60
+preplace netloc ADC_DB2N_1 1 0 1 NJ 80
+preplace netloc ADC_DB4P_1 1 0 1 NJ 100
+preplace netloc ADC_DB4N_1 1 0 1 NJ 120
+preplace netloc ADC_DB6P_1 1 0 1 30J 140n
+preplace netloc ADC_DB6N_1 1 0 1 30J 160n
+preplace netloc ADC_DB8P_1 1 0 1 -30J 180n
+preplace netloc ADC_DB8N_1 1 0 1 -20J -10n
+preplace netloc ADC_DB10P_1 1 0 1 -20J 220n
+preplace netloc ADC_DB10N_1 1 0 1 20J 240n
+preplace netloc ADC_DB12P_1 1 0 1 70J 260n
+preplace netloc ADC_DB12N_1 1 0 1 110J 280n
+preplace netloc ADS4249_Decode_0_daout 1 1 4 N -10 2170 -400 2630 -490 3010
+preplace netloc MCU_D3_ADCSen_1 1 7 1 4350 -30n
+preplace netloc MCU_D0_ADCReset_1 1 7 1 4370 0n
+preplace netloc MCU_D1_ADCSCLK_1 1 7 1 4380 60n
+preplace netloc axi_dma_0_mm2s_introut 1 3 2 N 1500 3090
+preplace netloc axi_dma_0_s2mm_introut 1 3 2 N 1520 3020
+preplace netloc axis_data_fifo_0_m_axis_tlast 1 1 2 570 1432 2160
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 7 170 830 N 830 N 830 N 830 N 830 N 830 3940
+preplace netloc processing_system7_0_UART1_TX 1 6 2 N 1350 4360
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 0 2 140 950 560
+preplace netloc s_axis_aclk_0_1 1 0 1 60J 1660n
+preplace netloc s_axis_aresetn_0_1 1 0 1 30J 1700n
+preplace netloc uart_rx_1 1 6 2 N 1370 4330
+preplace netloc xlconcat_0_dout 1 5 1 3500 1420n
+preplace netloc xlconstant_0_dout 1 3 1 2730 1130n
+preplace netloc clk_wiz_0_locked 1 3 5 2760 750 N 750 N 750 N 750 N
+preplace netloc fifo_generator_0_dout 1 4 4 3120J -200 NJ -200 NJ -200 N
+preplace netloc Data_FIFO_Rst_1 1 2 6 2190 130 2650 20 3030J 80 NJ 80 NJ 80 4340
+preplace netloc Data_FIFO_WREn_1 1 2 6 2230 -370 2640 -530 3060J -190 NJ -190 NJ -190 4370
+preplace netloc fifo_generator_1_dout 1 4 4 3110J -210 NJ -210 NJ -210 4380
+preplace netloc fifo_generator_2_dout 1 2 6 2220J 270 NJ 270 NJ 270 NJ 270 NJ 270 4330
+preplace netloc fifo_generator_3_dout 1 2 6 2220J 150 NJ 150 NJ 150 NJ 150 NJ 150 4340
+preplace netloc gpio_in_TimeCNT_A_1 1 6 2 3930 1870 N
+preplace netloc gpio_in_TimeCNT_B_1 1 6 2 3950 1910 N
+preplace netloc Net1 1 2 6 2200J -350 2740J -500 3020J -180 N -180 N -180 4350
+preplace netloc Net2 1 2 6 2210 140 N 140 3090 -220 N -220 N -220 4370
+preplace netloc fifo_generator_2_prog_full 1 2 2 2230 280 2630
+preplace netloc fifo_generator_3_prog_full 1 2 2 2230 120 2630
+preplace netloc fifo_generator_0_prog_full 1 3 5 2770 -520 3070 -240 3460J -230 N -230 4360
+preplace netloc ADC_CLKin_P_1 1 0 1 110 -640n
+preplace netloc ADC_CLKin_N_1 1 0 1 110 -600n
+preplace netloc mj_not_0_out1 1 0 3 130J -370 570J -370 2160J
+preplace netloc clk_wiz_0_clk_out2 1 0 4 140J -360 560J -360 N -360 2640
+preplace netloc MJ_inputclk_ds_gbuf_0_clkout_gbuf 1 1 1 560 -600n
+preplace netloc clk_wiz_1_clk_out1 1 0 8 130J -340 NJ -340 2150 -550 2750 -550 3040 -550 3490 -680 N -680 N
+preplace netloc DataA_FIFO_RDEn_1 1 3 5 2790 -540 3100 -540 NJ -540 N -540 4350
+preplace netloc fifo_generator_1_prog_full 1 3 5 2780 -510 3050 -230 3470J -240 N -240 4350
+preplace netloc DataB_FIFO_RDEn_1 1 3 5 2760 -560 3080 -580 NJ -580 N -580 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 2 6 2180 840 N 840 N 840 N 840 3950 1600 N
+preplace netloc xlconstant_0_dout1 1 0 1 120 -710n
 preplace netloc clk_wiz_2_clk_out1 1 3 3 2690 640 NJ 640 NJ
-preplace netloc CNTtest_0_OUT_CNTEN 1 3 1 2700
-preplace netloc IN_CNTEN_0_1 1 0 3 NJ -740 NJ -740 NJ
-preplace netloc fifo_generator_3_prog_full 1 2 2 2210 110 2630
-preplace netloc ADC_DB8N_1 1 0 1 -20J
-levelinfo -pg 1 -50 390 1992 2450 2900 3220 3630 4090 4340 -top -1260 -bot 3480
-levelinfo -hier ps7_0_axi_periph * 570 1220 1530 *
-levelinfo -hier ps7_0_axi_periph|s00_couplers * 650 860 *
-levelinfo -hier ps7_0_axi_periph|s01_couplers * 650 860 *
-",
+preplace netloc input_fx_0_1 1 0 3 NJ 2090 NJ 2090 2100J
+preplace netloc count_ip_0_gate_out 1 3 5 NJ 2100 NJ 2100 NJ 2100 NJ 2100 4330
+preplace netloc count_ip_0_stop 1 3 5 NJ 2120 NJ 2120 NJ 2120 NJ 2120 4360
+preplace netloc count_ip_0_start 1 3 5 NJ 2140 NJ 2140 NJ 2140 NJ 2140 4380
+preplace netloc rst_ps7_0_100M_peripheral_aresetn1 1 0 8 150 1172 570 1172 2120 1240 NJ 1240 3010 1240 3470 1800 3940 1790 N
+preplace netloc IN_CNTA_0_1 1 0 3 NJ -840 NJ -840 NJ
+preplace netloc IN_CNTB_0_1 1 0 3 NJ -820 NJ -820 NJ
+preplace netloc IN_CNTC_0_1 1 0 3 NJ -800 NJ -800 NJ
+preplace netloc IN_STOP_0_1 1 0 3 NJ -780 NJ -780 NJ
+preplace netloc IN_START_0_1 1 0 3 120J -770 NJ -770 2120J
+preplace netloc IN_CNTEN_0_1 1 0 3 110J -810 NJ -810 2150J
+preplace netloc CNTtest_0_SIGN_CNTC 1 3 1 2650 -730n
+preplace netloc CNTtest_0_SIGN_CNTB 1 3 1 2660 -750n
+preplace netloc CNTtest_0_SIGN_CNTA 1 3 1 2670 -770n
+preplace netloc CNTtest_0_OUT_CNTEN 1 3 1 2680 -790n
+preplace netloc CNTtest_0_OUT_START 1 3 1 2690 -810n
+preplace netloc CNTtest_0_OUT_STOP 1 3 1 2700 -830n
+preplace netloc CNTtest_0_OUT_CNTC 1 3 1 2710 -850n
+preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 2 6 2200 -950 NJ -950 NJ -950 NJ -950 NJ -950 4320
+preplace netloc CNTtest_0_OUT_CNTB 1 3 1 2720 -870n
+preplace netloc CNTtest_0_OUT_CNTA 1 3 1 2730 -890n
+preplace netloc IN_Correction_0_1 1 0 3 -10J 2414 580J 2320 NJ
+preplace netloc IN_spline1_0_1 1 0 3 -20J 2434 590J 2340 NJ
+preplace netloc IN_spline2_0_1 1 0 3 -30J 2424 600J 2360 NJ
+preplace netloc util_vector_logic_0_Res 1 2 2 2230 1950 2630
+preplace netloc axi_smc_M00_AXI 1 5 1 N 1340
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 2 2790 1330 N
+preplace netloc axis_data_fifo_0_M_AXIS 1 1 2 560 1412 2160
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 7 160 1152 N 1152 N 1152 2670 1210 N 1210 3500 1230 3920J
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 2 2640 1310 N
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 5 560 1250 N 1250 N 1250 N 1250 3480
+preplace netloc ps7_0_axi_periph_M02_AXI 1 1 5 NJ 1402 2140J 1660 NJ 1660 NJ 1660 3460
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 2 N 1362 2160
+preplace netloc processing_system7_0_M_AXI_GP1 1 0 7 170J 1162 NJ 1162 NJ 1162 2640J 1190 NJ 1190 NJ 1190 3930
+preplace netloc ps7_0_axi_periph_M03_AXI 1 1 2 NJ 1422 2130
+preplace netloc ps7_0_axi_periph_M04_AXI 1 1 2 NJ 1442 2110
+preplace netloc processing_system7_0_FIXED_IO 1 6 2 N 1310 4350
+preplace netloc S_AXIS_0_1 1 0 1 90 1620n
+preplace netloc processing_system7_0_DDR 1 6 2 N 1290 4350
+preplace netloc axi_gpio_0_GPIO 1 6 2 3930 1670 N
+levelinfo -pg 1 -50 390 1992 2450 2910 3290 3720 4150 4400
+pagesize -pg 1 -db -bbox -sgen -240 -1260 4620 3480
+"
 }
 {
-   da_axi4_cnt: "6",
-   da_board_cnt: "3",
-   da_clkrst_cnt: "2",
-   da_ps7_cnt: "1",
+   "da_axi4_cnt":"6",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"2",
+   "da_ps7_cnt":"1"
 }

@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:user:CNTtest:1.0
 // IP Revision: 6
 
-(* X_CORE_INFO = "CNTtest,Vivado 2017.4" *)
+(* X_CORE_INFO = "CNTtest,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_CNTtest_0_1,CNTtest,{}" *)
-(* CORE_GENERATION_INFO = "design_1_CNTtest_0_1,CNTtest,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=CNTtest,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_CNTtest_0_1,CNTtest,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=CNTtest,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_CNTtest_0_1 (
   sys_clk,

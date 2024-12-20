@@ -1,0 +1,473 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_xlconstant_0_1 (xilinx.com:ip:xlconstant:1.1) from (Rev. 3) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_xlconstant_0_0 (xilinx.com:ip:xlconstant:1.1) from (Rev. 3) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconcat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_xlconcat_0_0 (xilinx.com:ip:xlconcat:2.1) from (Rev. 1) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_vio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_vio_0_0 (xilinx.com:ip:vio:3.0) from (Rev. 17) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_util_vector_logic_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_util_vector_logic_0_0 (xilinx.com:ip:util_vector_logic:2.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps7_0_100M_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_rst_ps7_0_100M_1_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps7_0_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_rst_ps7_0_100M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ps7_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ps7_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 16) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_0_0 (xilinx.com:ip:ila:6.2) from (Rev. 5) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_fifo_generator_2_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_fifo_generator_2_1 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 1) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_fifo_generator_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_fifo_generator_2_0 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 1) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_fifo_generator_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_fifo_generator_0_2 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 1) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_fifo_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_fifo_generator_0_0 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 1) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clk_wiz_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clk_wiz_1_0 from xilinx.com:ip:clk_wiz:5.4 (Rev. 3) to xilinx.com:ip:clk_wiz:6.0 (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clk_wiz_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clk_wiz_0_1 from xilinx.com:ip:clk_wiz:5.4 (Rev. 3) to xilinx.com:ip:clk_wiz:6.0 (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clk_wiz_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clk_wiz_0_0 from xilinx.com:ip:clk_wiz:5.4 (Rev. 3) to xilinx.com:ip:clk_wiz:6.0 (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axis_data_fifo_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_axis_data_fifo_0_0 from xilinx.com:ip:axis_data_fifo:1.1 (Rev. 16) to xilinx.com:ip:axis_data_fifo:2.0 (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_axis_data_fifo_0_0'.
+
+
+-Upgrade has removed interface 'M_RSTIF'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_axis_data_fifo_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'axis_data_count'
+
+-Upgrade has removed port 'm_axis_aresetn'
+
+
+4. Upgrade messages
+-------------------
+
+Added parameter HAS_WR_DATA_COUNT with value 1 (source 'default')
+Added parameter HAS_RD_DATA_COUNT with value 1 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_smc_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_smc_0 (xilinx.com:ip:smartconnect:1.0) from (Rev. 7) to (Rev. 14)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection and Interface Information
+---------------------------------------
+
+Connection and Interface information can not be compared for deferred elaboration IPs.
+design_1_axi_smc_0 may have connection or interface changes.
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_gpio_0_1 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 17) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 17) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec 20 18:29:27 2024
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z030ffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_dma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_dma_0_0 (xilinx.com:ip:axi_dma:7.1) from (Rev. 16) to (Rev. 23)
+

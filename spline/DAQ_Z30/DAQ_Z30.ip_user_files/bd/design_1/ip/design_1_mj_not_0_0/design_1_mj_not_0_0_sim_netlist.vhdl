@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu Jan  4 15:38:56 2024
--- Host        : Lenovo running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Fri Dec 20 18:30:50 2024
+-- Host        : DESKTOP-V402F34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/Users/12554/Desktop/DAQ/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_mj_not_0_0/design_1_mj_not_0_0_sim_netlist.vhdl
+--               d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_mj_not_0_0/design_1_mj_not_0_0_sim_netlist.vhdl
 -- Design      : design_1_mj_not_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,7 +26,7 @@ entity design_1_mj_not_0_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_mj_not_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_1_mj_not_0_0 : entity is "mj_not,Vivado 2017.4";
+  attribute X_CORE_INFO of design_1_mj_not_0_0 : entity is "mj_not,Vivado 2020.2";
 end design_1_mj_not_0_0;
 
 architecture STRUCTURE of design_1_mj_not_0_0 is

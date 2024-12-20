@@ -10,5 +10,6 @@ create_clock -name clkin_10MHz_P -period 10.173 [get_ports clkin_10MHz_P]
 create_clock -name clkin_10MHz_N -period 10.173 [get_ports clkin_10MHz_N]
 create_clock -name s_axis_aclk -period 10 [get_ports s_axis_aclk]
 create_clock -name FIFO_Clk -period 4 [get_ports FIFO_Clk]
+create_clock -name processing_system7_0_FCLK_CLK0 -period 10 [get_pins processing_system7_0/FCLK_CLK0]
 
 ################################################################################

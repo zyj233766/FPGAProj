@@ -1,200 +1,113 @@
 #-----------------------------------------------------------
-# Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Oct 22 21:43:02 2024
-# Process ID: 24636
-# Current directory: C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec 20 18:30:15 2024
+# Process ID: 111528
+# Current directory: D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1
 # Command line: vivado.exe -log design_1_count_ip_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_count_ip_0_2.tcl
-# Log file: C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1/design_1_count_ip_0_2.vds
-# Journal file: C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1\vivado.jou
+# Log file: D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1/design_1_count_ip_0_2.vds
+# Journal file: D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_count_ip_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Git/spline/myip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/Vivado/2020.2/data/ip'.
 Command: synth_design -top design_1_count_ip_0_2 -part xc7z030ffg676-2 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z030'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z030'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5980 
+INFO: [Device 21-403] Loading part xc7z030ffg676-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 126116
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 406.211 ; gain = 99.977
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1176.852 ; gain = 53.938
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_count_ip_0_2' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/synth/design_1_count_ip_0_2.v:57]
-INFO: [Synth 8-638] synthesizing module 'count_ip_v1_0' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'design_1_count_ip_0_2' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/synth/design_1_count_ip_0_2.v:57]
+INFO: [Synth 8-6157] synthesizing module 'count_ip_v1_0' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0.v:4]
 	Parameter C_S0_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S0_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'count_ip_v1_0_S0_AXI' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'count_ip_v1_0_S0_AXI' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:238]
-INFO: [Synth 8-226] default block is never used [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:379]
-INFO: [Synth 8-638] synthesizing module 'counter' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count.v:3]
+INFO: [Synth 8-226] default block is never used [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:238]
+INFO: [Synth 8-226] default block is never used [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:379]
+INFO: [Synth 8-6157] synthesizing module 'counter' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count.v:3]
 	Parameter CNT_GATE_CNT bound to: 200000000 - type: integer 
 	Parameter CNT_GATE_LOW bound to: 100000000 - type: integer 
 	Parameter CNT_GATE_OUT bound to: 50000000 - type: integer 
 	Parameter CNT_START_STOP_OUT bound to: 5000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'counter' (1#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count.v:3]
-WARNING: [Synth 8-689] width (30) of port connection 'cnt_fx_reg' does not match port width (32) of module 'counter' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:412]
-WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:177]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg0_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:230]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:231]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:232]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:233]
-INFO: [Synth 8-256] done synthesizing module 'count_ip_v1_0_S0_AXI' (2#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:4]
-INFO: [Synth 8-256] done synthesizing module 'count_ip_v1_0' (3#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0.v:4]
-INFO: [Synth 8-256] done synthesizing module 'design_1_count_ip_0_2' (4#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/synth/design_1_count_ip_0_2.v:57]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[3]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[2]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[1]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[0]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[31]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[30]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[29]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[28]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[27]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[26]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[25]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[24]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[23]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[22]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[21]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[20]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[19]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[18]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[17]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[16]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[15]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[14]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[13]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[12]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[11]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[10]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[9]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[8]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[7]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[6]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[5]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[4]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[3]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[2]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[1]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[0]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design count_ip_v1_0_S0_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (1#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count.v:3]
+WARNING: [Synth 8-689] width (30) of port connection 'cnt_fx_reg' does not match port width (32) of module 'counter' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:412]
+INFO: [Synth 8-6155] done synthesizing module 'count_ip_v1_0_S0_AXI' (2#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0_S0_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'count_ip_v1_0' (3#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count_ip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_count_ip_0_2' (4#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/synth/design_1_count_ip_0_2.v:57]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 458.637 ; gain = 152.402
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1234.887 ; gain = 111.973
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 458.637 ; gain = 152.402
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z030ffg676-2
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1234.887 ; gain = 111.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1234.887 ; gain = 111.973
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1234.887 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1342.715 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 826.250 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1342.762 ; gain = 0.047
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 826.250 ; gain = 520.016
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z030ffg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 826.250 ; gain = 520.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 826.250 ; gain = 520.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "cnt_gate_fs" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element cnt_fx_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count.v:134]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 826.250 ; gain = 520.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 13    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   4 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module counter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 2     
-	                1 Bit    Registers := 7     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 1     
-Module count_ip_v1_0_S0_AXI 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -208,113 +121,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "inst/count_ip_v1_0_S0_AXI_inst/u_counter/cnt_gate_fs" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "inst/count_ip_v1_0_S0_AXI_inst/u_counter/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element inst/count_ip_v1_0_S0_AXI_inst/u_counter/cnt_fx_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/9a4c/hdl/count.v:134]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awaddr[3]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awaddr[2]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awaddr[1]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awaddr[0]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awprot[2]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awprot[1]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_awprot[0]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[31]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[30]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[29]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[28]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[27]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[26]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[25]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[24]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[23]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[22]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[21]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[20]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[19]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[18]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[17]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[16]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[15]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[14]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[13]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[12]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[11]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[10]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[9]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[8]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[7]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[6]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[5]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[4]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[3]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[2]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[1]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wdata[0]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wstrb[3]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wstrb[2]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wstrb[1]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_wstrb[0]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_arprot[2]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_arprot[1]
-WARNING: [Synth 8-3331] design design_1_count_ip_0_2 has unconnected port s0_axi_arprot[0]
-INFO: [Synth 8-3886] merging instance 'inst/count_ip_v1_0_S0_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/count_ip_v1_0_S0_AXI_inst/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/count_ip_v1_0_S0_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/count_ip_v1_0_S0_AXI_inst/axi_rdata_reg[30]' (FDRE) to 'inst/count_ip_v1_0_S0_AXI_inst/axi_rdata_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/count_ip_v1_0_S0_AXI_inst/axi_rdata_reg[31] )
-INFO: [Synth 8-3886] merging instance 'inst/count_ip_v1_0_S0_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/count_ip_v1_0_S0_AXI_inst/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/count_ip_v1_0_S0_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/u_counter/cnt_fx_reg[30]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/u_counter/cnt_fx_reg[31]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/u_counter/cnt_fx_reg_reg[31]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/u_counter/cnt_fx_reg_reg[30]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/axi_rdata_reg[31]) is unused and will be removed from module design_1_count_ip_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/count_ip_v1_0_S0_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_count_ip_0_2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 826.250 ; gain = 520.016
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 829.895 ; gain = 523.660
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 830.043 ; gain = 523.809
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1342.762 ; gain = 219.848
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1343.734 ; gain = 220.820
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -331,50 +158,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -391,48 +205,40 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |    16|
-|2     |LUT1   |     1|
-|3     |LUT2   |    37|
+|2     |LUT1   |     2|
+|3     |LUT2   |    66|
 |4     |LUT3   |    35|
 |5     |LUT4   |    11|
-|6     |LUT5   |     7|
-|7     |LUT6   |    56|
+|6     |LUT5   |     8|
+|7     |LUT6   |    11|
 |8     |FDCE   |    99|
 |9     |FDRE   |    37|
 |10    |FDSE   |     1|
 +------+-------+------+
-
-Report Instance Areas: 
-+------+------------------------------+---------------------+------+
-|      |Instance                      |Module               |Cells |
-+------+------------------------------+---------------------+------+
-|1     |top                           |                     |   300|
-|2     |  inst                        |count_ip_v1_0        |   300|
-|3     |    count_ip_v1_0_S0_AXI_inst |count_ip_v1_0_S0_AXI |   300|
-|4     |      u_counter               |counter              |   223|
-+------+------------------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 851.230 ; gain = 177.383
-Synthesis Optimization Complete : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 851.230 ; gain = 544.996
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1351.246 ; gain = 120.457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.246 ; gain = 228.332
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1363.328 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1368.582 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-44 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+27 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 853.266 ; gain = 558.551
-INFO: [Common 17-1381] The checkpoint 'C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1/design_1_count_ip_0_2.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/design_1_count_ip_0_2.xci
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.582 ; gain = 245.668
+INFO: [Common 17-1381] The checkpoint 'D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1/design_1_count_ip_0_2.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_count_ip_0_2, cache-ID = 7e88752708b966af
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1/design_1_count_ip_0_2.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_count_ip_0_2_synth_1/design_1_count_ip_0_2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_count_ip_0_2_utilization_synth.rpt -pb design_1_count_ip_0_2_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 853.266 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 22 21:43:27 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 18:30:52 2024...

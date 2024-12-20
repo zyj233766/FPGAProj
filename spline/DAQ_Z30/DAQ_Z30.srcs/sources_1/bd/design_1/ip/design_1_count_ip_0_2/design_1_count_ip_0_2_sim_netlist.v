@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Tue Oct 22 21:43:27 2024
-// Host        : Lenovo running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Fri Dec 20 18:30:52 2024
+// Host        : DESKTOP-V402F34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/design_1_count_ip_0_2_sim_netlist.v
+//               d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_count_ip_0_2/design_1_count_ip_0_2_sim_netlist.v
 // Design      : design_1_count_ip_0_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_count_ip_0_2,count_ip_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "count_ip_v1_0,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "design_1_count_ip_0_2,count_ip_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "count_ip_v1_0,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module design_1_count_ip_0_2
    (input_fx,
@@ -118,37 +118,37 @@ endmodule
 
 (* ORIG_REF_NAME = "count_ip_v1_0" *) 
 module design_1_count_ip_0_2_count_ip_v1_0
-   (S_AXI_ARREADY,
-    start,
+   (start,
     stop,
     gate_out,
     s0_axi_wready,
     S_AXI_AWREADY,
+    S_AXI_ARREADY,
     s0_axi_rdata,
     s0_axi_rvalid,
     s0_axi_bvalid,
-    s0_axi_arvalid,
     s0_axi_aclk,
     input_fx,
     s0_axi_araddr,
+    s0_axi_arvalid,
     s0_axi_wvalid,
     s0_axi_awvalid,
     s0_axi_aresetn,
     s0_axi_bready,
     s0_axi_rready);
-  output S_AXI_ARREADY;
   output start;
   output stop;
   output gate_out;
   output s0_axi_wready;
   output S_AXI_AWREADY;
+  output S_AXI_ARREADY;
   output [29:0]s0_axi_rdata;
   output s0_axi_rvalid;
   output s0_axi_bvalid;
-  input s0_axi_arvalid;
   input s0_axi_aclk;
   input input_fx;
   input [1:0]s0_axi_araddr;
+  input s0_axi_arvalid;
   input s0_axi_wvalid;
   input s0_axi_awvalid;
   input s0_axi_aresetn;
@@ -197,37 +197,37 @@ endmodule
 
 (* ORIG_REF_NAME = "count_ip_v1_0_S0_AXI" *) 
 module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
-   (S_AXI_ARREADY,
-    start,
+   (start,
     stop,
     gate_out,
     s0_axi_wready,
     S_AXI_AWREADY,
+    S_AXI_ARREADY,
     s0_axi_rdata,
     s0_axi_rvalid,
     s0_axi_bvalid,
-    s0_axi_arvalid,
     s0_axi_aclk,
     input_fx,
     s0_axi_araddr,
+    s0_axi_arvalid,
     s0_axi_wvalid,
     s0_axi_awvalid,
     s0_axi_aresetn,
     s0_axi_bready,
     s0_axi_rready);
-  output S_AXI_ARREADY;
   output start;
   output stop;
   output gate_out;
   output s0_axi_wready;
   output S_AXI_AWREADY;
+  output S_AXI_ARREADY;
   output [29:0]s0_axi_rdata;
   output s0_axi_rvalid;
   output s0_axi_bvalid;
-  input s0_axi_arvalid;
   input s0_axi_aclk;
   input input_fx;
   input [1:0]s0_axi_araddr;
+  input s0_axi_arvalid;
   input s0_axi_wvalid;
   input s0_axi_awvalid;
   input s0_axi_aresetn;
@@ -241,11 +241,11 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
   wire [3:2]axi_araddr;
   wire \axi_araddr[2]_i_1_n_0 ;
   wire \axi_araddr[3]_i_1_n_0 ;
-  wire axi_arready_i_1_n_0;
-  wire axi_awready0;
+  wire axi_arready0;
+  wire axi_awready0__0;
   wire axi_bvalid_i_1_n_0;
   wire axi_rvalid_i_1_n_0;
-  wire axi_wready0;
+  wire axi_wready0__0;
   wire [29:0]cnt_fx_reg;
   wire gate_out;
   wire input_fx;
@@ -268,12 +268,12 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
   wire u_counter_n_0;
 
   LUT6 #(
-    .INIT(64'hFF7FF070F070F070)) 
+    .INIT(64'hF7FFF700F700F700)) 
     aw_en_i_1
        (.I0(s0_axi_awvalid),
         .I1(s0_axi_wvalid),
-        .I2(aw_en_reg_n_0),
-        .I3(S_AXI_AWREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(aw_en_reg_n_0),
         .I4(s0_axi_bready),
         .I5(s0_axi_bvalid),
         .O(aw_en_i_1_n_0));
@@ -291,7 +291,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I2(S_AXI_ARREADY),
         .I3(axi_araddr[2]),
         .O(\axi_araddr[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[3]_i_1 
@@ -312,41 +312,41 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .R(u_counter_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
        (.I0(s0_axi_arvalid),
         .I1(S_AXI_ARREADY),
-        .O(axi_arready_i_1_n_0));
+        .O(axi_arready0));
   FDRE axi_arready_reg
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .D(axi_arready_i_1_n_0),
+        .D(axi_arready0),
         .Q(S_AXI_ARREADY),
         .R(u_counter_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
-    axi_awready_i_1
-       (.I0(S_AXI_AWREADY),
-        .I1(aw_en_reg_n_0),
+    .INIT(16'h2000)) 
+    axi_awready0
+       (.I0(aw_en_reg_n_0),
+        .I1(S_AXI_AWREADY),
         .I2(s0_axi_wvalid),
         .I3(s0_axi_awvalid),
-        .O(axi_awready0));
+        .O(axi_awready0__0));
   FDRE axi_awready_reg
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .D(axi_awready0),
+        .D(axi_awready0__0),
         .Q(S_AXI_AWREADY),
         .R(u_counter_n_0));
   LUT6 #(
     .INIT(64'h0000FFFF80008000)) 
     axi_bvalid_i_1
-       (.I0(s0_axi_wready),
-        .I1(s0_axi_awvalid),
-        .I2(s0_axi_wvalid),
-        .I3(S_AXI_AWREADY),
+       (.I0(S_AXI_AWREADY),
+        .I1(s0_axi_wready),
+        .I2(s0_axi_awvalid),
+        .I3(s0_axi_wvalid),
         .I4(s0_axi_bready),
         .I5(s0_axi_bvalid),
         .O(axi_bvalid_i_1_n_0));
@@ -365,7 +365,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I3(axi_araddr[3]),
         .I4(start),
         .O(reg_data_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[10]_i_1 
@@ -373,7 +373,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[10]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[11]_i_1 
@@ -381,7 +381,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[11]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[12]_i_1 
@@ -389,7 +389,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[12]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[13]_i_1 
@@ -397,7 +397,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[13]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[14]_i_1 
@@ -405,7 +405,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[14]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[14]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[15]_i_1 
@@ -413,7 +413,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[15]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[15]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[16]_i_1 
@@ -421,7 +421,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[16]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[16]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[17]_i_1 
@@ -429,7 +429,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[17]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[17]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[18]_i_1 
@@ -437,7 +437,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[18]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[18]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[19]_i_1 
@@ -445,7 +445,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[19]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[19]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[1]_i_1 
@@ -453,7 +453,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[1]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[20]_i_1 
@@ -461,7 +461,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[20]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[20]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[21]_i_1 
@@ -469,7 +469,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[21]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[21]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[22]_i_1 
@@ -477,7 +477,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[22]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[22]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[23]_i_1 
@@ -485,7 +485,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[23]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[23]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[24]_i_1 
@@ -493,7 +493,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[24]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[24]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[25]_i_1 
@@ -501,7 +501,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[25]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[25]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[26]_i_1 
@@ -509,7 +509,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[26]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[26]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[27]_i_1 
@@ -517,7 +517,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[27]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[27]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[28]_i_1 
@@ -532,7 +532,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[29]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[29]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[2]_i_1 
@@ -540,7 +540,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[2]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[3]_i_1 
@@ -548,7 +548,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[3]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[4]_i_1 
@@ -556,7 +556,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[4]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[5]_i_1 
@@ -564,7 +564,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[5]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[6]_i_1 
@@ -572,7 +572,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[6]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[7]_i_1 
@@ -580,7 +580,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[7]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \axi_rdata[8]_i_1 
@@ -588,7 +588,7 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .I1(cnt_fx_reg[8]),
         .I2(axi_araddr[2]),
         .O(reg_data_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \axi_rdata[9]_i_1 
@@ -790,42 +790,42 @@ module design_1_count_ip_0_2_count_ip_v1_0_S0_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s0_axi_rvalid),
         .R(u_counter_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
-    axi_wready_i_1
-       (.I0(s0_axi_wready),
-        .I1(aw_en_reg_n_0),
+    .INIT(16'h2000)) 
+    axi_wready0
+       (.I0(aw_en_reg_n_0),
+        .I1(s0_axi_wready),
         .I2(s0_axi_wvalid),
         .I3(s0_axi_awvalid),
-        .O(axi_wready0));
+        .O(axi_wready0__0));
   FDRE axi_wready_reg
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .D(axi_wready0),
+        .D(axi_wready0__0),
         .Q(s0_axi_wready),
         .R(u_counter_n_0));
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h20)) 
     slv_reg_rden
-       (.I0(s0_axi_rvalid),
-        .I1(s0_axi_arvalid),
+       (.I0(s0_axi_arvalid),
+        .I1(s0_axi_rvalid),
         .I2(S_AXI_ARREADY),
         .O(slv_reg_rden__0));
   design_1_count_ip_0_2_counter u_counter
        (.Q(cnt_fx_reg),
         .gate_out(gate_out),
-        .gate_out_reg_0(u_counter_n_0),
         .input_fx(input_fx),
         .s0_axi_aclk(s0_axi_aclk),
         .s0_axi_aresetn(s0_axi_aresetn),
+        .s0_axi_aresetn_0(u_counter_n_0),
         .start(start),
         .stop(stop));
 endmodule
 
 (* ORIG_REF_NAME = "counter" *) 
 module design_1_count_ip_0_2_counter
-   (gate_out_reg_0,
+   (s0_axi_aresetn_0,
     start,
     stop,
     gate_out,
@@ -833,7 +833,7 @@ module design_1_count_ip_0_2_counter
     s0_axi_aclk,
     input_fx,
     s0_axi_aresetn);
-  output gate_out_reg_0;
+  output s0_axi_aresetn_0;
   output start;
   output stop;
   output gate_out;
@@ -917,7 +917,6 @@ module design_1_count_ip_0_2_counter
   wire \cnt_fx_reg[28]_i_1_n_3 ;
   wire \cnt_fx_reg[28]_i_1_n_6 ;
   wire \cnt_fx_reg[28]_i_1_n_7 ;
-  wire \cnt_fx_reg[29]_i_1_n_0 ;
   wire \cnt_fx_reg[4]_i_1_n_0 ;
   wire \cnt_fx_reg[4]_i_1_n_1 ;
   wire \cnt_fx_reg[4]_i_1_n_2 ;
@@ -965,13 +964,6 @@ module design_1_count_ip_0_2_counter
   wire cnt_gate_fs0_carry_n_1;
   wire cnt_gate_fs0_carry_n_2;
   wire cnt_gate_fs0_carry_n_3;
-  wire \cnt_gate_fs[31]_i_2_n_0 ;
-  wire \cnt_gate_fs[31]_i_3_n_0 ;
-  wire \cnt_gate_fs[31]_i_4_n_0 ;
-  wire \cnt_gate_fs[31]_i_5_n_0 ;
-  wire \cnt_gate_fs[31]_i_6_n_0 ;
-  wire \cnt_gate_fs[31]_i_7_n_0 ;
-  wire \cnt_gate_fs[31]_i_8_n_0 ;
   wire \cnt_gate_fs_reg_n_0_[0] ;
   wire \cnt_gate_fs_reg_n_0_[10] ;
   wire \cnt_gate_fs_reg_n_0_[11] ;
@@ -993,7 +985,9 @@ module design_1_count_ip_0_2_counter
   wire \cnt_gate_fs_reg_n_0_[26] ;
   wire \cnt_gate_fs_reg_n_0_[27] ;
   wire \cnt_gate_fs_reg_n_0_[28] ;
+  wire \cnt_gate_fs_reg_n_0_[29] ;
   wire \cnt_gate_fs_reg_n_0_[2] ;
+  wire \cnt_gate_fs_reg_n_0_[30] ;
   wire \cnt_gate_fs_reg_n_0_[3] ;
   wire \cnt_gate_fs_reg_n_0_[4] ;
   wire \cnt_gate_fs_reg_n_0_[5] ;
@@ -1005,6 +999,7 @@ module design_1_count_ip_0_2_counter
   wire gate_fx_d1;
   wire gate_fx_d2;
   wire gate_fx_d3;
+  wire gate_fx_nege;
   wire gate_out;
   wire gate_out_i_10_n_0;
   wire gate_out_i_11_n_0;
@@ -1013,9 +1008,6 @@ module design_1_count_ip_0_2_counter
   wire gate_out_i_14_n_0;
   wire gate_out_i_15_n_0;
   wire gate_out_i_16_n_0;
-  wire gate_out_i_17_n_0;
-  wire gate_out_i_18_n_0;
-  wire gate_out_i_19_n_0;
   wire gate_out_i_1_n_0;
   wire gate_out_i_2_n_0;
   wire gate_out_i_4_n_0;
@@ -1024,24 +1016,20 @@ module design_1_count_ip_0_2_counter
   wire gate_out_i_7_n_0;
   wire gate_out_i_8_n_0;
   wire gate_out_i_9_n_0;
-  wire gate_out_reg_0;
   wire gate_sclk;
   wire gate_sclk_i_1_n_0;
   wire gate_sclk_i_2_n_0;
-  wire gate_sclk_i_3_n_0;
-  wire gate_sclk_i_4_n_0;
-  wire gate_sclk_i_5_n_0;
-  wire gate_sclk_i_6_n_0;
-  wire gate_sclk_i_7_n_0;
   wire input_fx;
-  wire [2:1]p_0_in;
   wire p_0_in0;
   wire s0_axi_aclk;
   wire s0_axi_aresetn;
+  wire s0_axi_aresetn_0;
   wire start;
   wire start_0;
   wire start_i_2_n_0;
   wire start_i_3_n_0;
+  wire start_i_4_n_0;
+  wire start_i_5_n_0;
   wire stop;
   wire stop_i_1_n_0;
   wire stop_i_2_n_0;
@@ -1051,7 +1039,6 @@ module design_1_count_ip_0_2_counter
   wire stop_i_6_n_0;
   wire stop_i_7_n_0;
   wire stop_i_8_n_0;
-  wire stop_i_9_n_0;
   wire [3:1]\NLW_cnt_fx_reg[28]_i_1_CO_UNCONNECTED ;
   wire [3:2]\NLW_cnt_fx_reg[28]_i_1_O_UNCONNECTED ;
   wire [3:2]NLW_cnt_gate_fs0_carry__6_CO_UNCONNECTED;
@@ -1240,7 +1227,7 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[0] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[0]_i_1_n_7 ),
         .Q(cnt_fx_reg[0]));
   CARRY4 \cnt_fx_reg[0]_i_1 
@@ -1253,19 +1240,19 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[10] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[8]_i_1_n_5 ),
         .Q(cnt_fx_reg[10]));
   FDCE \cnt_fx_reg[11] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[8]_i_1_n_4 ),
         .Q(cnt_fx_reg[11]));
   FDCE \cnt_fx_reg[12] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[12]_i_1_n_7 ),
         .Q(cnt_fx_reg[12]));
   CARRY4 \cnt_fx_reg[12]_i_1 
@@ -1278,25 +1265,25 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[13] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[12]_i_1_n_6 ),
         .Q(cnt_fx_reg[13]));
   FDCE \cnt_fx_reg[14] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[12]_i_1_n_5 ),
         .Q(cnt_fx_reg[14]));
   FDCE \cnt_fx_reg[15] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[12]_i_1_n_4 ),
         .Q(cnt_fx_reg[15]));
   FDCE \cnt_fx_reg[16] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[16]_i_1_n_7 ),
         .Q(cnt_fx_reg[16]));
   CARRY4 \cnt_fx_reg[16]_i_1 
@@ -1309,31 +1296,31 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[17] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[16]_i_1_n_6 ),
         .Q(cnt_fx_reg[17]));
   FDCE \cnt_fx_reg[18] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[16]_i_1_n_5 ),
         .Q(cnt_fx_reg[18]));
   FDCE \cnt_fx_reg[19] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[16]_i_1_n_4 ),
         .Q(cnt_fx_reg[19]));
   FDCE \cnt_fx_reg[1] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[0]_i_1_n_6 ),
         .Q(cnt_fx_reg[1]));
   FDCE \cnt_fx_reg[20] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[20]_i_1_n_7 ),
         .Q(cnt_fx_reg[20]));
   CARRY4 \cnt_fx_reg[20]_i_1 
@@ -1346,25 +1333,25 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[21] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[20]_i_1_n_6 ),
         .Q(cnt_fx_reg[21]));
   FDCE \cnt_fx_reg[22] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[20]_i_1_n_5 ),
         .Q(cnt_fx_reg[22]));
   FDCE \cnt_fx_reg[23] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[20]_i_1_n_4 ),
         .Q(cnt_fx_reg[23]));
   FDCE \cnt_fx_reg[24] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[24]_i_1_n_7 ),
         .Q(cnt_fx_reg[24]));
   CARRY4 \cnt_fx_reg[24]_i_1 
@@ -1377,25 +1364,25 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[25] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[24]_i_1_n_6 ),
         .Q(cnt_fx_reg[25]));
   FDCE \cnt_fx_reg[26] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[24]_i_1_n_5 ),
         .Q(cnt_fx_reg[26]));
   FDCE \cnt_fx_reg[27] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[24]_i_1_n_4 ),
         .Q(cnt_fx_reg[27]));
   FDCE \cnt_fx_reg[28] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[28]_i_1_n_7 ),
         .Q(cnt_fx_reg[28]));
   CARRY4 \cnt_fx_reg[28]_i_1 
@@ -1408,7 +1395,7 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[29] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[28]_i_1_n_6 ),
         .Q(cnt_fx_reg[29]));
   LUT2 #(
@@ -1416,23 +1403,23 @@ module design_1_count_ip_0_2_counter
     \cnt_fx_reg[29]_i_1 
        (.I0(gate_fx_d3),
         .I1(gate_fx_d2),
-        .O(\cnt_fx_reg[29]_i_1_n_0 ));
+        .O(gate_fx_nege));
   FDCE \cnt_fx_reg[2] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[0]_i_1_n_5 ),
         .Q(cnt_fx_reg[2]));
   FDCE \cnt_fx_reg[3] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[0]_i_1_n_4 ),
         .Q(cnt_fx_reg[3]));
   FDCE \cnt_fx_reg[4] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[4]_i_1_n_7 ),
         .Q(cnt_fx_reg[4]));
   CARRY4 \cnt_fx_reg[4]_i_1 
@@ -1445,25 +1432,25 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[5] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[4]_i_1_n_6 ),
         .Q(cnt_fx_reg[5]));
   FDCE \cnt_fx_reg[6] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[4]_i_1_n_5 ),
         .Q(cnt_fx_reg[6]));
   FDCE \cnt_fx_reg[7] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[4]_i_1_n_4 ),
         .Q(cnt_fx_reg[7]));
   FDCE \cnt_fx_reg[8] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[8]_i_1_n_7 ),
         .Q(cnt_fx_reg[8]));
   CARRY4 \cnt_fx_reg[8]_i_1 
@@ -1476,189 +1463,190 @@ module design_1_count_ip_0_2_counter
   FDCE \cnt_fx_reg[9] 
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(\cnt_fx_reg[8]_i_1_n_6 ),
         .Q(cnt_fx_reg[9]));
   FDCE \cnt_fx_reg_reg[0] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[0]),
         .Q(Q[0]));
   FDCE \cnt_fx_reg_reg[10] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[10]),
         .Q(Q[10]));
   FDCE \cnt_fx_reg_reg[11] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[11]),
         .Q(Q[11]));
   FDCE \cnt_fx_reg_reg[12] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[12]),
         .Q(Q[12]));
   FDCE \cnt_fx_reg_reg[13] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[13]),
         .Q(Q[13]));
   FDCE \cnt_fx_reg_reg[14] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[14]),
         .Q(Q[14]));
   FDCE \cnt_fx_reg_reg[15] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[15]),
         .Q(Q[15]));
   FDCE \cnt_fx_reg_reg[16] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[16]),
         .Q(Q[16]));
   FDCE \cnt_fx_reg_reg[17] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[17]),
         .Q(Q[17]));
   FDCE \cnt_fx_reg_reg[18] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[18]),
         .Q(Q[18]));
   FDCE \cnt_fx_reg_reg[19] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[19]),
         .Q(Q[19]));
   FDCE \cnt_fx_reg_reg[1] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[1]),
         .Q(Q[1]));
   FDCE \cnt_fx_reg_reg[20] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[20]),
         .Q(Q[20]));
   FDCE \cnt_fx_reg_reg[21] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[21]),
         .Q(Q[21]));
   FDCE \cnt_fx_reg_reg[22] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[22]),
         .Q(Q[22]));
   FDCE \cnt_fx_reg_reg[23] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[23]),
         .Q(Q[23]));
   FDCE \cnt_fx_reg_reg[24] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[24]),
         .Q(Q[24]));
   FDCE \cnt_fx_reg_reg[25] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[25]),
         .Q(Q[25]));
   FDCE \cnt_fx_reg_reg[26] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[26]),
         .Q(Q[26]));
   FDCE \cnt_fx_reg_reg[27] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[27]),
         .Q(Q[27]));
   FDCE \cnt_fx_reg_reg[28] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[28]),
         .Q(Q[28]));
   FDCE \cnt_fx_reg_reg[29] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[29]),
         .Q(Q[29]));
   FDCE \cnt_fx_reg_reg[2] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[2]),
         .Q(Q[2]));
   FDCE \cnt_fx_reg_reg[3] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[3]),
         .Q(Q[3]));
   FDCE \cnt_fx_reg_reg[4] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[4]),
         .Q(Q[4]));
   FDCE \cnt_fx_reg_reg[5] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[5]),
         .Q(Q[5]));
   FDCE \cnt_fx_reg_reg[6] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[6]),
         .Q(Q[6]));
   FDCE \cnt_fx_reg_reg[7] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[7]),
         .Q(Q[7]));
   FDCE \cnt_fx_reg_reg[8] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[8]),
         .Q(Q[8]));
   FDCE \cnt_fx_reg_reg[9] 
        (.C(input_fx),
-        .CE(\cnt_fx_reg[29]_i_1_n_0 ),
-        .CLR(gate_out_reg_0),
+        .CE(gate_fx_nege),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_fx_reg[9]),
         .Q(Q[9]));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry
        (.CI(1'b0),
         .CO({cnt_gate_fs0_carry_n_0,cnt_gate_fs0_carry_n_1,cnt_gate_fs0_carry_n_2,cnt_gate_fs0_carry_n_3}),
@@ -1666,6 +1654,7 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[4:1]),
         .S({\cnt_gate_fs_reg_n_0_[4] ,\cnt_gate_fs_reg_n_0_[3] ,\cnt_gate_fs_reg_n_0_[2] ,\cnt_gate_fs_reg_n_0_[1] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__0
        (.CI(cnt_gate_fs0_carry_n_0),
         .CO({cnt_gate_fs0_carry__0_n_0,cnt_gate_fs0_carry__0_n_1,cnt_gate_fs0_carry__0_n_2,cnt_gate_fs0_carry__0_n_3}),
@@ -1673,6 +1662,7 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[8:5]),
         .S({\cnt_gate_fs_reg_n_0_[8] ,\cnt_gate_fs_reg_n_0_[7] ,\cnt_gate_fs_reg_n_0_[6] ,\cnt_gate_fs_reg_n_0_[5] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__1
        (.CI(cnt_gate_fs0_carry__0_n_0),
         .CO({cnt_gate_fs0_carry__1_n_0,cnt_gate_fs0_carry__1_n_1,cnt_gate_fs0_carry__1_n_2,cnt_gate_fs0_carry__1_n_3}),
@@ -1680,6 +1670,7 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[12:9]),
         .S({\cnt_gate_fs_reg_n_0_[12] ,\cnt_gate_fs_reg_n_0_[11] ,\cnt_gate_fs_reg_n_0_[10] ,\cnt_gate_fs_reg_n_0_[9] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__2
        (.CI(cnt_gate_fs0_carry__1_n_0),
         .CO({cnt_gate_fs0_carry__2_n_0,cnt_gate_fs0_carry__2_n_1,cnt_gate_fs0_carry__2_n_2,cnt_gate_fs0_carry__2_n_3}),
@@ -1687,6 +1678,7 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[16:13]),
         .S({\cnt_gate_fs_reg_n_0_[16] ,\cnt_gate_fs_reg_n_0_[15] ,\cnt_gate_fs_reg_n_0_[14] ,\cnt_gate_fs_reg_n_0_[13] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__3
        (.CI(cnt_gate_fs0_carry__2_n_0),
         .CO({cnt_gate_fs0_carry__3_n_0,cnt_gate_fs0_carry__3_n_1,cnt_gate_fs0_carry__3_n_2,cnt_gate_fs0_carry__3_n_3}),
@@ -1694,6 +1686,7 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[20:17]),
         .S({\cnt_gate_fs_reg_n_0_[20] ,\cnt_gate_fs_reg_n_0_[19] ,\cnt_gate_fs_reg_n_0_[18] ,\cnt_gate_fs_reg_n_0_[17] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__4
        (.CI(cnt_gate_fs0_carry__3_n_0),
         .CO({cnt_gate_fs0_carry__4_n_0,cnt_gate_fs0_carry__4_n_1,cnt_gate_fs0_carry__4_n_2,cnt_gate_fs0_carry__4_n_3}),
@@ -1701,6 +1694,7 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[24:21]),
         .S({\cnt_gate_fs_reg_n_0_[24] ,\cnt_gate_fs_reg_n_0_[23] ,\cnt_gate_fs_reg_n_0_[22] ,\cnt_gate_fs_reg_n_0_[21] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__5
        (.CI(cnt_gate_fs0_carry__4_n_0),
         .CO({cnt_gate_fs0_carry__5_n_0,cnt_gate_fs0_carry__5_n_1,cnt_gate_fs0_carry__5_n_2,cnt_gate_fs0_carry__5_n_3}),
@@ -1708,969 +1702,738 @@ module design_1_count_ip_0_2_counter
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(data0[28:25]),
         .S({\cnt_gate_fs_reg_n_0_[28] ,\cnt_gate_fs_reg_n_0_[27] ,\cnt_gate_fs_reg_n_0_[26] ,\cnt_gate_fs_reg_n_0_[25] }));
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt_gate_fs0_carry__6
        (.CI(cnt_gate_fs0_carry__5_n_0),
         .CO({NLW_cnt_gate_fs0_carry__6_CO_UNCONNECTED[3:2],cnt_gate_fs0_carry__6_n_2,cnt_gate_fs0_carry__6_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({NLW_cnt_gate_fs0_carry__6_O_UNCONNECTED[3],data0[31:29]}),
-        .S({1'b0,p_0_in0,p_0_in[1],p_0_in[2]}));
-  LUT6 #(
-    .INIT(64'h00000000FEFFFFFF)) 
+        .S({1'b0,p_0_in0,\cnt_gate_fs_reg_n_0_[30] ,\cnt_gate_fs_reg_n_0_[29] }));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \cnt_gate_fs[0]_i_1 
-       (.I0(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I1(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I3(\cnt_gate_fs_reg_n_0_[15] ),
-        .I4(\cnt_gate_fs_reg_n_0_[9] ),
-        .I5(\cnt_gate_fs_reg_n_0_[0] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[0] ),
         .O(cnt_gate_fs[0]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[10]_i_1 
-       (.I0(data0[10]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[10]),
         .O(cnt_gate_fs[10]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[11]_i_1 
-       (.I0(data0[11]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[11]),
         .O(cnt_gate_fs[11]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[12]_i_1 
-       (.I0(data0[12]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[12]),
         .O(cnt_gate_fs[12]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[13]_i_1 
-       (.I0(data0[13]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[13]),
         .O(cnt_gate_fs[13]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[14]_i_1 
-       (.I0(data0[14]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[14]),
         .O(cnt_gate_fs[14]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[15]_i_1 
-       (.I0(data0[15]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[15]),
         .O(cnt_gate_fs[15]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[16]_i_1 
-       (.I0(data0[16]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[16]),
         .O(cnt_gate_fs[16]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[17]_i_1 
-       (.I0(data0[17]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[17]),
         .O(cnt_gate_fs[17]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[18]_i_1 
-       (.I0(data0[18]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[18]),
         .O(cnt_gate_fs[18]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[19]_i_1 
-       (.I0(data0[19]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[19]),
         .O(cnt_gate_fs[19]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[1]_i_1 
-       (.I0(data0[1]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[1]),
         .O(cnt_gate_fs[1]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[20]_i_1 
-       (.I0(data0[20]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[20]),
         .O(cnt_gate_fs[20]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[21]_i_1 
-       (.I0(data0[21]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[21]),
         .O(cnt_gate_fs[21]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[22]_i_1 
-       (.I0(data0[22]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[22]),
         .O(cnt_gate_fs[22]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[23]_i_1 
-       (.I0(data0[23]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[23]),
         .O(cnt_gate_fs[23]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[24]_i_1 
-       (.I0(data0[24]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[24]),
         .O(cnt_gate_fs[24]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[25]_i_1 
-       (.I0(data0[25]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[25]),
         .O(cnt_gate_fs[25]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[26]_i_1 
-       (.I0(data0[26]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[26]),
         .O(cnt_gate_fs[26]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[27]_i_1 
-       (.I0(data0[27]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[27]),
         .O(cnt_gate_fs[27]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[28]_i_1 
-       (.I0(data0[28]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[28]),
         .O(cnt_gate_fs[28]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[29]_i_1 
-       (.I0(data0[29]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[29]),
         .O(cnt_gate_fs[29]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[2]_i_1 
-       (.I0(data0[2]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[2]),
         .O(cnt_gate_fs[2]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[30]_i_1 
-       (.I0(data0[30]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[30]),
         .O(cnt_gate_fs[30]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[31]_i_1 
-       (.I0(data0[31]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[31]),
         .O(cnt_gate_fs[31]));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \cnt_gate_fs[31]_i_2 
-       (.I0(\cnt_gate_fs_reg_n_0_[21] ),
-        .I1(\cnt_gate_fs_reg_n_0_[27] ),
-        .I2(\cnt_gate_fs_reg_n_0_[16] ),
-        .I3(\cnt_gate_fs_reg_n_0_[24] ),
-        .I4(\cnt_gate_fs_reg_n_0_[7] ),
-        .O(\cnt_gate_fs[31]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \cnt_gate_fs[31]_i_3 
-       (.I0(\cnt_gate_fs_reg_n_0_[10] ),
-        .I1(\cnt_gate_fs_reg_n_0_[14] ),
-        .I2(gate_out_i_15_n_0),
-        .I3(\cnt_gate_fs_reg_n_0_[13] ),
-        .O(\cnt_gate_fs[31]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFB)) 
-    \cnt_gate_fs[31]_i_4 
-       (.I0(gate_out_i_19_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[20] ),
-        .I2(\cnt_gate_fs[31]_i_5_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_6_n_0 ),
-        .I4(\cnt_gate_fs[31]_i_7_n_0 ),
-        .I5(\cnt_gate_fs[31]_i_8_n_0 ),
-        .O(\cnt_gate_fs[31]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \cnt_gate_fs[31]_i_5 
-       (.I0(\cnt_gate_fs_reg_n_0_[19] ),
-        .I1(\cnt_gate_fs_reg_n_0_[8] ),
-        .I2(\cnt_gate_fs_reg_n_0_[12] ),
-        .I3(\cnt_gate_fs_reg_n_0_[28] ),
-        .O(\cnt_gate_fs[31]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \cnt_gate_fs[31]_i_6 
-       (.I0(\cnt_gate_fs_reg_n_0_[4] ),
-        .I1(\cnt_gate_fs_reg_n_0_[3] ),
-        .I2(\cnt_gate_fs_reg_n_0_[26] ),
-        .I3(\cnt_gate_fs_reg_n_0_[18] ),
-        .O(\cnt_gate_fs[31]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
-    .INIT(4'h7)) 
-    \cnt_gate_fs[31]_i_7 
-       (.I0(\cnt_gate_fs_reg_n_0_[23] ),
-        .I1(\cnt_gate_fs_reg_n_0_[22] ),
-        .O(\cnt_gate_fs[31]_i_7_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
-    \cnt_gate_fs[31]_i_8 
-       (.I0(\cnt_gate_fs_reg_n_0_[5] ),
-        .I1(\cnt_gate_fs_reg_n_0_[6] ),
-        .O(\cnt_gate_fs[31]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+    .INIT(4'h8)) 
     \cnt_gate_fs[3]_i_1 
-       (.I0(data0[3]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[3]),
         .O(cnt_gate_fs[3]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[4]_i_1 
-       (.I0(data0[4]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[4]),
         .O(cnt_gate_fs[4]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[5]_i_1 
-       (.I0(data0[5]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[5]),
         .O(cnt_gate_fs[5]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[6]_i_1 
-       (.I0(data0[6]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[6]),
         .O(cnt_gate_fs[6]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[7]_i_1 
-       (.I0(data0[7]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[7]),
         .O(cnt_gate_fs[7]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[8]_i_1 
-       (.I0(data0[8]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[8]),
         .O(cnt_gate_fs[8]));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \cnt_gate_fs[9]_i_1 
-       (.I0(data0[9]),
-        .I1(\cnt_gate_fs[31]_i_2_n_0 ),
-        .I2(\cnt_gate_fs[31]_i_3_n_0 ),
-        .I3(\cnt_gate_fs[31]_i_4_n_0 ),
-        .I4(\cnt_gate_fs_reg_n_0_[15] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(gate_out_i_6_n_0),
+        .I1(data0[9]),
         .O(cnt_gate_fs[9]));
   FDCE \cnt_gate_fs_reg[0] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[0]),
         .Q(\cnt_gate_fs_reg_n_0_[0] ));
   FDCE \cnt_gate_fs_reg[10] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[10]),
         .Q(\cnt_gate_fs_reg_n_0_[10] ));
   FDCE \cnt_gate_fs_reg[11] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[11]),
         .Q(\cnt_gate_fs_reg_n_0_[11] ));
   FDCE \cnt_gate_fs_reg[12] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[12]),
         .Q(\cnt_gate_fs_reg_n_0_[12] ));
   FDCE \cnt_gate_fs_reg[13] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[13]),
         .Q(\cnt_gate_fs_reg_n_0_[13] ));
   FDCE \cnt_gate_fs_reg[14] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[14]),
         .Q(\cnt_gate_fs_reg_n_0_[14] ));
   FDCE \cnt_gate_fs_reg[15] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[15]),
         .Q(\cnt_gate_fs_reg_n_0_[15] ));
   FDCE \cnt_gate_fs_reg[16] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[16]),
         .Q(\cnt_gate_fs_reg_n_0_[16] ));
   FDCE \cnt_gate_fs_reg[17] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[17]),
         .Q(\cnt_gate_fs_reg_n_0_[17] ));
   FDCE \cnt_gate_fs_reg[18] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[18]),
         .Q(\cnt_gate_fs_reg_n_0_[18] ));
   FDCE \cnt_gate_fs_reg[19] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[19]),
         .Q(\cnt_gate_fs_reg_n_0_[19] ));
   FDCE \cnt_gate_fs_reg[1] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[1]),
         .Q(\cnt_gate_fs_reg_n_0_[1] ));
   FDCE \cnt_gate_fs_reg[20] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[20]),
         .Q(\cnt_gate_fs_reg_n_0_[20] ));
   FDCE \cnt_gate_fs_reg[21] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[21]),
         .Q(\cnt_gate_fs_reg_n_0_[21] ));
   FDCE \cnt_gate_fs_reg[22] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[22]),
         .Q(\cnt_gate_fs_reg_n_0_[22] ));
   FDCE \cnt_gate_fs_reg[23] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[23]),
         .Q(\cnt_gate_fs_reg_n_0_[23] ));
   FDCE \cnt_gate_fs_reg[24] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[24]),
         .Q(\cnt_gate_fs_reg_n_0_[24] ));
   FDCE \cnt_gate_fs_reg[25] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[25]),
         .Q(\cnt_gate_fs_reg_n_0_[25] ));
   FDCE \cnt_gate_fs_reg[26] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[26]),
         .Q(\cnt_gate_fs_reg_n_0_[26] ));
   FDCE \cnt_gate_fs_reg[27] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[27]),
         .Q(\cnt_gate_fs_reg_n_0_[27] ));
   FDCE \cnt_gate_fs_reg[28] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[28]),
         .Q(\cnt_gate_fs_reg_n_0_[28] ));
   FDCE \cnt_gate_fs_reg[29] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[29]),
-        .Q(p_0_in[2]));
+        .Q(\cnt_gate_fs_reg_n_0_[29] ));
   FDCE \cnt_gate_fs_reg[2] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[2]),
         .Q(\cnt_gate_fs_reg_n_0_[2] ));
   FDCE \cnt_gate_fs_reg[30] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[30]),
-        .Q(p_0_in[1]));
+        .Q(\cnt_gate_fs_reg_n_0_[30] ));
   FDCE \cnt_gate_fs_reg[31] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[31]),
         .Q(p_0_in0));
   FDCE \cnt_gate_fs_reg[3] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[3]),
         .Q(\cnt_gate_fs_reg_n_0_[3] ));
   FDCE \cnt_gate_fs_reg[4] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[4]),
         .Q(\cnt_gate_fs_reg_n_0_[4] ));
   FDCE \cnt_gate_fs_reg[5] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[5]),
         .Q(\cnt_gate_fs_reg_n_0_[5] ));
   FDCE \cnt_gate_fs_reg[6] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[6]),
         .Q(\cnt_gate_fs_reg_n_0_[6] ));
   FDCE \cnt_gate_fs_reg[7] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[7]),
         .Q(\cnt_gate_fs_reg_n_0_[7] ));
   FDCE \cnt_gate_fs_reg[8] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[8]),
         .Q(\cnt_gate_fs_reg_n_0_[8] ));
   FDCE \cnt_gate_fs_reg[9] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(cnt_gate_fs[9]),
         .Q(\cnt_gate_fs_reg_n_0_[9] ));
   FDCE gate_fx_d1_reg
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(gate_sclk),
         .Q(gate_fx_d1));
   FDCE gate_fx_d2_reg
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(gate_fx_d1),
         .Q(gate_fx_d2));
   FDCE gate_fx_d3_reg
        (.C(input_fx),
         .CE(1'b1),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(gate_fx_d2),
         .Q(gate_fx_d3));
-  LUT6 #(
-    .INIT(64'h000000000000E000)) 
+  LUT4 #(
+    .INIT(16'hFFEF)) 
     gate_out_i_1
        (.I0(gate_out_i_4_n_0),
         .I1(gate_out_i_5_n_0),
         .I2(gate_out_i_6_n_0),
-        .I3(gate_out_i_7_n_0),
-        .I4(gate_out_i_8_n_0),
-        .I5(gate_out_i_9_n_0),
+        .I3(start_0),
         .O(gate_out_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
+    .INIT(64'h0001000000000000)) 
     gate_out_i_10
-       (.I0(\cnt_gate_fs_reg_n_0_[25] ),
-        .I1(\cnt_gate_fs_reg_n_0_[27] ),
-        .I2(\cnt_gate_fs_reg_n_0_[19] ),
-        .I3(p_0_in[1]),
-        .I4(p_0_in0),
-        .I5(p_0_in[2]),
+       (.I0(stop_i_8_n_0),
+        .I1(start_i_5_n_0),
+        .I2(stop_i_7_n_0),
+        .I3(\cnt_gate_fs_reg_n_0_[27] ),
+        .I4(gate_out_i_15_n_0),
+        .I5(gate_out_i_16_n_0),
         .O(gate_out_i_10_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
-    .INIT(8'h18)) 
+    .INIT(8'h04)) 
     gate_out_i_11
-       (.I0(\cnt_gate_fs_reg_n_0_[5] ),
-        .I1(\cnt_gate_fs_reg_n_0_[6] ),
-        .I2(\cnt_gate_fs_reg_n_0_[10] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[9] ),
+        .I1(\cnt_gate_fs_reg_n_0_[14] ),
+        .I2(\cnt_gate_fs_reg_n_0_[28] ),
         .O(gate_out_i_11_n_0));
   LUT6 #(
-    .INIT(64'h0080000000001000)) 
+    .INIT(64'h0000000000400000)) 
     gate_out_i_12
-       (.I0(\cnt_gate_fs_reg_n_0_[20] ),
-        .I1(\cnt_gate_fs_reg_n_0_[26] ),
-        .I2(gate_out_i_18_n_0),
-        .I3(\cnt_gate_fs_reg_n_0_[9] ),
-        .I4(\cnt_gate_fs_reg_n_0_[18] ),
-        .I5(\cnt_gate_fs_reg_n_0_[14] ),
+       (.I0(stop_i_4_n_0),
+        .I1(\cnt_gate_fs_reg_n_0_[27] ),
+        .I2(\cnt_gate_fs_reg_n_0_[20] ),
+        .I3(\cnt_gate_fs_reg_n_0_[19] ),
+        .I4(\cnt_gate_fs_reg_n_0_[21] ),
+        .I5(gate_out_i_13_n_0),
         .O(gate_out_i_12_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFD7)) 
+    .INIT(64'hFFFFFFFFFEFFFFFF)) 
     gate_out_i_13
-       (.I0(gate_out_i_16_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[28] ),
-        .I2(\cnt_gate_fs_reg_n_0_[26] ),
-        .I3(\cnt_gate_fs_reg_n_0_[11] ),
-        .I4(\cnt_gate_fs_reg_n_0_[17] ),
-        .I5(stop_i_4_n_0),
-        .O(gate_out_i_13_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFDDFD)) 
-    gate_out_i_14
-       (.I0(\cnt_gate_fs_reg_n_0_[7] ),
-        .I1(\cnt_gate_fs_reg_n_0_[8] ),
-        .I2(\cnt_gate_fs_reg_n_0_[10] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[16] ),
+        .I1(\cnt_gate_fs_reg_n_0_[24] ),
+        .I2(\cnt_gate_fs_reg_n_0_[13] ),
         .I3(\cnt_gate_fs_reg_n_0_[12] ),
-        .I4(stop_i_5_n_0),
-        .I5(gate_out_i_19_n_0),
+        .I4(\cnt_gate_fs_reg_n_0_[8] ),
+        .I5(\cnt_gate_fs_reg_n_0_[7] ),
+        .O(gate_out_i_13_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hDF)) 
+    gate_out_i_14
+       (.I0(\cnt_gate_fs_reg_n_0_[28] ),
+        .I1(\cnt_gate_fs_reg_n_0_[14] ),
+        .I2(\cnt_gate_fs_reg_n_0_[9] ),
         .O(gate_out_i_14_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     gate_out_i_15
-       (.I0(\cnt_gate_fs_reg_n_0_[25] ),
-        .I1(\cnt_gate_fs_reg_n_0_[11] ),
-        .I2(\cnt_gate_fs_reg_n_0_[17] ),
-        .I3(p_0_in[1]),
-        .I4(p_0_in0),
-        .I5(p_0_in[2]),
+       (.I0(\cnt_gate_fs_reg_n_0_[3] ),
+        .I1(\cnt_gate_fs_reg_n_0_[4] ),
         .O(gate_out_i_15_n_0));
+  LUT4 #(
+    .INIT(16'h0008)) 
+    gate_out_i_16
+       (.I0(\cnt_gate_fs_reg_n_0_[12] ),
+        .I1(\cnt_gate_fs_reg_n_0_[10] ),
+        .I2(\cnt_gate_fs_reg_n_0_[6] ),
+        .I3(\cnt_gate_fs_reg_n_0_[5] ),
+        .O(gate_out_i_16_n_0));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
-    .INIT(4'hB)) 
-    gate_out_i_16
-       (.I0(\cnt_gate_fs_reg_n_0_[10] ),
-        .I1(\cnt_gate_fs_reg_n_0_[12] ),
-        .O(gate_out_i_16_n_0));
-  LUT6 #(
-    .INIT(64'hFFFE7FFF7FFE7FFF)) 
-    gate_out_i_17
-       (.I0(\cnt_gate_fs_reg_n_0_[4] ),
-        .I1(\cnt_gate_fs_reg_n_0_[3] ),
-        .I2(\cnt_gate_fs_reg_n_0_[5] ),
-        .I3(\cnt_gate_fs_reg_n_0_[6] ),
-        .I4(\cnt_gate_fs_reg_n_0_[10] ),
-        .I5(\cnt_gate_fs_reg_n_0_[7] ),
-        .O(gate_out_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h81)) 
-    gate_out_i_18
-       (.I0(\cnt_gate_fs_reg_n_0_[5] ),
-        .I1(\cnt_gate_fs_reg_n_0_[3] ),
-        .I2(\cnt_gate_fs_reg_n_0_[4] ),
-        .O(gate_out_i_18_n_0));
-  LUT3 #(
-    .INIT(8'h7F)) 
-    gate_out_i_19
-       (.I0(\cnt_gate_fs_reg_n_0_[1] ),
-        .I1(\cnt_gate_fs_reg_n_0_[0] ),
-        .I2(\cnt_gate_fs_reg_n_0_[2] ),
-        .O(gate_out_i_19_n_0));
-  LUT5 #(
-    .INIT(32'h00000080)) 
+    .INIT(4'hE)) 
     gate_out_i_2
-       (.I0(gate_out_i_10_n_0),
-        .I1(gate_out_i_11_n_0),
-        .I2(gate_out_i_12_n_0),
-        .I3(gate_out_i_13_n_0),
-        .I4(gate_out_i_14_n_0),
+       (.I0(gate_out_i_4_n_0),
+        .I1(start_0),
         .O(gate_out_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     gate_out_i_3
        (.I0(s0_axi_aresetn),
-        .O(gate_out_reg_0));
+        .O(s0_axi_aresetn_0));
   LUT6 #(
-    .INIT(64'h0000100000100000)) 
+    .INIT(64'hFFFF000F44440000)) 
     gate_out_i_4
-       (.I0(\cnt_gate_fs_reg_n_0_[16] ),
-        .I1(\cnt_gate_fs_reg_n_0_[24] ),
-        .I2(\cnt_gate_fs_reg_n_0_[20] ),
-        .I3(\cnt_gate_fs_reg_n_0_[19] ),
-        .I4(\cnt_gate_fs_reg_n_0_[21] ),
-        .I5(\cnt_gate_fs_reg_n_0_[18] ),
+       (.I0(gate_out_i_7_n_0),
+        .I1(gate_out_i_8_n_0),
+        .I2(\cnt_gate_fs_reg_n_0_[12] ),
+        .I3(gate_out_i_9_n_0),
+        .I4(gate_out_i_10_n_0),
+        .I5(stop_i_2_n_0),
         .O(gate_out_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h0800000000000008)) 
-    gate_out_i_5
-       (.I0(\cnt_gate_fs_reg_n_0_[16] ),
-        .I1(\cnt_gate_fs_reg_n_0_[24] ),
-        .I2(\cnt_gate_fs_reg_n_0_[19] ),
-        .I3(\cnt_gate_fs_reg_n_0_[26] ),
-        .I4(\cnt_gate_fs_reg_n_0_[18] ),
-        .I5(\cnt_gate_fs_reg_n_0_[20] ),
-        .O(gate_out_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h4000000000000000)) 
-    gate_out_i_6
-       (.I0(gate_out_i_15_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[15] ),
-        .I2(\cnt_gate_fs_reg_n_0_[2] ),
-        .I3(\cnt_gate_fs_reg_n_0_[0] ),
-        .I4(\cnt_gate_fs_reg_n_0_[1] ),
-        .I5(gate_sclk_i_2_n_0),
-        .O(gate_out_i_6_n_0));
   LUT5 #(
-    .INIT(32'h03086008)) 
-    gate_out_i_7
-       (.I0(\cnt_gate_fs_reg_n_0_[28] ),
+    .INIT(32'h00100000)) 
+    gate_out_i_5
+       (.I0(\cnt_gate_fs_reg_n_0_[18] ),
         .I1(\cnt_gate_fs_reg_n_0_[26] ),
-        .I2(\cnt_gate_fs_reg_n_0_[24] ),
-        .I3(\cnt_gate_fs_reg_n_0_[21] ),
-        .I4(\cnt_gate_fs_reg_n_0_[27] ),
+        .I2(gate_out_i_11_n_0),
+        .I3(stop_i_3_n_0),
+        .I4(gate_out_i_12_n_0),
+        .O(gate_out_i_5_n_0));
+  LUT5 #(
+    .INIT(32'hFFFFFFFB)) 
+    gate_out_i_6
+       (.I0(gate_out_i_13_n_0),
+        .I1(\cnt_gate_fs_reg_n_0_[19] ),
+        .I2(\cnt_gate_fs_reg_n_0_[21] ),
+        .I3(gate_out_i_14_n_0),
+        .I4(start_i_3_n_0),
+        .O(gate_out_i_6_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    gate_out_i_7
+       (.I0(\cnt_gate_fs_reg_n_0_[26] ),
+        .I1(\cnt_gate_fs_reg_n_0_[20] ),
+        .I2(\cnt_gate_fs_reg_n_0_[18] ),
         .O(gate_out_i_7_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFF77FF77FF77F)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'h20000000)) 
     gate_out_i_8
-       (.I0(\cnt_gate_fs_reg_n_0_[23] ),
-        .I1(\cnt_gate_fs_reg_n_0_[22] ),
-        .I2(\cnt_gate_fs_reg_n_0_[9] ),
-        .I3(\cnt_gate_fs_reg_n_0_[14] ),
-        .I4(\cnt_gate_fs_reg_n_0_[28] ),
-        .I5(\cnt_gate_fs_reg_n_0_[27] ),
+       (.I0(gate_out_i_11_n_0),
+        .I1(\cnt_gate_fs_reg_n_0_[19] ),
+        .I2(\cnt_gate_fs_reg_n_0_[21] ),
+        .I3(\cnt_gate_fs_reg_n_0_[24] ),
+        .I4(stop_i_5_n_0),
         .O(gate_out_i_8_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFF7EFEFF7)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     gate_out_i_9
-       (.I0(gate_out_i_16_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[7] ),
-        .I2(\cnt_gate_fs_reg_n_0_[8] ),
-        .I3(\cnt_gate_fs_reg_n_0_[14] ),
-        .I4(\cnt_gate_fs_reg_n_0_[18] ),
-        .I5(gate_out_i_17_n_0),
+       (.I0(stop_i_4_n_0),
+        .I1(\cnt_gate_fs_reg_n_0_[27] ),
+        .I2(stop_i_7_n_0),
+        .I3(start_i_5_n_0),
+        .I4(stop_i_8_n_0),
         .O(gate_out_i_9_n_0));
   FDCE gate_out_reg
        (.C(s0_axi_aclk),
         .CE(gate_out_i_1_n_0),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(gate_out_i_2_n_0),
         .Q(gate_out));
-  LUT6 #(
-    .INIT(64'h0200000000000000)) 
-    gate_sclk_i_1
-       (.I0(gate_sclk_i_2_n_0),
-        .I1(stop_i_3_n_0),
-        .I2(\cnt_gate_fs_reg_n_0_[28] ),
-        .I3(gate_sclk_i_3_n_0),
-        .I4(gate_sclk_i_4_n_0),
-        .I5(gate_sclk_i_5_n_0),
-        .O(gate_sclk_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h8108)) 
-    gate_sclk_i_2
-       (.I0(\cnt_gate_fs_reg_n_0_[13] ),
-        .I1(\cnt_gate_fs_reg_n_0_[16] ),
-        .I2(\cnt_gate_fs_reg_n_0_[10] ),
-        .I3(\cnt_gate_fs_reg_n_0_[12] ),
-        .O(gate_sclk_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h0800000000000020)) 
-    gate_sclk_i_3
-       (.I0(gate_sclk_i_6_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[26] ),
-        .I2(\cnt_gate_fs_reg_n_0_[27] ),
-        .I3(\cnt_gate_fs_reg_n_0_[24] ),
-        .I4(\cnt_gate_fs_reg_n_0_[16] ),
-        .I5(\cnt_gate_fs_reg_n_0_[18] ),
-        .O(gate_sclk_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h0004000000000000)) 
-    gate_sclk_i_4
-       (.I0(\cnt_gate_fs[31]_i_7_n_0 ),
-        .I1(\cnt_gate_fs_reg_n_0_[15] ),
-        .I2(stop_i_8_n_0),
-        .I3(gate_out_i_19_n_0),
-        .I4(gate_sclk_i_7_n_0),
-        .I5(gate_out_i_18_n_0),
-        .O(gate_sclk_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h700C)) 
-    gate_sclk_i_5
-       (.I0(\cnt_gate_fs_reg_n_0_[7] ),
-        .I1(\cnt_gate_fs_reg_n_0_[10] ),
-        .I2(\cnt_gate_fs_reg_n_0_[6] ),
-        .I3(\cnt_gate_fs_reg_n_0_[5] ),
-        .O(gate_sclk_i_5_n_0));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT4 #(
-    .INIT(16'h04B0)) 
-    gate_sclk_i_6
-       (.I0(\cnt_gate_fs_reg_n_0_[10] ),
-        .I1(\cnt_gate_fs_reg_n_0_[12] ),
-        .I2(\cnt_gate_fs_reg_n_0_[7] ),
-        .I3(\cnt_gate_fs_reg_n_0_[8] ),
-        .O(gate_sclk_i_6_n_0));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    gate_sclk_i_1
+       (.I0(gate_out_i_5_n_0),
+        .I1(start_0),
+        .I2(gate_sclk_i_2_n_0),
+        .O(gate_sclk_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'h04000000)) 
-    gate_sclk_i_7
-       (.I0(\cnt_gate_fs_reg_n_0_[9] ),
-        .I1(\cnt_gate_fs_reg_n_0_[14] ),
-        .I2(\cnt_gate_fs_reg_n_0_[19] ),
-        .I3(\cnt_gate_fs_reg_n_0_[21] ),
-        .I4(\cnt_gate_fs_reg_n_0_[20] ),
-        .O(gate_sclk_i_7_n_0));
+    .INIT(32'h80000000)) 
+    gate_sclk_i_2
+       (.I0(\cnt_gate_fs_reg_n_0_[26] ),
+        .I1(\cnt_gate_fs_reg_n_0_[20] ),
+        .I2(\cnt_gate_fs_reg_n_0_[18] ),
+        .I3(gate_out_i_8_n_0),
+        .I4(gate_out_i_10_n_0),
+        .O(gate_sclk_i_2_n_0));
   FDCE gate_sclk_reg
        (.C(s0_axi_aclk),
         .CE(gate_out_i_1_n_0),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(gate_sclk_i_1_n_0),
         .Q(gate_sclk));
   LUT6 #(
-    .INIT(64'h0000000000004000)) 
+    .INIT(64'h0000000000100000)) 
     start_i_1
-       (.I0(stop_i_2_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[13] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[12] ),
+        .I1(\cnt_gate_fs_reg_n_0_[28] ),
         .I2(\cnt_gate_fs_reg_n_0_[14] ),
-        .I3(\cnt_gate_fs_reg_n_0_[20] ),
-        .I4(stop_i_5_n_0),
-        .I5(start_i_2_n_0),
+        .I3(\cnt_gate_fs_reg_n_0_[9] ),
+        .I4(start_i_2_n_0),
+        .I5(start_i_3_n_0),
         .O(start_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'h2000000000000000)) 
     start_i_2
-       (.I0(start_i_3_n_0),
-        .I1(\cnt_gate_fs_reg_n_0_[28] ),
-        .I2(gate_out_i_15_n_0),
-        .I3(\cnt_gate_fs_reg_n_0_[8] ),
-        .I4(\cnt_gate_fs_reg_n_0_[19] ),
-        .I5(\cnt_gate_fs_reg_n_0_[27] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[7] ),
+        .I1(\cnt_gate_fs_reg_n_0_[8] ),
+        .I2(\cnt_gate_fs_reg_n_0_[13] ),
+        .I3(\cnt_gate_fs_reg_n_0_[16] ),
+        .I4(\cnt_gate_fs_reg_n_0_[24] ),
+        .I5(start_i_4_n_0),
         .O(start_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEFFFFFFF)) 
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     start_i_3
-       (.I0(\cnt_gate_fs_reg_n_0_[10] ),
-        .I1(\cnt_gate_fs_reg_n_0_[12] ),
-        .I2(\cnt_gate_fs_reg_n_0_[18] ),
-        .I3(\cnt_gate_fs_reg_n_0_[26] ),
-        .I4(\cnt_gate_fs_reg_n_0_[16] ),
-        .I5(\cnt_gate_fs_reg_n_0_[9] ),
+       (.I0(stop_i_8_n_0),
+        .I1(start_i_5_n_0),
+        .I2(stop_i_7_n_0),
+        .I3(\cnt_gate_fs_reg_n_0_[27] ),
+        .I4(stop_i_4_n_0),
+        .I5(gate_out_i_7_n_0),
         .O(start_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    start_i_4
+       (.I0(\cnt_gate_fs_reg_n_0_[21] ),
+        .I1(\cnt_gate_fs_reg_n_0_[19] ),
+        .O(start_i_4_n_0));
+  LUT4 #(
+    .INIT(16'hDFFF)) 
+    start_i_5
+       (.I0(\cnt_gate_fs_reg_n_0_[15] ),
+        .I1(\cnt_gate_fs_reg_n_0_[17] ),
+        .I2(\cnt_gate_fs_reg_n_0_[23] ),
+        .I3(\cnt_gate_fs_reg_n_0_[22] ),
+        .O(start_i_5_n_0));
   FDCE start_reg
        (.C(s0_axi_aclk),
         .CE(gate_out_i_1_n_0),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(start_0),
         .Q(start));
-  LUT6 #(
-    .INIT(64'h0000000000000010)) 
+  LUT5 #(
+    .INIT(32'h00000004)) 
     stop_i_1
-       (.I0(stop_i_2_n_0),
-        .I1(stop_i_3_n_0),
-        .I2(\cnt_gate_fs_reg_n_0_[9] ),
-        .I3(stop_i_4_n_0),
-        .I4(stop_i_5_n_0),
-        .I5(stop_i_6_n_0),
+       (.I0(\cnt_gate_fs_reg_n_0_[12] ),
+        .I1(stop_i_2_n_0),
+        .I2(stop_i_3_n_0),
+        .I3(\cnt_gate_fs_reg_n_0_[27] ),
+        .I4(stop_i_4_n_0),
         .O(stop_i_1_n_0));
   LUT6 #(
-    .INIT(64'hF7FFFFFFFFFFFFFF)) 
+    .INIT(64'h0000400000000000)) 
     stop_i_2
-       (.I0(\cnt_gate_fs_reg_n_0_[3] ),
-        .I1(\cnt_gate_fs_reg_n_0_[4] ),
-        .I2(gate_out_i_19_n_0),
-        .I3(\cnt_gate_fs_reg_n_0_[7] ),
-        .I4(\cnt_gate_fs_reg_n_0_[5] ),
-        .I5(\cnt_gate_fs_reg_n_0_[6] ),
+       (.I0(gate_out_i_14_n_0),
+        .I1(stop_i_5_n_0),
+        .I2(\cnt_gate_fs_reg_n_0_[24] ),
+        .I3(\cnt_gate_fs_reg_n_0_[21] ),
+        .I4(\cnt_gate_fs_reg_n_0_[19] ),
+        .I5(stop_i_6_n_0),
         .O(stop_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFBFFFFFF)) 
     stop_i_3
-       (.I0(p_0_in[2]),
-        .I1(p_0_in0),
-        .I2(p_0_in[1]),
+       (.I0(stop_i_7_n_0),
+        .I1(\cnt_gate_fs_reg_n_0_[15] ),
+        .I2(\cnt_gate_fs_reg_n_0_[17] ),
+        .I3(\cnt_gate_fs_reg_n_0_[23] ),
+        .I4(\cnt_gate_fs_reg_n_0_[22] ),
+        .I5(stop_i_8_n_0),
         .O(stop_i_3_n_0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT5 #(
+    .INIT(32'hDFFFFFFF)) 
     stop_i_4
-       (.I0(\cnt_gate_fs_reg_n_0_[13] ),
-        .I1(\cnt_gate_fs_reg_n_0_[16] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[3] ),
+        .I1(\cnt_gate_fs_reg_n_0_[10] ),
+        .I2(\cnt_gate_fs_reg_n_0_[6] ),
+        .I3(\cnt_gate_fs_reg_n_0_[5] ),
+        .I4(\cnt_gate_fs_reg_n_0_[4] ),
         .O(stop_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
+  LUT4 #(
+    .INIT(16'h0800)) 
     stop_i_5
-       (.I0(\cnt_gate_fs_reg_n_0_[15] ),
-        .I1(\cnt_gate_fs_reg_n_0_[23] ),
-        .I2(\cnt_gate_fs_reg_n_0_[22] ),
-        .I3(\cnt_gate_fs_reg_n_0_[24] ),
-        .I4(\cnt_gate_fs_reg_n_0_[21] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[16] ),
+        .I1(\cnt_gate_fs_reg_n_0_[13] ),
+        .I2(\cnt_gate_fs_reg_n_0_[8] ),
+        .I3(\cnt_gate_fs_reg_n_0_[7] ),
         .O(stop_i_5_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFEFFFF)) 
-    stop_i_6
-       (.I0(stop_i_7_n_0),
-        .I1(stop_i_8_n_0),
-        .I2(\cnt_gate_fs_reg_n_0_[12] ),
-        .I3(\cnt_gate_fs_reg_n_0_[10] ),
-        .I4(\cnt_gate_fs_reg_n_0_[28] ),
-        .I5(stop_i_9_n_0),
-        .O(stop_i_6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    stop_i_7
-       (.I0(\cnt_gate_fs_reg_n_0_[27] ),
-        .I1(\cnt_gate_fs_reg_n_0_[19] ),
-        .O(stop_i_7_n_0));
   LUT3 #(
-    .INIT(8'hFE)) 
+    .INIT(8'h01)) 
+    stop_i_6
+       (.I0(\cnt_gate_fs_reg_n_0_[26] ),
+        .I1(\cnt_gate_fs_reg_n_0_[18] ),
+        .I2(\cnt_gate_fs_reg_n_0_[20] ),
+        .O(stop_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    stop_i_7
+       (.I0(\cnt_gate_fs_reg_n_0_[29] ),
+        .I1(\cnt_gate_fs_reg_n_0_[25] ),
+        .I2(p_0_in0),
+        .I3(\cnt_gate_fs_reg_n_0_[30] ),
+        .O(stop_i_7_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT4 #(
+    .INIT(16'hFF7F)) 
     stop_i_8
-       (.I0(\cnt_gate_fs_reg_n_0_[17] ),
-        .I1(\cnt_gate_fs_reg_n_0_[11] ),
-        .I2(\cnt_gate_fs_reg_n_0_[25] ),
+       (.I0(\cnt_gate_fs_reg_n_0_[1] ),
+        .I1(\cnt_gate_fs_reg_n_0_[0] ),
+        .I2(\cnt_gate_fs_reg_n_0_[2] ),
+        .I3(\cnt_gate_fs_reg_n_0_[11] ),
         .O(stop_i_8_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    stop_i_9
-       (.I0(\cnt_gate_fs_reg_n_0_[8] ),
-        .I1(\cnt_gate_fs_reg_n_0_[20] ),
-        .I2(\cnt_gate_fs_reg_n_0_[14] ),
-        .I3(\cnt_gate_fs_reg_n_0_[18] ),
-        .I4(\cnt_gate_fs_reg_n_0_[26] ),
-        .O(stop_i_9_n_0));
   FDCE stop_reg
        (.C(s0_axi_aclk),
         .CE(gate_out_i_1_n_0),
-        .CLR(gate_out_reg_0),
+        .CLR(s0_axi_aresetn_0),
         .D(stop_i_1_n_0),
         .Q(stop));
 endmodule
@@ -2682,12 +2445,15 @@ module glbl ();
 
     parameter ROC_WIDTH = 100000;
     parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
 
 //--------   STARTUP Globals --------------
     wire GSR;
     wire GTS;
     wire GWE;
     wire PRLD;
+    wire GRESTORE;
     tri1 p_up_tmp;
     tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
 
@@ -2700,6 +2466,7 @@ module glbl ();
     reg GSR_int;
     reg GTS_int;
     reg PRLD_int;
+    reg GRESTORE_int;
 
 //--------   JTAG Globals --------------
     wire JTAG_TDO_GLBL;
@@ -2727,6 +2494,7 @@ module glbl ();
     assign (strong1, weak0) GSR = GSR_int;
     assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
 
     initial begin
 	GSR_int = 1'b1;
@@ -2740,6 +2508,14 @@ module glbl ();
 	GTS_int = 1'b1;
 	#(TOC_WIDTH)
 	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
     end
 
 endmodule

@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:xlconstant:1.1
-// IP Revision: 3
+// IP Revision: 7
 
 `timescale 1ns/1ps
 
@@ -59,9 +59,9 @@ module design_1_xlconstant_0_0 (
 
 output wire [4 : 0] dout;
 
-  xlconstant_v1_1_3_xlconstant #(
+  xlconstant_v1_1_7_xlconstant #(
     .CONST_WIDTH(5),
-    .CONST_VAL('H03)
+    .CONST_VAL(5'H03)
   ) inst (
     .dout(dout)
   );

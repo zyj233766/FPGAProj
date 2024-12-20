@@ -1,7 +1,7 @@
 onbreak {quit -f}
 onerror {quit -f}
 
-vsim -t 1ps -lib xil_defaultlib design_1_opt
+vsim -lib xil_defaultlib design_1_opt
 
 do {wave.do}
 

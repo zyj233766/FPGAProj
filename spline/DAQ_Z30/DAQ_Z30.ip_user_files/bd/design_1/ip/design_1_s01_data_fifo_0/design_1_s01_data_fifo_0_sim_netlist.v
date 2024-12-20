@@ -1,11 +1,11 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Thu Dec 19 13:53:41 2024
-// Host        : YL running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Fri Dec 20 18:30:56 2024
+// Host        : DESKTOP-V402F34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top design_1_s01_data_fifo_0 -prefix
-//               design_1_s01_data_fifo_0_ design_1_s01_data_fifo_0_sim_netlist.v
-// Design      : design_1_s01_data_fifo_0
+//               design_1_s01_data_fifo_0_ design_1_s00_data_fifo_0_sim_netlist.v
+// Design      : design_1_s00_data_fifo_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z030ffg676-2
@@ -22,7 +22,7 @@
 (* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "9" *) (* P_WIDTH_RACH = "63" *) 
 (* P_WIDTH_RDCH = "37" *) (* P_WIDTH_WACH = "63" *) (* P_WIDTH_WDCH = "38" *) 
 (* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
-module design_1_s01_data_fifo_0_axi_data_fifo_v2_1_14_axi_data_fifo
+module design_1_s01_data_fifo_0_axi_data_fifo_v2_1_21_axi_data_fifo
    (aclk,
     aresetn,
     s_axi_awid,
@@ -208,100 +208,115 @@ module design_1_s01_data_fifo_0_axi_data_fifo_v2_1_14_axi_data_fifo
   input m_axi_rvalid;
   output m_axi_rready;
 
+  wire \<const0> ;
   wire m_axi_arready;
   wire m_axi_awready;
-  wire [0:0]m_axi_bid;
   wire [1:0]m_axi_bresp;
-  wire [0:0]m_axi_buser;
   wire m_axi_bvalid;
   wire [31:0]m_axi_rdata;
-  wire [0:0]m_axi_rid;
-  wire m_axi_rlast;
   wire [1:0]m_axi_rresp;
-  wire [0:0]m_axi_ruser;
   wire m_axi_rvalid;
   wire m_axi_wready;
   wire [31:0]s_axi_araddr;
-  wire [1:0]s_axi_arburst;
-  wire [3:0]s_axi_arcache;
-  wire [0:0]s_axi_arid;
-  wire [7:0]s_axi_arlen;
-  wire [0:0]s_axi_arlock;
   wire [2:0]s_axi_arprot;
-  wire [3:0]s_axi_arqos;
-  wire [3:0]s_axi_arregion;
-  wire [2:0]s_axi_arsize;
-  wire [0:0]s_axi_aruser;
   wire s_axi_arvalid;
   wire [31:0]s_axi_awaddr;
-  wire [1:0]s_axi_awburst;
-  wire [3:0]s_axi_awcache;
-  wire [0:0]s_axi_awid;
-  wire [7:0]s_axi_awlen;
-  wire [0:0]s_axi_awlock;
   wire [2:0]s_axi_awprot;
-  wire [3:0]s_axi_awqos;
-  wire [3:0]s_axi_awregion;
-  wire [2:0]s_axi_awsize;
-  wire [0:0]s_axi_awuser;
   wire s_axi_awvalid;
   wire s_axi_bready;
   wire s_axi_rready;
   wire [31:0]s_axi_wdata;
-  wire [0:0]s_axi_wid;
-  wire s_axi_wlast;
   wire [3:0]s_axi_wstrb;
-  wire [0:0]s_axi_wuser;
   wire s_axi_wvalid;
 
   assign m_axi_araddr[31:0] = s_axi_araddr;
-  assign m_axi_arburst[1:0] = s_axi_arburst;
-  assign m_axi_arcache[3:0] = s_axi_arcache;
-  assign m_axi_arid[0] = s_axi_arid;
-  assign m_axi_arlen[7:0] = s_axi_arlen;
-  assign m_axi_arlock[0] = s_axi_arlock;
+  assign m_axi_arburst[1] = \<const0> ;
+  assign m_axi_arburst[0] = \<const0> ;
+  assign m_axi_arcache[3] = \<const0> ;
+  assign m_axi_arcache[2] = \<const0> ;
+  assign m_axi_arcache[1] = \<const0> ;
+  assign m_axi_arcache[0] = \<const0> ;
+  assign m_axi_arid[0] = \<const0> ;
+  assign m_axi_arlen[7] = \<const0> ;
+  assign m_axi_arlen[6] = \<const0> ;
+  assign m_axi_arlen[5] = \<const0> ;
+  assign m_axi_arlen[4] = \<const0> ;
+  assign m_axi_arlen[3] = \<const0> ;
+  assign m_axi_arlen[2] = \<const0> ;
+  assign m_axi_arlen[1] = \<const0> ;
+  assign m_axi_arlen[0] = \<const0> ;
+  assign m_axi_arlock[0] = \<const0> ;
   assign m_axi_arprot[2:0] = s_axi_arprot;
-  assign m_axi_arqos[3:0] = s_axi_arqos;
-  assign m_axi_arregion[3:0] = s_axi_arregion;
-  assign m_axi_arsize[2:0] = s_axi_arsize;
-  assign m_axi_aruser[0] = s_axi_aruser;
+  assign m_axi_arqos[3] = \<const0> ;
+  assign m_axi_arqos[2] = \<const0> ;
+  assign m_axi_arqos[1] = \<const0> ;
+  assign m_axi_arqos[0] = \<const0> ;
+  assign m_axi_arregion[3] = \<const0> ;
+  assign m_axi_arregion[2] = \<const0> ;
+  assign m_axi_arregion[1] = \<const0> ;
+  assign m_axi_arregion[0] = \<const0> ;
+  assign m_axi_arsize[2] = \<const0> ;
+  assign m_axi_arsize[1] = \<const0> ;
+  assign m_axi_arsize[0] = \<const0> ;
+  assign m_axi_aruser[0] = \<const0> ;
   assign m_axi_arvalid = s_axi_arvalid;
   assign m_axi_awaddr[31:0] = s_axi_awaddr;
-  assign m_axi_awburst[1:0] = s_axi_awburst;
-  assign m_axi_awcache[3:0] = s_axi_awcache;
-  assign m_axi_awid[0] = s_axi_awid;
-  assign m_axi_awlen[7:0] = s_axi_awlen;
-  assign m_axi_awlock[0] = s_axi_awlock;
+  assign m_axi_awburst[1] = \<const0> ;
+  assign m_axi_awburst[0] = \<const0> ;
+  assign m_axi_awcache[3] = \<const0> ;
+  assign m_axi_awcache[2] = \<const0> ;
+  assign m_axi_awcache[1] = \<const0> ;
+  assign m_axi_awcache[0] = \<const0> ;
+  assign m_axi_awid[0] = \<const0> ;
+  assign m_axi_awlen[7] = \<const0> ;
+  assign m_axi_awlen[6] = \<const0> ;
+  assign m_axi_awlen[5] = \<const0> ;
+  assign m_axi_awlen[4] = \<const0> ;
+  assign m_axi_awlen[3] = \<const0> ;
+  assign m_axi_awlen[2] = \<const0> ;
+  assign m_axi_awlen[1] = \<const0> ;
+  assign m_axi_awlen[0] = \<const0> ;
+  assign m_axi_awlock[0] = \<const0> ;
   assign m_axi_awprot[2:0] = s_axi_awprot;
-  assign m_axi_awqos[3:0] = s_axi_awqos;
-  assign m_axi_awregion[3:0] = s_axi_awregion;
-  assign m_axi_awsize[2:0] = s_axi_awsize;
-  assign m_axi_awuser[0] = s_axi_awuser;
+  assign m_axi_awqos[3] = \<const0> ;
+  assign m_axi_awqos[2] = \<const0> ;
+  assign m_axi_awqos[1] = \<const0> ;
+  assign m_axi_awqos[0] = \<const0> ;
+  assign m_axi_awregion[3] = \<const0> ;
+  assign m_axi_awregion[2] = \<const0> ;
+  assign m_axi_awregion[1] = \<const0> ;
+  assign m_axi_awregion[0] = \<const0> ;
+  assign m_axi_awsize[2] = \<const0> ;
+  assign m_axi_awsize[1] = \<const0> ;
+  assign m_axi_awsize[0] = \<const0> ;
+  assign m_axi_awuser[0] = \<const0> ;
   assign m_axi_awvalid = s_axi_awvalid;
   assign m_axi_bready = s_axi_bready;
   assign m_axi_rready = s_axi_rready;
   assign m_axi_wdata[31:0] = s_axi_wdata;
-  assign m_axi_wid[0] = s_axi_wid;
-  assign m_axi_wlast = s_axi_wlast;
+  assign m_axi_wid[0] = \<const0> ;
+  assign m_axi_wlast = \<const0> ;
   assign m_axi_wstrb[3:0] = s_axi_wstrb;
-  assign m_axi_wuser[0] = s_axi_wuser;
+  assign m_axi_wuser[0] = \<const0> ;
   assign m_axi_wvalid = s_axi_wvalid;
   assign s_axi_arready = m_axi_arready;
   assign s_axi_awready = m_axi_awready;
-  assign s_axi_bid[0] = m_axi_bid;
+  assign s_axi_bid[0] = \<const0> ;
   assign s_axi_bresp[1:0] = m_axi_bresp;
-  assign s_axi_buser[0] = m_axi_buser;
+  assign s_axi_buser[0] = \<const0> ;
   assign s_axi_bvalid = m_axi_bvalid;
   assign s_axi_rdata[31:0] = m_axi_rdata;
-  assign s_axi_rid[0] = m_axi_rid;
-  assign s_axi_rlast = m_axi_rlast;
+  assign s_axi_rid[0] = \<const0> ;
+  assign s_axi_rlast = \<const0> ;
   assign s_axi_rresp[1:0] = m_axi_rresp;
-  assign s_axi_ruser[0] = m_axi_ruser;
+  assign s_axi_ruser[0] = \<const0> ;
   assign s_axi_rvalid = m_axi_rvalid;
   assign s_axi_wready = m_axi_wready;
+  GND GND
+       (.G(\<const0> ));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "design_1_s01_data_fifo_0,axi_data_fifo_v2_1_14_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_14_axi_data_fifo,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "design_1_s00_data_fifo_0,axi_data_fifo_v2_1_21_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_21_axi_data_fifo,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module design_1_s01_data_fifo_0
    (aclk,
@@ -344,8 +359,8 @@ module design_1_s01_data_fifo_0
     m_axi_rresp,
     m_axi_rvalid,
     m_axi_rready);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN" *) input aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) input [31:0]s_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWPROT" *) input [2:0]s_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
@@ -364,7 +379,7 @@ module design_1_s01_data_fifo_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [31:0]m_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWPROT" *) output [2:0]m_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWVALID" *) output m_axi_awvalid;
@@ -383,10 +398,8 @@ module design_1_s01_data_fifo_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [31:0]m_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
 
-  wire aclk;
-  wire aresetn;
   wire [31:0]m_axi_araddr;
   wire [2:0]m_axi_arprot;
   wire m_axi_arready;
@@ -481,9 +494,9 @@ module design_1_s01_data_fifo_0
   (* P_WIDTH_WDCH = "38" *) 
   (* P_WIDTH_WRCH = "4" *) 
   (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
-  design_1_s01_data_fifo_0_axi_data_fifo_v2_1_14_axi_data_fifo inst
-       (.aclk(aclk),
-        .aresetn(aresetn),
+  design_1_s01_data_fifo_0_axi_data_fifo_v2_1_21_axi_data_fifo inst
+       (.aclk(1'b0),
+        .aresetn(1'b0),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arburst(NLW_inst_m_axi_arburst_UNCONNECTED[1:0]),
         .m_axi_arcache(NLW_inst_m_axi_arcache_UNCONNECTED[3:0]),
@@ -583,12 +596,15 @@ module glbl ();
 
     parameter ROC_WIDTH = 100000;
     parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
 
 //--------   STARTUP Globals --------------
     wire GSR;
     wire GTS;
     wire GWE;
     wire PRLD;
+    wire GRESTORE;
     tri1 p_up_tmp;
     tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
 
@@ -601,6 +617,7 @@ module glbl ();
     reg GSR_int;
     reg GTS_int;
     reg PRLD_int;
+    reg GRESTORE_int;
 
 //--------   JTAG Globals --------------
     wire JTAG_TDO_GLBL;
@@ -628,6 +645,7 @@ module glbl ();
     assign (strong1, weak0) GSR = GSR_int;
     assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
 
     initial begin
 	GSR_int = 1'b1;
@@ -641,6 +659,14 @@ module glbl ();
 	GTS_int = 1'b1;
 	#(TOC_WIDTH)
 	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
     end
 
 endmodule

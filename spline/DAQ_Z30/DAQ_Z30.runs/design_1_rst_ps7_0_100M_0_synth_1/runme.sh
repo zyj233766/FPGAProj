@@ -3,7 +3,7 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/Xilinx2017.4/SDK/2017.4/bin;E:/Xilinx2017.4/Vivado/2017.4/ids_lite/ISE/bin/nt64;E:/Xilinx2017.4/Vivado/2017.4/ids_lite/ISE/lib/nt64:E:/Xilinx2017.4/Vivado/2017.4/bin
+  PATH=E:/vivado/Vitis/2020.2/bin;E:/vivado/Vivado/2020.2/ids_lite/ISE/bin/nt64;E:/vivado/Vivado/2020.2/ids_lite/ISE/lib/nt64:E:/vivado/Vivado/2020.2/bin
 else
-  PATH=E:/Xilinx2017.4/SDK/2017.4/bin;E:/Xilinx2017.4/Vivado/2017.4/ids_lite/ISE/bin/nt64;E:/Xilinx2017.4/Vivado/2017.4/ids_lite/ISE/lib/nt64:E:/Xilinx2017.4/Vivado/2017.4/bin:$PATH
+  PATH=E:/vivado/Vitis/2020.2/bin;E:/vivado/Vivado/2020.2/ids_lite/ISE/bin/nt64;E:/vivado/Vivado/2020.2/ids_lite/ISE/lib/nt64:E:/vivado/Vivado/2020.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/12554/Desktop/DAQ/DAQ_Z30/DAQ_Z30.runs/design_1_rst_ps7_0_100M_0_synth_1'
+HD_PWD='D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_rst_ps7_0_100M_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

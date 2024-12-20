@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Dec 18 23:18:38 2024
--- Host        : YL running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Fri Dec 20 18:30:52 2024
+-- Host        : DESKTOP-V402F34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/design_1_MaxdataTrans_ip_0_0_sim_netlist.vhdl
+--               d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/design_1_MaxdataTrans_ip_0_0_sim_netlist.vhdl
 -- Design      : design_1_MaxdataTrans_ip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,8 +18,8 @@ entity design_1_MaxdataTrans_ip_0_0_MaxdataTrans is
   port (
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \axi_rdata_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \axi_rdata_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    \OUT_spline1_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    \OUT_Correction_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s0_axi_aresetn : in STD_LOGIC;
     IN_spline2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s0_axi_aclk : in STD_LOGIC;
@@ -39,7 +39,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(0),
-      Q => \axi_rdata_reg[31]_0\(0),
+      Q => \OUT_Correction_reg[31]_0\(0),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[10]\: unisim.vcomponents.FDRE
@@ -47,7 +47,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(10),
-      Q => \axi_rdata_reg[31]_0\(10),
+      Q => \OUT_Correction_reg[31]_0\(10),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[11]\: unisim.vcomponents.FDRE
@@ -55,7 +55,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(11),
-      Q => \axi_rdata_reg[31]_0\(11),
+      Q => \OUT_Correction_reg[31]_0\(11),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[12]\: unisim.vcomponents.FDRE
@@ -63,7 +63,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(12),
-      Q => \axi_rdata_reg[31]_0\(12),
+      Q => \OUT_Correction_reg[31]_0\(12),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[13]\: unisim.vcomponents.FDRE
@@ -71,7 +71,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(13),
-      Q => \axi_rdata_reg[31]_0\(13),
+      Q => \OUT_Correction_reg[31]_0\(13),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[14]\: unisim.vcomponents.FDRE
@@ -79,7 +79,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(14),
-      Q => \axi_rdata_reg[31]_0\(14),
+      Q => \OUT_Correction_reg[31]_0\(14),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[15]\: unisim.vcomponents.FDRE
@@ -87,7 +87,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(15),
-      Q => \axi_rdata_reg[31]_0\(15),
+      Q => \OUT_Correction_reg[31]_0\(15),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[16]\: unisim.vcomponents.FDRE
@@ -95,7 +95,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(16),
-      Q => \axi_rdata_reg[31]_0\(16),
+      Q => \OUT_Correction_reg[31]_0\(16),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[17]\: unisim.vcomponents.FDRE
@@ -103,7 +103,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(17),
-      Q => \axi_rdata_reg[31]_0\(17),
+      Q => \OUT_Correction_reg[31]_0\(17),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[18]\: unisim.vcomponents.FDRE
@@ -111,7 +111,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(18),
-      Q => \axi_rdata_reg[31]_0\(18),
+      Q => \OUT_Correction_reg[31]_0\(18),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[19]\: unisim.vcomponents.FDRE
@@ -119,7 +119,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(19),
-      Q => \axi_rdata_reg[31]_0\(19),
+      Q => \OUT_Correction_reg[31]_0\(19),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[1]\: unisim.vcomponents.FDRE
@@ -127,7 +127,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(1),
-      Q => \axi_rdata_reg[31]_0\(1),
+      Q => \OUT_Correction_reg[31]_0\(1),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[20]\: unisim.vcomponents.FDRE
@@ -135,7 +135,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(20),
-      Q => \axi_rdata_reg[31]_0\(20),
+      Q => \OUT_Correction_reg[31]_0\(20),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[21]\: unisim.vcomponents.FDRE
@@ -143,7 +143,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(21),
-      Q => \axi_rdata_reg[31]_0\(21),
+      Q => \OUT_Correction_reg[31]_0\(21),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[22]\: unisim.vcomponents.FDRE
@@ -151,7 +151,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(22),
-      Q => \axi_rdata_reg[31]_0\(22),
+      Q => \OUT_Correction_reg[31]_0\(22),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[23]\: unisim.vcomponents.FDRE
@@ -159,7 +159,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(23),
-      Q => \axi_rdata_reg[31]_0\(23),
+      Q => \OUT_Correction_reg[31]_0\(23),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[24]\: unisim.vcomponents.FDRE
@@ -167,7 +167,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(24),
-      Q => \axi_rdata_reg[31]_0\(24),
+      Q => \OUT_Correction_reg[31]_0\(24),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[25]\: unisim.vcomponents.FDRE
@@ -175,7 +175,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(25),
-      Q => \axi_rdata_reg[31]_0\(25),
+      Q => \OUT_Correction_reg[31]_0\(25),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[26]\: unisim.vcomponents.FDRE
@@ -183,7 +183,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(26),
-      Q => \axi_rdata_reg[31]_0\(26),
+      Q => \OUT_Correction_reg[31]_0\(26),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[27]\: unisim.vcomponents.FDRE
@@ -191,7 +191,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(27),
-      Q => \axi_rdata_reg[31]_0\(27),
+      Q => \OUT_Correction_reg[31]_0\(27),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[28]\: unisim.vcomponents.FDRE
@@ -199,7 +199,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(28),
-      Q => \axi_rdata_reg[31]_0\(28),
+      Q => \OUT_Correction_reg[31]_0\(28),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[29]\: unisim.vcomponents.FDRE
@@ -207,7 +207,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(29),
-      Q => \axi_rdata_reg[31]_0\(29),
+      Q => \OUT_Correction_reg[31]_0\(29),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[2]\: unisim.vcomponents.FDRE
@@ -215,7 +215,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(2),
-      Q => \axi_rdata_reg[31]_0\(2),
+      Q => \OUT_Correction_reg[31]_0\(2),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[30]\: unisim.vcomponents.FDRE
@@ -223,7 +223,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(30),
-      Q => \axi_rdata_reg[31]_0\(30),
+      Q => \OUT_Correction_reg[31]_0\(30),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[31]\: unisim.vcomponents.FDRE
@@ -231,7 +231,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(31),
-      Q => \axi_rdata_reg[31]_0\(31),
+      Q => \OUT_Correction_reg[31]_0\(31),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[3]\: unisim.vcomponents.FDRE
@@ -239,7 +239,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(3),
-      Q => \axi_rdata_reg[31]_0\(3),
+      Q => \OUT_Correction_reg[31]_0\(3),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[4]\: unisim.vcomponents.FDRE
@@ -247,7 +247,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(4),
-      Q => \axi_rdata_reg[31]_0\(4),
+      Q => \OUT_Correction_reg[31]_0\(4),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[5]\: unisim.vcomponents.FDRE
@@ -255,7 +255,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(5),
-      Q => \axi_rdata_reg[31]_0\(5),
+      Q => \OUT_Correction_reg[31]_0\(5),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[6]\: unisim.vcomponents.FDRE
@@ -263,7 +263,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(6),
-      Q => \axi_rdata_reg[31]_0\(6),
+      Q => \OUT_Correction_reg[31]_0\(6),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[7]\: unisim.vcomponents.FDRE
@@ -271,7 +271,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(7),
-      Q => \axi_rdata_reg[31]_0\(7),
+      Q => \OUT_Correction_reg[31]_0\(7),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[8]\: unisim.vcomponents.FDRE
@@ -279,7 +279,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(8),
-      Q => \axi_rdata_reg[31]_0\(8),
+      Q => \OUT_Correction_reg[31]_0\(8),
       R => \^sr\(0)
     );
 \OUT_Correction_reg[9]\: unisim.vcomponents.FDRE
@@ -287,7 +287,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_Correction(9),
-      Q => \axi_rdata_reg[31]_0\(9),
+      Q => \OUT_Correction_reg[31]_0\(9),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[0]\: unisim.vcomponents.FDRE
@@ -295,7 +295,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(0),
-      Q => \axi_rdata_reg[31]\(0),
+      Q => \OUT_spline1_reg[31]_0\(0),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[10]\: unisim.vcomponents.FDRE
@@ -303,7 +303,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(10),
-      Q => \axi_rdata_reg[31]\(10),
+      Q => \OUT_spline1_reg[31]_0\(10),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[11]\: unisim.vcomponents.FDRE
@@ -311,7 +311,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(11),
-      Q => \axi_rdata_reg[31]\(11),
+      Q => \OUT_spline1_reg[31]_0\(11),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[12]\: unisim.vcomponents.FDRE
@@ -319,7 +319,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(12),
-      Q => \axi_rdata_reg[31]\(12),
+      Q => \OUT_spline1_reg[31]_0\(12),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[13]\: unisim.vcomponents.FDRE
@@ -327,7 +327,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(13),
-      Q => \axi_rdata_reg[31]\(13),
+      Q => \OUT_spline1_reg[31]_0\(13),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[14]\: unisim.vcomponents.FDRE
@@ -335,7 +335,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(14),
-      Q => \axi_rdata_reg[31]\(14),
+      Q => \OUT_spline1_reg[31]_0\(14),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[15]\: unisim.vcomponents.FDRE
@@ -343,7 +343,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(15),
-      Q => \axi_rdata_reg[31]\(15),
+      Q => \OUT_spline1_reg[31]_0\(15),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[16]\: unisim.vcomponents.FDRE
@@ -351,7 +351,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(16),
-      Q => \axi_rdata_reg[31]\(16),
+      Q => \OUT_spline1_reg[31]_0\(16),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[17]\: unisim.vcomponents.FDRE
@@ -359,7 +359,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(17),
-      Q => \axi_rdata_reg[31]\(17),
+      Q => \OUT_spline1_reg[31]_0\(17),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[18]\: unisim.vcomponents.FDRE
@@ -367,7 +367,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(18),
-      Q => \axi_rdata_reg[31]\(18),
+      Q => \OUT_spline1_reg[31]_0\(18),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[19]\: unisim.vcomponents.FDRE
@@ -375,7 +375,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(19),
-      Q => \axi_rdata_reg[31]\(19),
+      Q => \OUT_spline1_reg[31]_0\(19),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[1]\: unisim.vcomponents.FDRE
@@ -383,7 +383,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(1),
-      Q => \axi_rdata_reg[31]\(1),
+      Q => \OUT_spline1_reg[31]_0\(1),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[20]\: unisim.vcomponents.FDRE
@@ -391,7 +391,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(20),
-      Q => \axi_rdata_reg[31]\(20),
+      Q => \OUT_spline1_reg[31]_0\(20),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[21]\: unisim.vcomponents.FDRE
@@ -399,7 +399,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(21),
-      Q => \axi_rdata_reg[31]\(21),
+      Q => \OUT_spline1_reg[31]_0\(21),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[22]\: unisim.vcomponents.FDRE
@@ -407,7 +407,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(22),
-      Q => \axi_rdata_reg[31]\(22),
+      Q => \OUT_spline1_reg[31]_0\(22),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[23]\: unisim.vcomponents.FDRE
@@ -415,7 +415,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(23),
-      Q => \axi_rdata_reg[31]\(23),
+      Q => \OUT_spline1_reg[31]_0\(23),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[24]\: unisim.vcomponents.FDRE
@@ -423,7 +423,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(24),
-      Q => \axi_rdata_reg[31]\(24),
+      Q => \OUT_spline1_reg[31]_0\(24),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[25]\: unisim.vcomponents.FDRE
@@ -431,7 +431,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(25),
-      Q => \axi_rdata_reg[31]\(25),
+      Q => \OUT_spline1_reg[31]_0\(25),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[26]\: unisim.vcomponents.FDRE
@@ -439,7 +439,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(26),
-      Q => \axi_rdata_reg[31]\(26),
+      Q => \OUT_spline1_reg[31]_0\(26),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[27]\: unisim.vcomponents.FDRE
@@ -447,7 +447,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(27),
-      Q => \axi_rdata_reg[31]\(27),
+      Q => \OUT_spline1_reg[31]_0\(27),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[28]\: unisim.vcomponents.FDRE
@@ -455,7 +455,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(28),
-      Q => \axi_rdata_reg[31]\(28),
+      Q => \OUT_spline1_reg[31]_0\(28),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[29]\: unisim.vcomponents.FDRE
@@ -463,7 +463,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(29),
-      Q => \axi_rdata_reg[31]\(29),
+      Q => \OUT_spline1_reg[31]_0\(29),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[2]\: unisim.vcomponents.FDRE
@@ -471,7 +471,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(2),
-      Q => \axi_rdata_reg[31]\(2),
+      Q => \OUT_spline1_reg[31]_0\(2),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[30]\: unisim.vcomponents.FDRE
@@ -479,7 +479,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(30),
-      Q => \axi_rdata_reg[31]\(30),
+      Q => \OUT_spline1_reg[31]_0\(30),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[31]\: unisim.vcomponents.FDRE
@@ -487,7 +487,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(31),
-      Q => \axi_rdata_reg[31]\(31),
+      Q => \OUT_spline1_reg[31]_0\(31),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[3]\: unisim.vcomponents.FDRE
@@ -495,7 +495,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(3),
-      Q => \axi_rdata_reg[31]\(3),
+      Q => \OUT_spline1_reg[31]_0\(3),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[4]\: unisim.vcomponents.FDRE
@@ -503,7 +503,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(4),
-      Q => \axi_rdata_reg[31]\(4),
+      Q => \OUT_spline1_reg[31]_0\(4),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[5]\: unisim.vcomponents.FDRE
@@ -511,7 +511,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(5),
-      Q => \axi_rdata_reg[31]\(5),
+      Q => \OUT_spline1_reg[31]_0\(5),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[6]\: unisim.vcomponents.FDRE
@@ -519,7 +519,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(6),
-      Q => \axi_rdata_reg[31]\(6),
+      Q => \OUT_spline1_reg[31]_0\(6),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[7]\: unisim.vcomponents.FDRE
@@ -527,7 +527,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(7),
-      Q => \axi_rdata_reg[31]\(7),
+      Q => \OUT_spline1_reg[31]_0\(7),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[8]\: unisim.vcomponents.FDRE
@@ -535,7 +535,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(8),
-      Q => \axi_rdata_reg[31]\(8),
+      Q => \OUT_spline1_reg[31]_0\(8),
       R => \^sr\(0)
     );
 \OUT_spline1_reg[9]\: unisim.vcomponents.FDRE
@@ -543,7 +543,7 @@ begin
       C => s0_axi_aclk,
       CE => '1',
       D => IN_spline1(9),
-      Q => \axi_rdata_reg[31]\(9),
+      Q => \OUT_spline1_reg[31]_0\(9),
       R => \^sr\(0)
     );
 \OUT_spline2_reg[0]\: unisim.vcomponents.FDRE
@@ -817,15 +817,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI is
   port (
-    s0_axi_arready : out STD_LOGIC;
     s0_axi_wready : out STD_LOGIC;
     s0_axi_awready : out STD_LOGIC;
+    s0_axi_arready : out STD_LOGIC;
     s0_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s0_axi_bvalid : out STD_LOGIC;
     s0_axi_rvalid : out STD_LOGIC;
-    s0_axi_arvalid : in STD_LOGIC;
     s0_axi_aclk : in STD_LOGIC;
     s0_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s0_axi_arvalid : in STD_LOGIC;
     IN_spline2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     IN_spline1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     IN_Correction : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -848,11 +848,11 @@ architecture STRUCTURE of design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_A
   signal axi_araddr : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \axi_araddr[2]_i_1_n_0\ : STD_LOGIC;
   signal \axi_araddr[3]_i_1_n_0\ : STD_LOGIC;
-  signal axi_arready_i_1_n_0 : STD_LOGIC;
-  signal axi_awready0 : STD_LOGIC;
+  signal axi_arready0 : STD_LOGIC;
+  signal \axi_awready0__0\ : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
-  signal axi_wready0 : STD_LOGIC;
+  signal \axi_wready0__0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s0_axi_arready\ : STD_LOGIC;
@@ -862,10 +862,10 @@ architecture STRUCTURE of design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_A
   signal \^s0_axi_wready\ : STD_LOGIC;
   signal \slv_reg_rden__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \axi_araddr[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_awready0 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_wready0 : label is "soft_lutpair1";
 begin
   s0_axi_arready <= \^s0_axi_arready\;
   s0_axi_awready <= \^s0_axi_awready\;
@@ -874,13 +874,13 @@ begin
   s0_axi_wready <= \^s0_axi_wready\;
 aw_en_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FF070F070F070"
+      INIT => X"F7FFF700F700F700"
     )
         port map (
       I0 => s0_axi_awvalid,
       I1 => s0_axi_wvalid,
-      I2 => aw_en_reg_n_0,
-      I3 => \^s0_axi_awready\,
+      I2 => \^s0_axi_awready\,
+      I3 => aw_en_reg_n_0,
       I4 => s0_axi_bready,
       I5 => \^s0_axi_bvalid\,
       O => aw_en_i_1_n_0
@@ -938,32 +938,32 @@ axi_arready_i_1: unisim.vcomponents.LUT2
         port map (
       I0 => s0_axi_arvalid,
       I1 => \^s0_axi_arready\,
-      O => axi_arready_i_1_n_0
+      O => axi_arready0
     );
 axi_arready_reg: unisim.vcomponents.FDRE
      port map (
       C => s0_axi_aclk,
       CE => '1',
-      D => axi_arready_i_1_n_0,
+      D => axi_arready0,
       Q => \^s0_axi_arready\,
       R => p_0_in
     );
-axi_awready_i_2: unisim.vcomponents.LUT4
+axi_awready0: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"4000"
+      INIT => X"2000"
     )
         port map (
-      I0 => \^s0_axi_awready\,
-      I1 => aw_en_reg_n_0,
+      I0 => aw_en_reg_n_0,
+      I1 => \^s0_axi_awready\,
       I2 => s0_axi_wvalid,
       I3 => s0_axi_awvalid,
-      O => axi_awready0
+      O => \axi_awready0__0\
     );
 axi_awready_reg: unisim.vcomponents.FDRE
      port map (
       C => s0_axi_aclk,
       CE => '1',
-      D => axi_awready0,
+      D => \axi_awready0__0\,
       Q => \^s0_axi_awready\,
       R => p_0_in
     );
@@ -972,10 +972,10 @@ axi_bvalid_i_1: unisim.vcomponents.LUT6
       INIT => X"0000FFFF80008000"
     )
         port map (
-      I0 => \^s0_axi_wready\,
-      I1 => s0_axi_awvalid,
-      I2 => s0_axi_wvalid,
-      I3 => \^s0_axi_awready\,
+      I0 => \^s0_axi_awready\,
+      I1 => \^s0_axi_wready\,
+      I2 => s0_axi_awvalid,
+      I3 => s0_axi_wvalid,
       I4 => s0_axi_bready,
       I5 => \^s0_axi_bvalid\,
       O => axi_bvalid_i_1_n_0
@@ -1647,32 +1647,32 @@ axi_rvalid_reg: unisim.vcomponents.FDRE
       Q => \^s0_axi_rvalid\,
       R => p_0_in
     );
-axi_wready_i_1: unisim.vcomponents.LUT4
+axi_wready0: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"4000"
+      INIT => X"2000"
     )
         port map (
-      I0 => \^s0_axi_wready\,
-      I1 => aw_en_reg_n_0,
+      I0 => aw_en_reg_n_0,
+      I1 => \^s0_axi_wready\,
       I2 => s0_axi_wvalid,
       I3 => s0_axi_awvalid,
-      O => axi_wready0
+      O => \axi_wready0__0\
     );
 axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s0_axi_aclk,
       CE => '1',
-      D => axi_wready0,
+      D => \axi_wready0__0\,
       Q => \^s0_axi_wready\,
       R => p_0_in
     );
 slv_reg_rden: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"40"
+      INIT => X"20"
     )
         port map (
-      I0 => \^s0_axi_rvalid\,
-      I1 => s0_axi_arvalid,
+      I0 => s0_axi_arvalid,
+      I1 => \^s0_axi_rvalid\,
       I2 => \^s0_axi_arready\,
       O => \slv_reg_rden__0\
     );
@@ -1681,10 +1681,10 @@ u_MaxdataTrans: entity work.design_1_MaxdataTrans_ip_0_0_MaxdataTrans
       IN_Correction(31 downto 0) => IN_Correction(31 downto 0),
       IN_spline1(31 downto 0) => IN_spline1(31 downto 0),
       IN_spline2(31 downto 0) => IN_spline2(31 downto 0),
+      \OUT_Correction_reg[31]_0\(31 downto 0) => OUT_Correction(31 downto 0),
+      \OUT_spline1_reg[31]_0\(31 downto 0) => OUT_spline1(31 downto 0),
       Q(31 downto 0) => OUT_spline2(31 downto 0),
       SR(0) => p_0_in,
-      \axi_rdata_reg[31]\(31 downto 0) => OUT_spline1(31 downto 0),
-      \axi_rdata_reg[31]_0\(31 downto 0) => OUT_Correction(31 downto 0),
       s0_axi_aclk => s0_axi_aclk,
       s0_axi_aresetn => s0_axi_aresetn
     );
@@ -1695,15 +1695,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0 is
   port (
-    S_AXI_ARREADY : out STD_LOGIC;
     s0_axi_wready : out STD_LOGIC;
     S_AXI_AWREADY : out STD_LOGIC;
+    S_AXI_ARREADY : out STD_LOGIC;
     s0_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s0_axi_bvalid : out STD_LOGIC;
     s0_axi_rvalid : out STD_LOGIC;
-    s0_axi_arvalid : in STD_LOGIC;
     s0_axi_aclk : in STD_LOGIC;
     s0_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s0_axi_arvalid : in STD_LOGIC;
     IN_spline2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     IN_spline1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     IN_Correction : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1778,7 +1778,7 @@ entity design_1_MaxdataTrans_ip_0_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_MaxdataTrans_ip_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_1_MaxdataTrans_ip_0_0 : entity is "MaxdataTrans_ip_v1_0,Vivado 2017.4";
+  attribute X_CORE_INFO of design_1_MaxdataTrans_ip_0_0 : entity is "MaxdataTrans_ip_v1_0,Vivado 2020.2";
 end design_1_MaxdataTrans_ip_0_0;
 
 architecture STRUCTURE of design_1_MaxdataTrans_ip_0_0 is
@@ -1796,7 +1796,7 @@ architecture STRUCTURE of design_1_MaxdataTrans_ip_0_0 is
   attribute X_INTERFACE_INFO of s0_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S0_AXI BREADY";
   attribute X_INTERFACE_INFO of s0_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S0_AXI BVALID";
   attribute X_INTERFACE_INFO of s0_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S0_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s0_axi_rready : signal is "XIL_INTERFACENAME S0_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute X_INTERFACE_PARAMETER of s0_axi_rready : signal is "XIL_INTERFACENAME S0_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute X_INTERFACE_INFO of s0_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S0_AXI RVALID";
   attribute X_INTERFACE_INFO of s0_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S0_AXI WREADY";
   attribute X_INTERFACE_INFO of s0_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S0_AXI WVALID";

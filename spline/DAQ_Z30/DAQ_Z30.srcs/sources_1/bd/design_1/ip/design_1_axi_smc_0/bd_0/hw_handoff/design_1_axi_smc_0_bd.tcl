@@ -20,12 +20,12 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2017.4
+set scripts_vivado_version 2020.2
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
    puts ""
-   catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+   catch {common::send_gid_msg -ssname BD::TCL -id 2041 -severity "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
 
    return 1
 }
@@ -76,10 +76,10 @@ if { ${design_name} eq "" } {
    #    4): Current design opened AND is empty AND names diff; design_name exists in project.
 
    if { $cur_design ne $design_name } {
-      common::send_msg_id "BD_TCL-001" "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+      common::send_gid_msg -ssname BD::TCL -id 2001 -severity "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
       set design_name [get_property NAME $cur_design]
    }
-   common::send_msg_id "BD_TCL-002" "INFO" "Constructing design in IPI design <$cur_design>..."
+   common::send_gid_msg -ssname BD::TCL -id 2002 -severity "INFO" "Constructing design in IPI design <$cur_design>..."
 
 } elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
    # USE CASES:
@@ -100,19 +100,19 @@ if { ${design_name} eq "" } {
    #    8) No opened design, design_name not in project.
    #    9) Current opened design, has components, but diff names, design_name not in project.
 
-   common::send_msg_id "BD_TCL-003" "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+   common::send_gid_msg -ssname BD::TCL -id 2003 -severity "INFO" "Currently there is no design <$design_name> in project, so creating one..."
 
    create_bd_design -bdsource SBD $design_name
 
-   common::send_msg_id "BD_TCL-004" "INFO" "Making design <$design_name> as current_bd_design."
+   common::send_gid_msg -ssname BD::TCL -id 2004 -severity "INFO" "Making design <$design_name> as current_bd_design."
    current_bd_design $design_name
 
 }
 
-common::send_msg_id "BD_TCL-005" "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
 
 if { $nRet != 0 } {
-   catch {common::send_msg_id "BD_TCL-114" "ERROR" $errMsg}
+   catch {common::send_gid_msg -ssname BD::TCL -id 2006 -severity "ERROR" $errMsg}
    return $nRet
 }
 
@@ -127,21 +127,21 @@ proc create_hier_cell_switchboards { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_switchboards() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_switchboards() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -157,20 +157,35 @@ proc create_hier_cell_switchboards { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_AR
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_AW
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_B
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_R
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_W
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M01_SC_B
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M01_SC_R
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_AR
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_AW
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_B
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_R
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_W
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S01_SC_AR
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S01_SC_AW
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S01_SC_W
+
 
   # Create pins
   create_bd_pin -dir I -type clk aclk
@@ -184,7 +199,7 @@ proc create_hier_cell_switchboards { parentCell nameHier } {
    CONFIG.M_PIPELINES {1} \
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_SI {2} \
-   CONFIG.PAYLD_WIDTH {138} \
+   CONFIG.PAYLD_WIDTH {140} \
    CONFIG.S_LATENCY {0} \
    CONFIG.S_PIPELINES {0} \
  ] $ar_switchboard
@@ -197,7 +212,7 @@ proc create_hier_cell_switchboards { parentCell nameHier } {
    CONFIG.M_PIPELINES {1} \
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_SI {2} \
-   CONFIG.PAYLD_WIDTH {138} \
+   CONFIG.PAYLD_WIDTH {140} \
    CONFIG.S_LATENCY {0} \
    CONFIG.S_PIPELINES {0} \
  ] $aw_switchboard
@@ -210,7 +225,7 @@ proc create_hier_cell_switchboards { parentCell nameHier } {
    CONFIG.M_PIPELINES {1} \
    CONFIG.NUM_MI {2} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {6} \
+   CONFIG.PAYLD_WIDTH {7} \
    CONFIG.S_LATENCY {0} \
    CONFIG.S_PIPELINES {0} \
  ] $b_switchboard
@@ -223,7 +238,7 @@ proc create_hier_cell_switchboards { parentCell nameHier } {
    CONFIG.M_PIPELINES {1} \
    CONFIG.NUM_MI {2} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {84} \
+   CONFIG.PAYLD_WIDTH {85} \
    CONFIG.S_LATENCY {0} \
    CONFIG.S_PIPELINES {0} \
  ] $r_switchboard
@@ -271,21 +286,21 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_s01_nodes() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_s01_nodes() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -301,11 +316,17 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_AW
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_B
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_W
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_AW
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_B
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_W
+
 
   # Create pins
   create_bd_pin -dir I -type clk m_sc_clk
@@ -320,7 +341,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {3} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -340,8 +361,9 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {138} \
+   CONFIG.PAYLD_WIDTH {140} \
    CONFIG.S00_NUM_BYTES {4} \
    CONFIG.S01_NUM_BYTES {4} \
    CONFIG.S02_NUM_BYTES {4} \
@@ -369,7 +391,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {4} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {4} \
    CONFIG.M01_NUM_BYTES {4} \
    CONFIG.M02_NUM_BYTES {4} \
@@ -389,8 +411,9 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {6} \
+   CONFIG.PAYLD_WIDTH {7} \
    CONFIG.S00_NUM_BYTES {8} \
    CONFIG.S01_NUM_BYTES {8} \
    CONFIG.S02_NUM_BYTES {8} \
@@ -419,7 +442,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {1} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -439,6 +462,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {88} \
    CONFIG.S00_NUM_BYTES {4} \
@@ -485,21 +509,21 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_s01_entry_pipeline() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_s01_entry_pipeline() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -515,7 +539,9 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 m_axi
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi
+
 
   # Create pins
   create_bd_pin -dir I -type clk aclk
@@ -530,7 +556,9 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
    CONFIG.MSC000_ROUTE {0b1} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
    CONFIG.NUM_MSC {1} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_SEG {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
    CONFIG.SEG000_BASE_ADDR {0x0000000000000000} \
@@ -540,6 +568,7 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
    CONFIG.SEG000_SIZE {30} \
    CONFIG.SEG000_SUPPORTS_READ {1} \
    CONFIG.SEG000_SUPPORTS_WRITE {1} \
+   CONFIG.SUPPORTS_NARROW {0} \
    CONFIG.SUPPORTS_WRITE_DECERR {1} \
    CONFIG.S_AWUSER_WIDTH {0} \
    CONFIG.S_BUSER_WIDTH {0} \
@@ -554,18 +583,20 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.HAS_BURST {0} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.IS_CASCADED {0} \
    CONFIG.LIMIT_READ_LENGTH {0} \
    CONFIG.LIMIT_WRITE_LENGTH {0} \
    CONFIG.MAX_RUSER_BITS_PER_BYTE {0} \
    CONFIG.MAX_WUSER_BITS_PER_BYTE {0} \
-   CONFIG.MEP_IDENTIFIER_WIDTH {1} \
+   CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.MSC000_RDATA_WIDTH {64} \
    CONFIG.MSC000_WDATA_WIDTH {64} \
    CONFIG.NUM_MSC {1} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_READ_THREADS {1} \
    CONFIG.NUM_SEG {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.NUM_WRITE_THREADS {1} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
@@ -583,8 +614,10 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.IS_CASCADED {0} \
-   CONFIG.MEP_IDENTIFIER {1} \
-   CONFIG.MEP_IDENTIFIER_WIDTH {1} \
+   CONFIG.MEP_IDENTIFIER {2} \
+   CONFIG.MEP_IDENTIFIER_WIDTH {2} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
    CONFIG.SEP_ROUTE_WIDTH {1} \
@@ -614,21 +647,21 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_s00_nodes() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_s00_nodes() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -644,9 +677,13 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_AR
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_R
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_AR
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_R
+
 
   # Create pins
   create_bd_pin -dir I -type clk m_sc_clk
@@ -661,7 +698,7 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {2} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -681,8 +718,9 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {138} \
+   CONFIG.PAYLD_WIDTH {140} \
    CONFIG.S00_NUM_BYTES {4} \
    CONFIG.S01_NUM_BYTES {4} \
    CONFIG.S02_NUM_BYTES {4} \
@@ -710,7 +748,7 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {0} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {4} \
    CONFIG.M01_NUM_BYTES {4} \
    CONFIG.M02_NUM_BYTES {4} \
@@ -730,8 +768,9 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {84} \
+   CONFIG.PAYLD_WIDTH {85} \
    CONFIG.S00_NUM_BYTES {8} \
    CONFIG.S01_NUM_BYTES {8} \
    CONFIG.S02_NUM_BYTES {8} \
@@ -775,21 +814,21 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_s00_entry_pipeline() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_s00_entry_pipeline() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -805,7 +844,9 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 m_axi
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi
+
 
   # Create pins
   create_bd_pin -dir I -type clk aclk
@@ -820,7 +861,9 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.MSC000_ROUTE {0b1} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
    CONFIG.NUM_MSC {1} \
+   CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_SEG {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_ONLY} \
    CONFIG.SEG000_BASE_ADDR {0x0000000000000000} \
@@ -830,6 +873,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.SEG000_SIZE {30} \
    CONFIG.SEG000_SUPPORTS_READ {1} \
    CONFIG.SEG000_SUPPORTS_WRITE {1} \
+   CONFIG.SUPPORTS_NARROW {0} \
    CONFIG.SUPPORTS_READ_DECERR {1} \
    CONFIG.S_ARUSER_WIDTH {0} \
    CONFIG.S_PROTOCOL {AXI4} \
@@ -843,18 +887,20 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.HAS_BURST {0} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.IS_CASCADED {0} \
    CONFIG.LIMIT_READ_LENGTH {0} \
    CONFIG.LIMIT_WRITE_LENGTH {0} \
    CONFIG.MAX_RUSER_BITS_PER_BYTE {0} \
    CONFIG.MAX_WUSER_BITS_PER_BYTE {0} \
-   CONFIG.MEP_IDENTIFIER_WIDTH {1} \
+   CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.MSC000_RDATA_WIDTH {64} \
    CONFIG.MSC000_WDATA_WIDTH {64} \
    CONFIG.NUM_MSC {1} \
+   CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_READ_THREADS {1} \
    CONFIG.NUM_SEG {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_THREADS {1} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_ONLY} \
@@ -872,8 +918,10 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.IS_CASCADED {0} \
-   CONFIG.MEP_IDENTIFIER {0} \
-   CONFIG.MEP_IDENTIFIER_WIDTH {1} \
+   CONFIG.MEP_IDENTIFIER {1} \
+   CONFIG.MEP_IDENTIFIER_WIDTH {2} \
+   CONFIG.NUM_READ_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_ONLY} \
    CONFIG.SEP_ROUTE_WIDTH {1} \
@@ -903,21 +951,21 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_m00_nodes() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_m00_nodes() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -933,15 +981,25 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_AR
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_AW
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_B
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_R
+
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_W
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_AR
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_AW
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_B
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_R
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_W
+
 
   # Create pins
   create_bd_pin -dir I -type clk m_axi_aclk
@@ -955,7 +1013,7 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {2} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -975,8 +1033,9 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {2} \
-   CONFIG.PAYLD_WIDTH {138} \
+   CONFIG.PAYLD_WIDTH {140} \
    CONFIG.S00_NUM_BYTES {8} \
    CONFIG.S01_NUM_BYTES {8} \
    CONFIG.S02_NUM_BYTES {8} \
@@ -1004,7 +1063,7 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {3} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -1024,8 +1083,9 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {2} \
-   CONFIG.PAYLD_WIDTH {138} \
+   CONFIG.PAYLD_WIDTH {140} \
    CONFIG.S00_NUM_BYTES {8} \
    CONFIG.S01_NUM_BYTES {8} \
    CONFIG.S02_NUM_BYTES {8} \
@@ -1053,7 +1113,7 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {4} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -1073,8 +1133,9 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {2} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {6} \
+   CONFIG.PAYLD_WIDTH {7} \
    CONFIG.S00_NUM_BYTES {8} \
    CONFIG.S01_NUM_BYTES {8} \
    CONFIG.S02_NUM_BYTES {8} \
@@ -1101,7 +1162,7 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {0} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -1121,8 +1182,9 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {2} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {84} \
+   CONFIG.PAYLD_WIDTH {85} \
    CONFIG.S00_NUM_BYTES {8} \
    CONFIG.S01_NUM_BYTES {8} \
    CONFIG.S02_NUM_BYTES {8} \
@@ -1150,7 +1212,7 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.ACLK_RELATIONSHIP {1} \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.CHANNEL {1} \
-   CONFIG.ID_WIDTH {1} \
+   CONFIG.ID_WIDTH {2} \
    CONFIG.M00_NUM_BYTES {8} \
    CONFIG.M01_NUM_BYTES {8} \
    CONFIG.M02_NUM_BYTES {8} \
@@ -1170,6 +1232,7 @@ proc create_hier_cell_m00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {8} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
+   CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {2} \
    CONFIG.PAYLD_WIDTH {88} \
    CONFIG.S00_NUM_BYTES {8} \
@@ -1223,21 +1286,21 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_m00_exit_pipeline() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_m00_exit_pipeline() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -1253,7 +1316,9 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 m_axi
+
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi
+
 
   # Create pins
   create_bd_pin -dir I -type clk aclk
@@ -1268,7 +1333,7 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
    CONFIG.IS_CASCADED {0} \
    CONFIG.MAX_RUSER_BITS_PER_BYTE {0} \
    CONFIG.MAX_WUSER_BITS_PER_BYTE {0} \
-   CONFIG.MEP_IDENTIFIER_WIDTH {1} \
+   CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.M_ARUSER_WIDTH {0} \
    CONFIG.M_AWUSER_WIDTH {0} \
    CONFIG.M_BUSER_WIDTH {0} \
@@ -1280,12 +1345,16 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
    CONFIG.M_WUSER_BITS_PER_BYTE {0} \
    CONFIG.M_WUSER_WIDTH {0} \
    CONFIG.NUM_MSC {1} \
+   CONFIG.NUM_READ_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.RDATA_WIDTH {64} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.SSC000_ROUTE {0b01} \
-   CONFIG.SSC001_ROUTE {0b10} \
+   CONFIG.SSC000_ROUTE {0b00} \
+   CONFIG.SSC001_ROUTE {0b01} \
+   CONFIG.SSC002_ROUTE {0b10} \
+   CONFIG.SSC003_ROUTE {0b00} \
    CONFIG.SSC_ROUTE_WIDTH {2} \
-   CONFIG.S_ID_WIDTH {1} \
+   CONFIG.S_ID_WIDTH {2} \
    CONFIG.WDATA_WIDTH {64} \
  ] $m00_exit
 
@@ -1307,21 +1376,21 @@ proc create_hier_cell_clk_map { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_clk_map() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_clk_map() - Empty argument(s)!"}
      return
   }
 
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -1385,14 +1454,14 @@ proc create_root_design { parentCell } {
   # Get object for parentCell
   set parentObj [get_bd_cells $parentCell]
   if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
      return
   }
 
   # Make sure parentObj is hier blk
   set parentType [get_property TYPE $parentObj]
   if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
      return
   }
 
@@ -1407,12 +1476,25 @@ proc create_root_design { parentCell } {
   set M00_AXI [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M00_AXI ]
   set_property -dict [ list \
    CONFIG.MAX_BURST_LENGTH {8} \
+   CONFIG.NUM_READ_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.RUSER_BITS_PER_BYTE {0} \
    CONFIG.SUPPORTS_NARROW_BURST {0} \
    CONFIG.WUSER_BITS_PER_BYTE {0} \
    ] $M00_AXI
+
   set S00_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI ]
+  set_property -dict [ list \
+   CONFIG.NUM_READ_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   ] $S00_AXI
+
   set S01_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S01_AXI ]
+  set_property -dict [ list \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   ] $S01_AXI
+
 
   # Create ports
   set aclk [ create_bd_port -dir I -type clk aclk ]
@@ -1437,7 +1519,7 @@ proc create_root_design { parentCell } {
   set m00_sc2axi [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_sc2axi:1.0 m00_sc2axi ]
   set_property -dict [ list \
    CONFIG.AXI_ADDR_WIDTH {32} \
-   CONFIG.AXI_ID_WIDTH {1} \
+   CONFIG.AXI_ID_WIDTH {2} \
    CONFIG.AXI_RDATA_WIDTH {64} \
    CONFIG.AXI_WDATA_WIDTH {64} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
@@ -1446,7 +1528,7 @@ proc create_root_design { parentCell } {
    CONFIG.SC_ARUSER_WIDTH {0} \
    CONFIG.SC_AWUSER_WIDTH {0} \
    CONFIG.SC_BUSER_WIDTH {0} \
-   CONFIG.SC_ID_WIDTH {1} \
+   CONFIG.SC_ID_WIDTH {2} \
    CONFIG.SC_RDATA_WIDTH {64} \
    CONFIG.SC_RUSER_BITS_PER_BYTE {0} \
    CONFIG.SC_WDATA_WIDTH {64} \
@@ -1458,7 +1540,7 @@ proc create_root_design { parentCell } {
   set s00_axi2sc [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_axi2sc:1.0 s00_axi2sc ]
   set_property -dict [ list \
    CONFIG.AXI_ADDR_WIDTH {32} \
-   CONFIG.AXI_ID_WIDTH {1} \
+   CONFIG.AXI_ID_WIDTH {2} \
    CONFIG.AXI_RDATA_WIDTH {32} \
    CONFIG.AXI_WDATA_WIDTH {32} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
@@ -1467,7 +1549,7 @@ proc create_root_design { parentCell } {
    CONFIG.SC_ARUSER_WIDTH {0} \
    CONFIG.SC_AWUSER_WIDTH {0} \
    CONFIG.SC_BUSER_WIDTH {0} \
-   CONFIG.SC_ID_WIDTH {1} \
+   CONFIG.SC_ID_WIDTH {2} \
    CONFIG.SC_RDATA_WIDTH {64} \
    CONFIG.SC_RUSER_BITS_PER_BYTE {0} \
    CONFIG.SC_WDATA_WIDTH {64} \
@@ -1485,7 +1567,7 @@ proc create_root_design { parentCell } {
   set s01_axi2sc [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_axi2sc:1.0 s01_axi2sc ]
   set_property -dict [ list \
    CONFIG.AXI_ADDR_WIDTH {32} \
-   CONFIG.AXI_ID_WIDTH {1} \
+   CONFIG.AXI_ID_WIDTH {2} \
    CONFIG.AXI_RDATA_WIDTH {32} \
    CONFIG.AXI_WDATA_WIDTH {32} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
@@ -1494,7 +1576,7 @@ proc create_root_design { parentCell } {
    CONFIG.SC_ARUSER_WIDTH {0} \
    CONFIG.SC_AWUSER_WIDTH {0} \
    CONFIG.SC_BUSER_WIDTH {0} \
-   CONFIG.SC_ID_WIDTH {1} \
+   CONFIG.SC_ID_WIDTH {2} \
    CONFIG.SC_RDATA_WIDTH {64} \
    CONFIG.SC_RUSER_BITS_PER_BYTE {0} \
    CONFIG.SC_WDATA_WIDTH {64} \
@@ -1558,6 +1640,7 @@ proc create_root_design { parentCell } {
   # Restore current instance
   current_bd_instance $oldCurInst
 
+  validate_bd_design
   save_bd_design
 }
 # End of create_root_design()

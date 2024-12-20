@@ -1,140 +1,88 @@
 #-----------------------------------------------------------
-# Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Dec 18 23:18:13 2024
-# Process ID: 20980
-# Current directory: C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec 20 18:30:15 2024
+# Process ID: 48008
+# Current directory: D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1
 # Command line: vivado.exe -log design_1_MaxdataTrans_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_MaxdataTrans_ip_0_0.tcl
-# Log file: C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1/design_1_MaxdataTrans_ip_0_0.vds
-# Journal file: C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1\vivado.jou
+# Log file: D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1/design_1_MaxdataTrans_ip_0_0.vds
+# Journal file: D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_MaxdataTrans_ip_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Git/spline/myip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/Vivado/2020.2/data/ip'.
 Command: synth_design -top design_1_MaxdataTrans_ip_0_0 -part xc7z030ffg676-2 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z030'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z030'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 30808 
+INFO: [Device 21-403] Loading part xc7z030ffg676-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 147048
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 405.973 ; gain = 99.637
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1178.418 ; gain = 51.453
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_MaxdataTrans_ip_0_0' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/synth/design_1_MaxdataTrans_ip_0_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'MaxdataTrans_ip_v1_0' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'design_1_MaxdataTrans_ip_0_0' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/synth/design_1_MaxdataTrans_ip_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'MaxdataTrans_ip_v1_0' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0.v:4]
 	Parameter C_S0_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S0_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'MaxdataTrans_ip_v1_0_S0_AXI' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'MaxdataTrans_ip_v1_0_S0_AXI' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:237]
-INFO: [Synth 8-226] default block is never used [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:378]
-INFO: [Synth 8-638] synthesizing module 'MaxdataTrans' [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans.v:2]
-INFO: [Synth 8-256] done synthesizing module 'MaxdataTrans' (1#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans.v:2]
-WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:176]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg0_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:229]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:230]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:231]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:232]
-INFO: [Synth 8-256] done synthesizing module 'MaxdataTrans_ip_v1_0_S0_AXI' (2#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:4]
-INFO: [Synth 8-256] done synthesizing module 'MaxdataTrans_ip_v1_0' (3#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0.v:4]
-INFO: [Synth 8-256] done synthesizing module 'design_1_MaxdataTrans_ip_0_0' (4#1) [c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/synth/design_1_MaxdataTrans_ip_0_0.v:57]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[3]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[2]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[1]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWADDR[0]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[31]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[30]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[29]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[28]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[27]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[26]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[25]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[24]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[23]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[22]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[21]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[20]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[19]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[18]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[17]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[16]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[15]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[14]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[13]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[12]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[11]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[10]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[9]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[8]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[7]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[6]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[5]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[4]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[3]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[2]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[1]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WDATA[0]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design MaxdataTrans_ip_v1_0_S0_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-226] default block is never used [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:237]
+INFO: [Synth 8-226] default block is never used [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:378]
+INFO: [Synth 8-6157] synthesizing module 'MaxdataTrans' [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'MaxdataTrans' (1#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'MaxdataTrans_ip_v1_0_S0_AXI' (2#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0_S0_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'MaxdataTrans_ip_v1_0' (3#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ipshared/b052/hdl/MaxdataTrans_ip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_MaxdataTrans_ip_0_0' (4#1) [d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/synth/design_1_MaxdataTrans_ip_0_0.v:57]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 458.832 ; gain = 152.496
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1234.582 ; gain = 107.617
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 458.832 ; gain = 152.496
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z030ffg676-2
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1234.582 ; gain = 107.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1234.582 ; gain = 107.617
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1234.582 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1337.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 825.203 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1338.406 ; gain = 0.957
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 825.203 ; gain = 518.867
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z030ffg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 825.203 ; gain = 518.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 825.203 ; gain = 518.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 825.203 ; gain = 518.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -145,31 +93,10 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 6     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module MaxdataTrans 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 3     
-Module MaxdataTrans_ip_v1_0_S0_AXI 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -183,99 +110,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awaddr[3]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awaddr[2]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awaddr[1]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awaddr[0]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awprot[2]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awprot[1]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_awprot[0]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[31]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[30]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[29]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[28]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[27]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[26]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[25]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[24]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[23]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[22]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[21]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[20]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[19]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[18]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[17]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[16]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[15]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[14]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[13]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[12]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[11]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[10]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[9]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[8]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[7]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[6]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[5]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[4]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[3]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[2]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[1]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wdata[0]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wstrb[3]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wstrb[2]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wstrb[1]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_wstrb[0]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_arprot[2]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_arprot[1]
-WARNING: [Synth 8-3331] design design_1_MaxdataTrans_ip_0_0 has unconnected port s0_axi_arprot[0]
-INFO: [Synth 8-3886] merging instance 'inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3332] Sequential element (inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_MaxdataTrans_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_MaxdataTrans_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_MaxdataTrans_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/MaxdataTrans_ip_v1_0_S0_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_MaxdataTrans_ip_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 825.203 ; gain = 518.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 827.418 ; gain = 521.082
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 827.492 ; gain = 521.156
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1338.406 ; gain = 211.441
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1347.910 ; gain = 220.945
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -292,50 +147,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -360,36 +202,28 @@ Report Cell Usage:
 |7     |FDRE |   135|
 |8     |FDSE |     1|
 +------+-----+------+
-
-Report Instance Areas: 
-+------+-------------------------------------+----------------------------+------+
-|      |Instance                             |Module                      |Cells |
-+------+-------------------------------------+----------------------------+------+
-|1     |top                                  |                            |   178|
-|2     |  inst                               |MaxdataTrans_ip_v1_0        |   178|
-|3     |    MaxdataTrans_ip_v1_0_S0_AXI_inst |MaxdataTrans_ip_v1_0_S0_AXI |   178|
-|4     |      u_MaxdataTrans                 |MaxdataTrans                |    97|
-+------+-------------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 847.336 ; gain = 174.629
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 847.336 ; gain = 541.000
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1353.723 ; gain = 122.934
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.723 ; gain = 226.758
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1365.801 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1379.312 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
+25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 851.727 ; gain = 556.910
-INFO: [Common 17-1381] The checkpoint 'C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1/design_1_MaxdataTrans_ip_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/design_1_MaxdataTrans_ip_0_0.xci
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1379.312 ; gain = 252.348
+INFO: [Common 17-1381] The checkpoint 'D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1/design_1_MaxdataTrans_ip_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_MaxdataTrans_ip_0_0, cache-ID = 545f52797152964e
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1/design_1_MaxdataTrans_ip_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/design_1_MaxdataTrans_ip_0_0_synth_1/design_1_MaxdataTrans_ip_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_MaxdataTrans_ip_0_0_utilization_synth.rpt -pb design_1_MaxdataTrans_ip_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 851.727 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 23:18:38 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 18:30:52 2024...

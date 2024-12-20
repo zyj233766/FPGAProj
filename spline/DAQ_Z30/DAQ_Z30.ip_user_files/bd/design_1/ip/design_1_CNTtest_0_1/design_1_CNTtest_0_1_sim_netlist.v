@@ -1,17 +1,94 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Tue Oct 15 21:36:36 2024
-// Host        : Lenovo running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_CNTtest_0_1 -prefix
-//               design_1_CNTtest_0_1_ design_1_CNTtest_0_0_sim_netlist.v
-// Design      : design_1_CNTtest_0_0
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Fri Dec 20 18:30:53 2024
+// Host        : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_CNTtest_0_1/design_1_CNTtest_0_1_sim_netlist.v
+// Design      : design_1_CNTtest_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z030ffg676-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "design_1_CNTtest_0_1,CNTtest,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "CNTtest,Vivado 2020.2" *) 
+(* NotValidForBitStream *)
+module design_1_CNTtest_0_1
+   (sys_clk,
+    sys_rst_n,
+    IN_CNTA,
+    IN_CNTB,
+    IN_CNTC,
+    IN_STOP,
+    IN_START,
+    IN_CNTEN,
+    OUT_CNTA,
+    OUT_CNTB,
+    OUT_CNTC,
+    OUT_STOP,
+    OUT_START,
+    OUT_CNTEN,
+    SIGN_CNTA,
+    SIGN_CNTB,
+    SIGN_CNTC);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 sys_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_clk, ASSOCIATED_RESET sys_rst_n, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) input sys_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 sys_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_rst_n, POLARITY ACTIVE_LOW" *) input sys_rst_n;
+  input [31:0]IN_CNTA;
+  input [31:0]IN_CNTB;
+  input [31:0]IN_CNTC;
+  input IN_STOP;
+  input IN_START;
+  input IN_CNTEN;
+  output [31:0]OUT_CNTA;
+  output [31:0]OUT_CNTB;
+  output [31:0]OUT_CNTC;
+  output OUT_STOP;
+  output OUT_START;
+  output OUT_CNTEN;
+  output SIGN_CNTA;
+  output SIGN_CNTB;
+  output SIGN_CNTC;
+
+  wire [31:0]IN_CNTA;
+  wire [31:0]IN_CNTB;
+  wire [31:0]IN_CNTC;
+  wire IN_CNTEN;
+  wire IN_START;
+  wire IN_STOP;
+  wire [31:0]OUT_CNTA;
+  wire [31:0]OUT_CNTB;
+  wire [31:0]OUT_CNTC;
+  wire OUT_CNTEN;
+  wire OUT_START;
+  wire OUT_STOP;
+  wire SIGN_CNTA;
+  wire SIGN_CNTB;
+  wire SIGN_CNTC;
+  wire sys_clk;
+  wire sys_rst_n;
+
+  design_1_CNTtest_0_1_CNTtest inst
+       (.IN_CNTA(IN_CNTA),
+        .IN_CNTB(IN_CNTB),
+        .IN_CNTC(IN_CNTC),
+        .IN_CNTEN(IN_CNTEN),
+        .IN_START(IN_START),
+        .IN_STOP(IN_STOP),
+        .OUT_CNTA(OUT_CNTA),
+        .OUT_CNTB(OUT_CNTB),
+        .OUT_CNTC(OUT_CNTC),
+        .OUT_CNTEN(OUT_CNTEN),
+        .OUT_START(OUT_START),
+        .OUT_STOP(OUT_STOP),
+        .SIGN_CNTA(SIGN_CNTA),
+        .SIGN_CNTB(SIGN_CNTB),
+        .SIGN_CNTC(SIGN_CNTC),
+        .sys_clk(sys_clk),
+        .sys_rst_n(sys_rst_n));
+endmodule
+
+(* ORIG_REF_NAME = "CNTtest" *) 
 module design_1_CNTtest_0_1_CNTtest
    (OUT_CNTA,
     OUT_CNTB,
@@ -2797,82 +2874,6 @@ module design_1_CNTtest_0_1_CNTtest
         .D(SIGN_CNTC_i_1_n_0),
         .Q(SIGN_CNTC));
 endmodule
-
-(* CHECK_LICENSE_TYPE = "design_1_CNTtest_0_0,CNTtest,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "CNTtest,Vivado 2017.4" *) 
-(* NotValidForBitStream *)
-module design_1_CNTtest_0_1
-   (sys_clk,
-    sys_rst_n,
-    IN_CNTA,
-    IN_CNTB,
-    IN_CNTC,
-    IN_STOP,
-    IN_START,
-    IN_CNTEN,
-    OUT_CNTA,
-    OUT_CNTB,
-    OUT_CNTC,
-    OUT_STOP,
-    OUT_START,
-    OUT_CNTEN,
-    SIGN_CNTA,
-    SIGN_CNTB,
-    SIGN_CNTC);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 sys_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_clk, ASSOCIATED_RESET sys_rst_n, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) input sys_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 sys_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_rst_n, POLARITY ACTIVE_LOW" *) input sys_rst_n;
-  input [31:0]IN_CNTA;
-  input [31:0]IN_CNTB;
-  input [31:0]IN_CNTC;
-  input IN_STOP;
-  input IN_START;
-  input IN_CNTEN;
-  output [31:0]OUT_CNTA;
-  output [31:0]OUT_CNTB;
-  output [31:0]OUT_CNTC;
-  output OUT_STOP;
-  output OUT_START;
-  output OUT_CNTEN;
-  output SIGN_CNTA;
-  output SIGN_CNTB;
-  output SIGN_CNTC;
-
-  wire [31:0]IN_CNTA;
-  wire [31:0]IN_CNTB;
-  wire [31:0]IN_CNTC;
-  wire IN_CNTEN;
-  wire IN_START;
-  wire IN_STOP;
-  wire [31:0]OUT_CNTA;
-  wire [31:0]OUT_CNTB;
-  wire [31:0]OUT_CNTC;
-  wire OUT_CNTEN;
-  wire OUT_START;
-  wire OUT_STOP;
-  wire SIGN_CNTA;
-  wire SIGN_CNTB;
-  wire SIGN_CNTC;
-  wire sys_clk;
-  wire sys_rst_n;
-
-  design_1_CNTtest_0_1_CNTtest inst
-       (.IN_CNTA(IN_CNTA),
-        .IN_CNTB(IN_CNTB),
-        .IN_CNTC(IN_CNTC),
-        .IN_CNTEN(IN_CNTEN),
-        .IN_START(IN_START),
-        .IN_STOP(IN_STOP),
-        .OUT_CNTA(OUT_CNTA),
-        .OUT_CNTB(OUT_CNTB),
-        .OUT_CNTC(OUT_CNTC),
-        .OUT_CNTEN(OUT_CNTEN),
-        .OUT_START(OUT_START),
-        .OUT_STOP(OUT_STOP),
-        .SIGN_CNTA(SIGN_CNTA),
-        .SIGN_CNTB(SIGN_CNTB),
-        .SIGN_CNTC(SIGN_CNTC),
-        .sys_clk(sys_clk),
-        .sys_rst_n(sys_rst_n));
-endmodule
 `ifndef GLBL
 `define GLBL
 `timescale  1 ps / 1 ps
@@ -2881,12 +2882,15 @@ module glbl ();
 
     parameter ROC_WIDTH = 100000;
     parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
 
 //--------   STARTUP Globals --------------
     wire GSR;
     wire GTS;
     wire GWE;
     wire PRLD;
+    wire GRESTORE;
     tri1 p_up_tmp;
     tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
 
@@ -2899,6 +2903,7 @@ module glbl ();
     reg GSR_int;
     reg GTS_int;
     reg PRLD_int;
+    reg GRESTORE_int;
 
 //--------   JTAG Globals --------------
     wire JTAG_TDO_GLBL;
@@ -2926,6 +2931,7 @@ module glbl ();
     assign (strong1, weak0) GSR = GSR_int;
     assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
 
     initial begin
 	GSR_int = 1'b1;
@@ -2939,6 +2945,14 @@ module glbl ();
 	GTS_int = 1'b1;
 	#(TOC_WIDTH)
 	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
     end
 
 endmodule

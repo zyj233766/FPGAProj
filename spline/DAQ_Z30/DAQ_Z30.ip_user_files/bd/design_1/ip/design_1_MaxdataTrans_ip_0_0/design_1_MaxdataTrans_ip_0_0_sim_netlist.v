@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Dec 18 23:18:38 2024
-// Host        : YL running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Fri Dec 20 18:30:52 2024
+// Host        : DESKTOP-V402F34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/12554/Desktop/test5/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/design_1_MaxdataTrans_ip_0_0_sim_netlist.v
+//               d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/bd/design_1/ip/design_1_MaxdataTrans_ip_0_0/design_1_MaxdataTrans_ip_0_0_sim_netlist.v
 // Design      : design_1_MaxdataTrans_ip_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_MaxdataTrans_ip_0_0,MaxdataTrans_ip_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "MaxdataTrans_ip_v1_0,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "design_1_MaxdataTrans_ip_0_0,MaxdataTrans_ip_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "MaxdataTrans_ip_v1_0,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module design_1_MaxdataTrans_ip_0_0
    (IN_Correction,
@@ -60,7 +60,7 @@ module design_1_MaxdataTrans_ip_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S0_AXI RDATA" *) output [31:0]s0_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S0_AXI RRESP" *) output [1:0]s0_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S0_AXI RVALID" *) output s0_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S0_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S0_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s0_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S0_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S0_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s0_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S0_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S0_AXI_CLK, ASSOCIATED_BUSIF S0_AXI, ASSOCIATED_RESET s0_axi_aresetn, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1" *) input s0_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S0_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S0_AXI_RST, POLARITY ACTIVE_LOW" *) input s0_axi_aresetn;
 
@@ -113,8 +113,8 @@ endmodule
 module design_1_MaxdataTrans_ip_0_0_MaxdataTrans
    (SR,
     Q,
-    \axi_rdata_reg[31] ,
-    \axi_rdata_reg[31]_0 ,
+    \OUT_spline1_reg[31]_0 ,
+    \OUT_Correction_reg[31]_0 ,
     s0_axi_aresetn,
     IN_spline2,
     s0_axi_aclk,
@@ -122,8 +122,8 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans
     IN_Correction);
   output [0:0]SR;
   output [31:0]Q;
-  output [31:0]\axi_rdata_reg[31] ;
-  output [31:0]\axi_rdata_reg[31]_0 ;
+  output [31:0]\OUT_spline1_reg[31]_0 ;
+  output [31:0]\OUT_Correction_reg[31]_0 ;
   input s0_axi_aresetn;
   input [31:0]IN_spline2;
   input s0_axi_aclk;
@@ -133,10 +133,10 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans
   wire [31:0]IN_Correction;
   wire [31:0]IN_spline1;
   wire [31:0]IN_spline2;
+  wire [31:0]\OUT_Correction_reg[31]_0 ;
+  wire [31:0]\OUT_spline1_reg[31]_0 ;
   wire [31:0]Q;
   wire [0:0]SR;
-  wire [31:0]\axi_rdata_reg[31] ;
-  wire [31:0]\axi_rdata_reg[31]_0 ;
   wire s0_axi_aclk;
   wire s0_axi_aresetn;
 
@@ -144,385 +144,385 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[0]),
-        .Q(\axi_rdata_reg[31]_0 [0]),
+        .Q(\OUT_Correction_reg[31]_0 [0]),
         .R(SR));
   FDRE \OUT_Correction_reg[10] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[10]),
-        .Q(\axi_rdata_reg[31]_0 [10]),
+        .Q(\OUT_Correction_reg[31]_0 [10]),
         .R(SR));
   FDRE \OUT_Correction_reg[11] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[11]),
-        .Q(\axi_rdata_reg[31]_0 [11]),
+        .Q(\OUT_Correction_reg[31]_0 [11]),
         .R(SR));
   FDRE \OUT_Correction_reg[12] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[12]),
-        .Q(\axi_rdata_reg[31]_0 [12]),
+        .Q(\OUT_Correction_reg[31]_0 [12]),
         .R(SR));
   FDRE \OUT_Correction_reg[13] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[13]),
-        .Q(\axi_rdata_reg[31]_0 [13]),
+        .Q(\OUT_Correction_reg[31]_0 [13]),
         .R(SR));
   FDRE \OUT_Correction_reg[14] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[14]),
-        .Q(\axi_rdata_reg[31]_0 [14]),
+        .Q(\OUT_Correction_reg[31]_0 [14]),
         .R(SR));
   FDRE \OUT_Correction_reg[15] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[15]),
-        .Q(\axi_rdata_reg[31]_0 [15]),
+        .Q(\OUT_Correction_reg[31]_0 [15]),
         .R(SR));
   FDRE \OUT_Correction_reg[16] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[16]),
-        .Q(\axi_rdata_reg[31]_0 [16]),
+        .Q(\OUT_Correction_reg[31]_0 [16]),
         .R(SR));
   FDRE \OUT_Correction_reg[17] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[17]),
-        .Q(\axi_rdata_reg[31]_0 [17]),
+        .Q(\OUT_Correction_reg[31]_0 [17]),
         .R(SR));
   FDRE \OUT_Correction_reg[18] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[18]),
-        .Q(\axi_rdata_reg[31]_0 [18]),
+        .Q(\OUT_Correction_reg[31]_0 [18]),
         .R(SR));
   FDRE \OUT_Correction_reg[19] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[19]),
-        .Q(\axi_rdata_reg[31]_0 [19]),
+        .Q(\OUT_Correction_reg[31]_0 [19]),
         .R(SR));
   FDRE \OUT_Correction_reg[1] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[1]),
-        .Q(\axi_rdata_reg[31]_0 [1]),
+        .Q(\OUT_Correction_reg[31]_0 [1]),
         .R(SR));
   FDRE \OUT_Correction_reg[20] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[20]),
-        .Q(\axi_rdata_reg[31]_0 [20]),
+        .Q(\OUT_Correction_reg[31]_0 [20]),
         .R(SR));
   FDRE \OUT_Correction_reg[21] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[21]),
-        .Q(\axi_rdata_reg[31]_0 [21]),
+        .Q(\OUT_Correction_reg[31]_0 [21]),
         .R(SR));
   FDRE \OUT_Correction_reg[22] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[22]),
-        .Q(\axi_rdata_reg[31]_0 [22]),
+        .Q(\OUT_Correction_reg[31]_0 [22]),
         .R(SR));
   FDRE \OUT_Correction_reg[23] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[23]),
-        .Q(\axi_rdata_reg[31]_0 [23]),
+        .Q(\OUT_Correction_reg[31]_0 [23]),
         .R(SR));
   FDRE \OUT_Correction_reg[24] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[24]),
-        .Q(\axi_rdata_reg[31]_0 [24]),
+        .Q(\OUT_Correction_reg[31]_0 [24]),
         .R(SR));
   FDRE \OUT_Correction_reg[25] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[25]),
-        .Q(\axi_rdata_reg[31]_0 [25]),
+        .Q(\OUT_Correction_reg[31]_0 [25]),
         .R(SR));
   FDRE \OUT_Correction_reg[26] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[26]),
-        .Q(\axi_rdata_reg[31]_0 [26]),
+        .Q(\OUT_Correction_reg[31]_0 [26]),
         .R(SR));
   FDRE \OUT_Correction_reg[27] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[27]),
-        .Q(\axi_rdata_reg[31]_0 [27]),
+        .Q(\OUT_Correction_reg[31]_0 [27]),
         .R(SR));
   FDRE \OUT_Correction_reg[28] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[28]),
-        .Q(\axi_rdata_reg[31]_0 [28]),
+        .Q(\OUT_Correction_reg[31]_0 [28]),
         .R(SR));
   FDRE \OUT_Correction_reg[29] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[29]),
-        .Q(\axi_rdata_reg[31]_0 [29]),
+        .Q(\OUT_Correction_reg[31]_0 [29]),
         .R(SR));
   FDRE \OUT_Correction_reg[2] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[2]),
-        .Q(\axi_rdata_reg[31]_0 [2]),
+        .Q(\OUT_Correction_reg[31]_0 [2]),
         .R(SR));
   FDRE \OUT_Correction_reg[30] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[30]),
-        .Q(\axi_rdata_reg[31]_0 [30]),
+        .Q(\OUT_Correction_reg[31]_0 [30]),
         .R(SR));
   FDRE \OUT_Correction_reg[31] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[31]),
-        .Q(\axi_rdata_reg[31]_0 [31]),
+        .Q(\OUT_Correction_reg[31]_0 [31]),
         .R(SR));
   FDRE \OUT_Correction_reg[3] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[3]),
-        .Q(\axi_rdata_reg[31]_0 [3]),
+        .Q(\OUT_Correction_reg[31]_0 [3]),
         .R(SR));
   FDRE \OUT_Correction_reg[4] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[4]),
-        .Q(\axi_rdata_reg[31]_0 [4]),
+        .Q(\OUT_Correction_reg[31]_0 [4]),
         .R(SR));
   FDRE \OUT_Correction_reg[5] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[5]),
-        .Q(\axi_rdata_reg[31]_0 [5]),
+        .Q(\OUT_Correction_reg[31]_0 [5]),
         .R(SR));
   FDRE \OUT_Correction_reg[6] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[6]),
-        .Q(\axi_rdata_reg[31]_0 [6]),
+        .Q(\OUT_Correction_reg[31]_0 [6]),
         .R(SR));
   FDRE \OUT_Correction_reg[7] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[7]),
-        .Q(\axi_rdata_reg[31]_0 [7]),
+        .Q(\OUT_Correction_reg[31]_0 [7]),
         .R(SR));
   FDRE \OUT_Correction_reg[8] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[8]),
-        .Q(\axi_rdata_reg[31]_0 [8]),
+        .Q(\OUT_Correction_reg[31]_0 [8]),
         .R(SR));
   FDRE \OUT_Correction_reg[9] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_Correction[9]),
-        .Q(\axi_rdata_reg[31]_0 [9]),
+        .Q(\OUT_Correction_reg[31]_0 [9]),
         .R(SR));
   FDRE \OUT_spline1_reg[0] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[0]),
-        .Q(\axi_rdata_reg[31] [0]),
+        .Q(\OUT_spline1_reg[31]_0 [0]),
         .R(SR));
   FDRE \OUT_spline1_reg[10] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[10]),
-        .Q(\axi_rdata_reg[31] [10]),
+        .Q(\OUT_spline1_reg[31]_0 [10]),
         .R(SR));
   FDRE \OUT_spline1_reg[11] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[11]),
-        .Q(\axi_rdata_reg[31] [11]),
+        .Q(\OUT_spline1_reg[31]_0 [11]),
         .R(SR));
   FDRE \OUT_spline1_reg[12] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[12]),
-        .Q(\axi_rdata_reg[31] [12]),
+        .Q(\OUT_spline1_reg[31]_0 [12]),
         .R(SR));
   FDRE \OUT_spline1_reg[13] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[13]),
-        .Q(\axi_rdata_reg[31] [13]),
+        .Q(\OUT_spline1_reg[31]_0 [13]),
         .R(SR));
   FDRE \OUT_spline1_reg[14] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[14]),
-        .Q(\axi_rdata_reg[31] [14]),
+        .Q(\OUT_spline1_reg[31]_0 [14]),
         .R(SR));
   FDRE \OUT_spline1_reg[15] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[15]),
-        .Q(\axi_rdata_reg[31] [15]),
+        .Q(\OUT_spline1_reg[31]_0 [15]),
         .R(SR));
   FDRE \OUT_spline1_reg[16] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[16]),
-        .Q(\axi_rdata_reg[31] [16]),
+        .Q(\OUT_spline1_reg[31]_0 [16]),
         .R(SR));
   FDRE \OUT_spline1_reg[17] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[17]),
-        .Q(\axi_rdata_reg[31] [17]),
+        .Q(\OUT_spline1_reg[31]_0 [17]),
         .R(SR));
   FDRE \OUT_spline1_reg[18] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[18]),
-        .Q(\axi_rdata_reg[31] [18]),
+        .Q(\OUT_spline1_reg[31]_0 [18]),
         .R(SR));
   FDRE \OUT_spline1_reg[19] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[19]),
-        .Q(\axi_rdata_reg[31] [19]),
+        .Q(\OUT_spline1_reg[31]_0 [19]),
         .R(SR));
   FDRE \OUT_spline1_reg[1] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[1]),
-        .Q(\axi_rdata_reg[31] [1]),
+        .Q(\OUT_spline1_reg[31]_0 [1]),
         .R(SR));
   FDRE \OUT_spline1_reg[20] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[20]),
-        .Q(\axi_rdata_reg[31] [20]),
+        .Q(\OUT_spline1_reg[31]_0 [20]),
         .R(SR));
   FDRE \OUT_spline1_reg[21] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[21]),
-        .Q(\axi_rdata_reg[31] [21]),
+        .Q(\OUT_spline1_reg[31]_0 [21]),
         .R(SR));
   FDRE \OUT_spline1_reg[22] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[22]),
-        .Q(\axi_rdata_reg[31] [22]),
+        .Q(\OUT_spline1_reg[31]_0 [22]),
         .R(SR));
   FDRE \OUT_spline1_reg[23] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[23]),
-        .Q(\axi_rdata_reg[31] [23]),
+        .Q(\OUT_spline1_reg[31]_0 [23]),
         .R(SR));
   FDRE \OUT_spline1_reg[24] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[24]),
-        .Q(\axi_rdata_reg[31] [24]),
+        .Q(\OUT_spline1_reg[31]_0 [24]),
         .R(SR));
   FDRE \OUT_spline1_reg[25] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[25]),
-        .Q(\axi_rdata_reg[31] [25]),
+        .Q(\OUT_spline1_reg[31]_0 [25]),
         .R(SR));
   FDRE \OUT_spline1_reg[26] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[26]),
-        .Q(\axi_rdata_reg[31] [26]),
+        .Q(\OUT_spline1_reg[31]_0 [26]),
         .R(SR));
   FDRE \OUT_spline1_reg[27] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[27]),
-        .Q(\axi_rdata_reg[31] [27]),
+        .Q(\OUT_spline1_reg[31]_0 [27]),
         .R(SR));
   FDRE \OUT_spline1_reg[28] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[28]),
-        .Q(\axi_rdata_reg[31] [28]),
+        .Q(\OUT_spline1_reg[31]_0 [28]),
         .R(SR));
   FDRE \OUT_spline1_reg[29] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[29]),
-        .Q(\axi_rdata_reg[31] [29]),
+        .Q(\OUT_spline1_reg[31]_0 [29]),
         .R(SR));
   FDRE \OUT_spline1_reg[2] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[2]),
-        .Q(\axi_rdata_reg[31] [2]),
+        .Q(\OUT_spline1_reg[31]_0 [2]),
         .R(SR));
   FDRE \OUT_spline1_reg[30] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[30]),
-        .Q(\axi_rdata_reg[31] [30]),
+        .Q(\OUT_spline1_reg[31]_0 [30]),
         .R(SR));
   FDRE \OUT_spline1_reg[31] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[31]),
-        .Q(\axi_rdata_reg[31] [31]),
+        .Q(\OUT_spline1_reg[31]_0 [31]),
         .R(SR));
   FDRE \OUT_spline1_reg[3] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[3]),
-        .Q(\axi_rdata_reg[31] [3]),
+        .Q(\OUT_spline1_reg[31]_0 [3]),
         .R(SR));
   FDRE \OUT_spline1_reg[4] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[4]),
-        .Q(\axi_rdata_reg[31] [4]),
+        .Q(\OUT_spline1_reg[31]_0 [4]),
         .R(SR));
   FDRE \OUT_spline1_reg[5] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[5]),
-        .Q(\axi_rdata_reg[31] [5]),
+        .Q(\OUT_spline1_reg[31]_0 [5]),
         .R(SR));
   FDRE \OUT_spline1_reg[6] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[6]),
-        .Q(\axi_rdata_reg[31] [6]),
+        .Q(\OUT_spline1_reg[31]_0 [6]),
         .R(SR));
   FDRE \OUT_spline1_reg[7] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[7]),
-        .Q(\axi_rdata_reg[31] [7]),
+        .Q(\OUT_spline1_reg[31]_0 [7]),
         .R(SR));
   FDRE \OUT_spline1_reg[8] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[8]),
-        .Q(\axi_rdata_reg[31] [8]),
+        .Q(\OUT_spline1_reg[31]_0 [8]),
         .R(SR));
   FDRE \OUT_spline1_reg[9] 
        (.C(s0_axi_aclk),
         .CE(1'b1),
         .D(IN_spline1[9]),
-        .Q(\axi_rdata_reg[31] [9]),
+        .Q(\OUT_spline1_reg[31]_0 [9]),
         .R(SR));
   FDRE \OUT_spline2_reg[0] 
        (.C(s0_axi_aclk),
@@ -725,15 +725,15 @@ endmodule
 
 (* ORIG_REF_NAME = "MaxdataTrans_ip_v1_0" *) 
 module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0
-   (S_AXI_ARREADY,
-    s0_axi_wready,
+   (s0_axi_wready,
     S_AXI_AWREADY,
+    S_AXI_ARREADY,
     s0_axi_rdata,
     s0_axi_bvalid,
     s0_axi_rvalid,
-    s0_axi_arvalid,
     s0_axi_aclk,
     s0_axi_araddr,
+    s0_axi_arvalid,
     IN_spline2,
     IN_spline1,
     IN_Correction,
@@ -742,15 +742,15 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0
     s0_axi_wvalid,
     s0_axi_bready,
     s0_axi_rready);
-  output S_AXI_ARREADY;
   output s0_axi_wready;
   output S_AXI_AWREADY;
+  output S_AXI_ARREADY;
   output [31:0]s0_axi_rdata;
   output s0_axi_bvalid;
   output s0_axi_rvalid;
-  input s0_axi_arvalid;
   input s0_axi_aclk;
   input [1:0]s0_axi_araddr;
+  input s0_axi_arvalid;
   input [31:0]IN_spline2;
   input [31:0]IN_spline1;
   input [31:0]IN_Correction;
@@ -800,15 +800,15 @@ endmodule
 
 (* ORIG_REF_NAME = "MaxdataTrans_ip_v1_0_S0_AXI" *) 
 module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
-   (s0_axi_arready,
-    s0_axi_wready,
+   (s0_axi_wready,
     s0_axi_awready,
+    s0_axi_arready,
     s0_axi_rdata,
     s0_axi_bvalid,
     s0_axi_rvalid,
-    s0_axi_arvalid,
     s0_axi_aclk,
     s0_axi_araddr,
+    s0_axi_arvalid,
     IN_spline2,
     IN_spline1,
     IN_Correction,
@@ -817,15 +817,15 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
     s0_axi_wvalid,
     s0_axi_bready,
     s0_axi_rready);
-  output s0_axi_arready;
   output s0_axi_wready;
   output s0_axi_awready;
+  output s0_axi_arready;
   output [31:0]s0_axi_rdata;
   output s0_axi_bvalid;
   output s0_axi_rvalid;
-  input s0_axi_arvalid;
   input s0_axi_aclk;
   input [1:0]s0_axi_araddr;
+  input s0_axi_arvalid;
   input [31:0]IN_spline2;
   input [31:0]IN_spline1;
   input [31:0]IN_Correction;
@@ -846,11 +846,11 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
   wire [3:2]axi_araddr;
   wire \axi_araddr[2]_i_1_n_0 ;
   wire \axi_araddr[3]_i_1_n_0 ;
-  wire axi_arready_i_1_n_0;
-  wire axi_awready0;
+  wire axi_arready0;
+  wire axi_awready0__0;
   wire axi_bvalid_i_1_n_0;
   wire axi_rvalid_i_1_n_0;
-  wire axi_wready0;
+  wire axi_wready0__0;
   wire p_0_in;
   wire [31:0]reg_data_out;
   wire s0_axi_aclk;
@@ -870,12 +870,12 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
   wire slv_reg_rden__0;
 
   LUT6 #(
-    .INIT(64'hFF7FF070F070F070)) 
+    .INIT(64'hF7FFF700F700F700)) 
     aw_en_i_1
        (.I0(s0_axi_awvalid),
         .I1(s0_axi_wvalid),
-        .I2(aw_en_reg_n_0),
-        .I3(s0_axi_awready),
+        .I2(s0_axi_awready),
+        .I3(aw_en_reg_n_0),
         .I4(s0_axi_bready),
         .I5(s0_axi_bvalid),
         .O(aw_en_i_1_n_0));
@@ -885,7 +885,6 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
         .D(aw_en_i_1_n_0),
         .Q(aw_en_reg_n_0),
         .S(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[2]_i_1 
@@ -894,6 +893,7 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
         .I2(s0_axi_arready),
         .I3(axi_araddr[2]),
         .O(\axi_araddr[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[3]_i_1 
@@ -920,35 +920,35 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
     axi_arready_i_1
        (.I0(s0_axi_arvalid),
         .I1(s0_axi_arready),
-        .O(axi_arready_i_1_n_0));
+        .O(axi_arready0));
   FDRE axi_arready_reg
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .D(axi_arready_i_1_n_0),
+        .D(axi_arready0),
         .Q(s0_axi_arready),
         .R(p_0_in));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
-    axi_awready_i_2
-       (.I0(s0_axi_awready),
-        .I1(aw_en_reg_n_0),
+    .INIT(16'h2000)) 
+    axi_awready0
+       (.I0(aw_en_reg_n_0),
+        .I1(s0_axi_awready),
         .I2(s0_axi_wvalid),
         .I3(s0_axi_awvalid),
-        .O(axi_awready0));
+        .O(axi_awready0__0));
   FDRE axi_awready_reg
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .D(axi_awready0),
+        .D(axi_awready0__0),
         .Q(s0_axi_awready),
         .R(p_0_in));
   LUT6 #(
     .INIT(64'h0000FFFF80008000)) 
     axi_bvalid_i_1
-       (.I0(s0_axi_wready),
-        .I1(s0_axi_awvalid),
-        .I2(s0_axi_wvalid),
-        .I3(s0_axi_awready),
+       (.I0(s0_axi_awready),
+        .I1(s0_axi_wready),
+        .I2(s0_axi_awvalid),
+        .I3(s0_axi_wvalid),
         .I4(s0_axi_bready),
         .I5(s0_axi_bvalid),
         .O(axi_bvalid_i_1_n_0));
@@ -1454,34 +1454,34 @@ module design_1_MaxdataTrans_ip_0_0_MaxdataTrans_ip_v1_0_S0_AXI
         .R(p_0_in));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
-    axi_wready_i_1
-       (.I0(s0_axi_wready),
-        .I1(aw_en_reg_n_0),
+    .INIT(16'h2000)) 
+    axi_wready0
+       (.I0(aw_en_reg_n_0),
+        .I1(s0_axi_wready),
         .I2(s0_axi_wvalid),
         .I3(s0_axi_awvalid),
-        .O(axi_wready0));
+        .O(axi_wready0__0));
   FDRE axi_wready_reg
        (.C(s0_axi_aclk),
         .CE(1'b1),
-        .D(axi_wready0),
+        .D(axi_wready0__0),
         .Q(s0_axi_wready),
         .R(p_0_in));
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h20)) 
     slv_reg_rden
-       (.I0(s0_axi_rvalid),
-        .I1(s0_axi_arvalid),
+       (.I0(s0_axi_arvalid),
+        .I1(s0_axi_rvalid),
         .I2(s0_axi_arready),
         .O(slv_reg_rden__0));
   design_1_MaxdataTrans_ip_0_0_MaxdataTrans u_MaxdataTrans
        (.IN_Correction(IN_Correction),
         .IN_spline1(IN_spline1),
         .IN_spline2(IN_spline2),
+        .\OUT_Correction_reg[31]_0 (OUT_Correction),
+        .\OUT_spline1_reg[31]_0 (OUT_spline1),
         .Q(OUT_spline2),
         .SR(p_0_in),
-        .\axi_rdata_reg[31] (OUT_spline1),
-        .\axi_rdata_reg[31]_0 (OUT_Correction),
         .s0_axi_aclk(s0_axi_aclk),
         .s0_axi_aresetn(s0_axi_aresetn));
 endmodule
@@ -1493,12 +1493,15 @@ module glbl ();
 
     parameter ROC_WIDTH = 100000;
     parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
 
 //--------   STARTUP Globals --------------
     wire GSR;
     wire GTS;
     wire GWE;
     wire PRLD;
+    wire GRESTORE;
     tri1 p_up_tmp;
     tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
 
@@ -1511,6 +1514,7 @@ module glbl ();
     reg GSR_int;
     reg GTS_int;
     reg PRLD_int;
+    reg GRESTORE_int;
 
 //--------   JTAG Globals --------------
     wire JTAG_TDO_GLBL;
@@ -1538,6 +1542,7 @@ module glbl ();
     assign (strong1, weak0) GSR = GSR_int;
     assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
 
     initial begin
 	GSR_int = 1'b1;
@@ -1551,6 +1556,14 @@ module glbl ();
 	GTS_int = 1'b1;
 	#(TOC_WIDTH)
 	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
     end
 
 endmodule

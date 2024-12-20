@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:user:MJ_IBUFG_DS:1.0
 // IP Revision: 3
 
-(* X_CORE_INFO = "MJ_IBUFG_DS,Vivado 2017.4" *)
+(* X_CORE_INFO = "MJ_IBUFG_DS,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_MJ_IBUFG_DS_0_0,MJ_IBUFG_DS,{}" *)
-(* CORE_GENERATION_INFO = "design_1_MJ_IBUFG_DS_0_0,MJ_IBUFG_DS,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MJ_IBUFG_DS,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_MJ_IBUFG_DS_0_0,MJ_IBUFG_DS,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MJ_IBUFG_DS,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_MJ_IBUFG_DS_0_0 (
   in_P,
