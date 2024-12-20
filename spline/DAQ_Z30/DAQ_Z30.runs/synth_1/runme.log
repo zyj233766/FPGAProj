@@ -25,33 +25,33 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 85732
+INFO: [Synth 8-7075] Helper process launched with PID 44424
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1183.184 ; gain = 42.844
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1184.207 ; gain = 44.922
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'test' [D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v:3]
 	Parameter POINT_NUM_X bound to: 240 - type: integer 
 	Parameter POINT_NUM_Y bound to: 220 - type: integer 
 	Parameter SAMPLE_BIT bound to: 16 - type: integer 
 	Parameter INSERT_NUM bound to: 16 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-146668-DESKTOP-V402F34/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (1#1) [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-146668-DESKTOP-V402F34/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-146668-DESKTOP-V402F34/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (2#1) [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-146668-DESKTOP-V402F34/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-43220-DESKTOP-V402F34/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (1#1) [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-43220-DESKTOP-V402F34/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-43220-DESKTOP-V402F34/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (2#1) [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/.Xil/Vivado-43220-DESKTOP-V402F34/realtime/blk_mem_gen_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'test' (3#1) [D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1251.656 ; gain = 111.316
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.633 ; gain = 113.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1251.656 ; gain = 111.316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1252.633 ; gain = 113.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1251.656 ; gain = 111.316
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1252.633 ; gain = 113.348
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1251.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1252.633 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -64,22 +64,22 @@ Parsing XDC File [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1368.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1368.855 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1368.566 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1368.855 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.566 ; gain = 228.227
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.855 ; gain = 229.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z030ffg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.566 ; gain = 228.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.855 ; gain = 229.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -87,7 +87,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for my_blk_mem_gen_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for my_blk_mem_gen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.566 ; gain = 228.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.855 ; gain = 229.570
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'BLOCK[0].state_reg' in module 'test'
 INFO: [Synth 8-802] inferred FSM for state register 'BLOCK[1].state_reg' in module 'test'
@@ -112,7 +112,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'BLOCK[0].state_reg' using 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'BLOCK[1].state_reg' using encoding 'sequential' in module 'test'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.566 ; gain = 228.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.855 ; gain = 229.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -171,7 +171,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-5407] Accumulator 'CrossCorrelation[0].temp_reg' cannot be implemented in DSP cascade. 2 registers folloiwng 'CrossCorrelation[0].temp_reg' are required, 0 are found. [D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v:343]
+WARNING: [Synth 8-5407] Accumulator 'CrossCorrelation[0].temp_reg' cannot be implemented in DSP cascade. 2 registers folloiwng 'CrossCorrelation[0].temp_reg' are required, 0 are found. [D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v:346]
 DSP Report: Generating DSP addr1_reg, operation Mode is: (P+1)'.
 DSP Report: register addr1_reg is absorbed into DSP addr1_reg.
 DSP Report: operator addr10 is absorbed into DSP addr1_reg.
@@ -497,7 +497,7 @@ RAM Pipeline Warning: Read Address Register Found For RAM BLOCK[1].Ci_reg. We wi
 RAM Pipeline Warning: Read Address Register Found For RAM BLOCK[1].Bi_reg. We will not be able to pipeline it. This may degrade performance. 
 RAM Pipeline Warning: Read Address Register Found For RAM BLOCK[1].Di_reg. We will not be able to pipeline it. This may degrade performance. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1368.566 ; gain = 228.227
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1368.855 ; gain = 229.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -676,13 +676,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1450.887 ; gain = 310.547
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1455.938 ; gain = 316.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1467.223 ; gain = 326.883
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1472.191 ; gain = 332.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -742,7 +742,7 @@ INFO: [Synth 8-7052] The timing for the instance BLOCK[1].Ci_reg (implemented as
 INFO: [Synth 8-7052] The timing for the instance BLOCK[1].Bi_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance BLOCK[1].Di_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1561.910 ; gain = 421.570
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1560.773 ; gain = 421.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -760,37 +760,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1565.984 ; gain = 425.645
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1565.984 ; gain = 425.645
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1565.984 ; gain = 425.645
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1565.984 ; gain = 425.645
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1565.996 ; gain = 425.656
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1565.996 ; gain = 425.656
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -813,11 +813,11 @@ Report Cell Usage:
 |4     |CARRY4      |  2426|
 |5     |DSP48E1     |   117|
 |14    |LUT1        |   746|
-|15    |LUT2        |   735|
-|16    |LUT3        |  7978|
+|15    |LUT2        |   759|
+|16    |LUT3        |  7971|
 |17    |LUT4        |   891|
-|18    |LUT5        |   301|
-|19    |LUT6        |  1877|
+|18    |LUT5        |   344|
+|19    |LUT6        |  1803|
 |20    |MUXF7       |   448|
 |21    |MUXF8       |    96|
 |22    |RAM128X1S   |    44|
@@ -827,25 +827,25 @@ Report Cell Usage:
 |26    |RAM64X1D    |   358|
 |27    |RAM64X1S    |    44|
 |28    |RAMB18E1    |     8|
-|29    |FDRE        |   488|
+|29    |FDRE        |   494|
 |30    |FDSE        |    15|
 |31    |IBUF        |     2|
 |32    |OBUF        |   144|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1565.996 ; gain = 425.656
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1565.996 ; gain = 308.746
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1565.996 ; gain = 425.656
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1573.316 ; gain = 317.809
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1573.316 ; gain = 434.031
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1578.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 1585.379 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 5275 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'test' is not ideal for floorplanning, since the cellview 'test' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1581.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1585.426 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2180 instances were transformed.
   RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 44 instances
@@ -858,7 +858,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 41 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1581.113 ; gain = 440.773
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1585.426 ; gain = 446.141
 INFO: [Common 17-1381] The checkpoint 'D:/Git/spline/DAQ_Z30/DAQ_Z30.runs/synth_1/test.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file test_utilization_synth.rpt -pb test_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 21 02:54:16 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 21 05:55:22 2024...

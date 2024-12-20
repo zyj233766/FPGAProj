@@ -174,15 +174,17 @@ generate
                                 state <= state;
                         end
                         GETMAX: begin
-                            if(i < MAXINSERTINDEX + 2) begin
+                            if(i < MAXINSERTINDEX + 1) begin
                                 temp <= (i) / INSERT_NUM;
                                 temp1 <= $signed(Bi[temp]) * $signed(CntX);
                                 temp2 <= $signed(Ci[temp]) * $signed(CntX) * $signed(CntX);
                                 temp3 <= $signed(Di[temp]) * $signed(CntX) * $signed(CntX) * $signed(CntX);
                                 temp4 <= Ai[i / INSERT_NUM];
-                                CntVal <= temp4 + temp1[43:12] + temp2[55:24] + temp3[67:36];
-                                if (i > 1) begin
-                                    DataX[(i - 2)] <= temp4 + temp1[43:12] + temp2[55:24] + temp3[67:36];
+                                CntVal <= $signed(temp4) + $signed(temp1[43:12])
+                                         + $signed(temp2[55:24]) + $signed(temp3[67:36]);
+                                if (i > 0) begin
+                                    DataX[(i - 1)] <= $signed(temp4) + $signed(temp1[43:12])
+                                         + $signed(temp2[55:24]) + $signed(temp3[67:36]);
                                 end
                                 if($signed(CntVal) > $signed(MaxVal)) begin
                                     MaxVal <= CntVal;
@@ -232,7 +234,7 @@ generate
                                 i <= 32'd0;
                         end
                         GETMAX: begin
-                            if(i < MAXINSERTINDEX + 2)
+                            if(i < MAXINSERTINDEX + 1)
                                 i <= i + 1'b1;
                             else
                                 i <= 32'd0;
@@ -248,10 +250,10 @@ genvar k2;
     generate
         for(k2 = 0; k2 < 1; k2 = k2 + 1) begin:CrossCorrelation
             localparam OnceTimes = 1;
-            localparam JMax = ((POINT_NUM_Y - 1) * INSERT_NUM - 1) / OnceTimes;
+            localparam JMax = ((POINT_NUM_Y - 1) * INSERT_NUM) / OnceTimes;
             localparam Wait = 0;
             localparam Culculate = 1;
-            localparam OutputNum = (POINT_NUM_X - POINT_NUM_Y + 1) * INSERT_NUM;
+            localparam OutputNum = (POINT_NUM_X - POINT_NUM_Y) * INSERT_NUM + 1;
             reg enable;
             reg enable_d0, enable_d1;
             reg state;
@@ -306,6 +308,7 @@ genvar k2;
                     j <= 20'd0;
                     k <= 10'd0;
                     k_d0 <= 10'd0;
+                    kk <= 0;
                 end
                 else begin
                     if (state == Culculate) begin
@@ -364,21 +367,25 @@ genvar k2;
                                 BLOCK[2].SampleX[2] <= StoredValue[2];
                                 BLOCK[2].SampleX[3] <= StoredValue[3];
                             end
+                            if(j == 0) begin
+                                StoredValue[5] <= temp;
+                                StoredValue[4] <= StoredValue[5];
+                                StoredValue[3] <= StoredValue[4];
+                                StoredValue[2] <= StoredValue[3];
+                                StoredValue[1] <= StoredValue[2];
+                                StoredValue[0] <= StoredValue[1];  
+                            end
+                            if(kk + 6 == k && j == 1) begin
+                                BLOCK[2].SampleX[4] <= StoredValue[0];
+                                BLOCK[2].SampleX[5] <= StoredValue[1];
+                                BLOCK[2].SampleX[6] <= StoredValue[2];
+                                BLOCK[2].SampleX[7] <= StoredValue[3];
+                                BLOCK[2].SampleX[8] <= StoredValue[4];
+                                BLOCK[2].SampleX[9] <= StoredValue[5];
+                            end   
                         end                        
-                        StoredValue[5] <= temp;
-                        StoredValue[4] <= StoredValue[5];
-                        StoredValue[3] <= StoredValue[4];
-                        StoredValue[2] <= StoredValue[3];
-                        StoredValue[1] <= StoredValue[2];
-                        StoredValue[0] <= StoredValue[1];                         
-                        if(kk + 6 == k) begin
-                            BLOCK[2].SampleX[4] <= StoredValue[0];
-                            BLOCK[2].SampleX[5] <= StoredValue[1];
-                            BLOCK[2].SampleX[6] <= StoredValue[2];
-                            BLOCK[2].SampleX[7] <= StoredValue[3];
-                            BLOCK[2].SampleX[8] <= StoredValue[4];
-                            BLOCK[2].SampleX[9] <= StoredValue[5];
-                        end              
+                       
+           
                     end
                 end
             end
