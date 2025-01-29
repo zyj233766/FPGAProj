@@ -1,0 +1,10 @@
+set_property PACKAGE_PIN A9 [get_ports {a[1]}]
+set_property PACKAGE_PIN A10 [get_ports {a[0]}]
+set_property PACKAGE_PIN A12 [get_ports {b[1]}]
+set_property PACKAGE_PIN A13 [get_ports {b[0]}]
+set_property PACKAGE_PIN N1 [get_ports {out[3]}]
+set_property PACKAGE_PIN N2 [get_ports {out[2]}]
+set_property PACKAGE_PIN N3 [get_ports {out[1]}]
+set_property PACKAGE_PIN N4 [get_ports {out[0]}]
+
+create_clock -period 5.000 -name clk_200M -waveform {0.000 2.500} [get_ports sys_clk]

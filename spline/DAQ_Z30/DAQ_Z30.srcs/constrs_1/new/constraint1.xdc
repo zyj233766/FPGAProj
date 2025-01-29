@@ -1,4 +1,4 @@
-create_clock -period 4.000 -name sysclk250MHz -waveform {0.000 2.000} [get_ports ADC_CLKin_P]
+create_clock -period 5.000 -name sysclk250MHz -waveform {0.000 2.500} [get_ports ADC_CLKin_P]
 
 #输入10MHz基准时钟
 set_property IOSTANDARD LVDS_25 [get_ports clkin_10MHz_P]

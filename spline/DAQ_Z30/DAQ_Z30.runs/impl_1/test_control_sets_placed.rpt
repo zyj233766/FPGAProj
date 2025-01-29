@@ -1,0 +1,347 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Jan 30 04:16:45 2025
+| Host         : DESKTOP-V402F34 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file test_control_sets_placed.rpt
+| Design       : test
+| Device       : xc7z030
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   269 |
+|    Minimum number of control sets                        |   269 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   267 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   269 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     2 |
+| >= 16              |   258 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             317 |          179 |
+| No           | No                    | Yes                    |            2508 |          379 |
+| No           | Yes                   | No                     |           17567 |         4539 |
+| Yes          | No                    | No                     |             264 |          114 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1549 |          466 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                   Enable Signal                                   |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_data_cul/Bi1[16]_i_1_n_0                           |                1 |              5 |         5.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_data_cul/Bi1[16]_i_1__0_n_0                        |                2 |              5 |         2.50 |
+|  sys_clk_IBUF_BUFG | CrossCorrelation[0].j                                                             | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                2 |              9 |         4.50 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/u_div/u_comple_encode/FSM_sequential_BLOCK[0].state_reg[2][0] | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                3 |             10 |         3.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/FSM_sequential_BLOCK[0].state_reg[2][0]                       | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                3 |             10 |         3.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/FSM_sequential_BLOCK[1].state_reg[1][0]                       | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                3 |             10 |         3.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/u_div/u_comple_encode/FSM_sequential_BLOCK[1].state_reg[1][0] | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                3 |             10 |         3.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_data_cul/FSM_sequential_BLOCK[0].state_reg[1]                          |                                                               |                4 |             12 |         3.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_data_cul/FSM_sequential_BLOCK[1].state_reg[1]                          |                                                               |                4 |             12 |         3.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/m_rdy_reg_2                                                   | BLOCK[0].u_data_cul/p_0_in                                    |                7 |             14 |         2.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/FSM_sequential_BLOCK[0].state_reg[0]                          | BLOCK[0].u_data_cul/p_0_in                                    |                5 |             14 |         2.80 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].kr_cul_k_d0[31]_i_2_n_0                                                  |                                                               |               10 |             20 |         2.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/E[0]                                                          | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             20 |         3.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/E[0]                                                          | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                8 |             20 |         2.50 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].kr_cul_a0_out__0                                                         | BLOCK[0].kr_cul_y[19]_i_1_n_0                                 |                8 |             20 |         2.50 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].b_reg_0_15_0_0_i_1_n_0                                                   |                                                               |                7 |             22 |         3.14 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_ABCD_cul/temp[16]_i_1_n_0                          |                5 |             22 |         4.40 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_ABCD_cul/temp[16]_i_1__0_n_0                       |                6 |             22 |         3.67 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].b_reg_0_31_0_0_i_1_n_0                                                   |                                                               |                7 |             22 |         3.14 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].b_reg_0_63_0_0_i_1_n_0                                                   |                                                               |                7 |             22 |         3.14 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].b_reg_0_15_0_0__0_i_1_n_0                                                |                                                               |                7 |             22 |         3.14 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].b_reg_0_15_0_0_i_1_n_0                                                   |                                                               |                7 |             22 |         3.14 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].b_reg_0_63_0_0_i_1_n_0                                                   |                                                               |                6 |             22 |         3.67 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_ABCD_cul/Ai[31]_i_1_n_0                            |                9 |             28 |         3.11 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_ABCD_cul/Ai[31]_i_1__0_n_0                         |               18 |             28 |         1.56 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[13].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[14].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[15].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[16].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[17].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[18].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[19].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[1].u_div_step/SR[0]         |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[20].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[21].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[22].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[23].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[24].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[26].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[27].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[28].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[29].u_div_step/SR[0]        |               13 |             31 |         2.38 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[2].u_div_step/SR[0]         |                6 |             31 |         5.17 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[30].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[31].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[32].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[33].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[34].u_div_step/SR[0]        |               13 |             31 |         2.38 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[35].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[36].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[37].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[38].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[39].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[3].u_div_step/SR[0]         |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[40].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[4].u_div_step/SR[0]         |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[5].u_div_step/SR[0]         |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[6].u_div_step/SR[0]         |                7 |             31 |         4.43 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[7].u_div_step/SR[0]         |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[8].u_div_step/SR[0]         |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[9].u_div_step/rdy_reg_1[0]  |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/u_div_cell_0/rdy_reg_1[0]             |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[15].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[16].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[17].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/u_comple_decode1/SR[0]                |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[31].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[10].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[11].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[12].u_div_step/SR[0]       |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[13].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[14].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[18].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[19].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[1].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[20].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[21].u_div_step/SR[0]       |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[22].u_div_step/SR[0]       |               14 |             31 |         2.21 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[23].u_div_step/SR[0]       |               14 |             31 |         2.21 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[24].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[25].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[26].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[27].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[28].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[29].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[2].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[30].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[32].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[33].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[36].u_div_step/SR[0]       |               14 |             31 |         2.21 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[37].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[38].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[39].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[3].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[40].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[4].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[5].u_div_step/SR[0]        |               13 |             31 |         2.38 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[6].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[7].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[8].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[9].u_div_step/rdy_reg_1[0] |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/u_div_cell_0/rdy_reg_1[0]            |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[29].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[2].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[30].u_div_step/SR[0]       |                7 |             31 |         4.43 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[20].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[21].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[22].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[23].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[24].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[25].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[26].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[27].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[28].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[29].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[2].u_div_step/SR[0]         |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[30].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[31].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[32].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[33].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[34].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[35].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[36].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[37].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[38].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[39].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[3].u_div_step/SR[0]         |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[40].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[4].u_div_step/SR[0]         |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[5].u_div_step/SR[0]         |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[6].u_div_step/SR[0]         |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[7].u_div_step/SR[0]         |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[8].u_div_step/SR[0]         |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[9].u_div_step/rdy_reg_1[0]  |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/u_comple_decode1/SR[0]               |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[10].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[11].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[12].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[13].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[14].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[15].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[16].u_div_step/SR[0]        |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[17].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[18].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[19].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/div_stepx[1].u_div_step/SR[0]         |               15 |             31 |         2.07 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/u_comple_decode1/SR[0]               |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[10].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[11].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[12].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[13].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[14].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[15].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[16].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[17].u_div_step/SR[0]       |                7 |             31 |         4.43 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[18].u_div_step/SR[0]       |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[19].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[1].u_div_step/SR[0]        |               13 |             31 |         2.38 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[20].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[21].u_div_step/SR[0]       |                7 |             31 |         4.43 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[22].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[23].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[24].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[25].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[26].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[27].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[28].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[31].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[32].u_div_step/SR[0]       |               14 |             31 |         2.21 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[33].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[34].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[35].u_div_step/SR[0]       |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[36].u_div_step/SR[0]       |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[37].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[38].u_div_step/SR[0]       |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[39].u_div_step/SR[0]       |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[3].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[40].u_div_step/SR[0]       |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[4].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[5].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[6].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[7].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[8].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/div_stepx[9].u_div_step/rdy_reg_1[0] |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div2/u_div_cell_0/rdy_reg_1[0]            |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[34].u_div_step/SR[0]       |               12 |             31 |         2.58 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div2/div_stepx[35].u_div_step/SR[0]       |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/u_div/u_div_cell_0/rdy_reg_1[0]             |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[25].u_div_step/SR[0]        |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_ABCD_cul/Ci[31]_i_1_n_0                            |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_ABCD_cul/Ci[31]_i_1__0_n_0                         |                6 |             31 |         5.17 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/u_comple_decode1/SR[0]                |                9 |             31 |         3.44 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[10].u_div_step/SR[0]        |               10 |             31 |         3.10 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[11].u_div_step/SR[0]        |               11 |             31 |         2.82 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_div/div_stepx[12].u_div_step/SR[0]        |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/u_div/div_stepx[42].u_div_step/rdy_reg_0                      | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/u_div/div_stepx[42].u_div_step/rdy_reg_0                      | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             32 |         5.33 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_ABCD_cul/u_div/u_comple_encode/SR[0]               |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_div/div_stepx[42].u_div_step/rdy_reg_0                        | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                7 |             32 |         4.57 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_mult/mult_stepx[18].u_mult_step/rdy_t_18                      | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             32 |         5.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/temp_rdy                                                      | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/res[31]_i_1_n_0                             |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/res[31]_i_1_n_0                             |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/res[31]_i_1__0_n_0                          |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_div/div_stepx[42].u_div_step/rdy_reg_0                        | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                7 |             32 |         4.57 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_kr_cul/res[31]_i_1__0_n_0                          |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_minus/res_rdy                                                 | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               14 |             32 |         2.29 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_mult2/mult_stepx[18].u_mult_step/rdy_t_18                     | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             32 |         5.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/u_minus/res_rdy                                               | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                9 |             32 |         3.56 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/u_minus/res_rdy                                               | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             32 |         5.33 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_data_cul/CntVal[31]_i_1__0_n_0                     |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_ABCD_cul/res[31]_i_1_n_0                           |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_div2/div_stepx[42].u_div_step/rdy_t_42                        | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             32 |         5.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_div2/div_stepx[42].u_div_step/rdy_t_42                        | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                6 |             32 |         5.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/temp_rdy                                                      | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_ABCD_cul/res[31]_i_1_n_0                           |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_data_cul/CntVal[31]_i_1_n_0                        |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_ABCD_cul/u_div/u_comple_encode/SR[0]               |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_data_cul/FSM_sequential_BLOCK[0].state_reg[0][0]                       | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                4 |             32 |         8.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_data_cul/E[0]                                                          | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_data_cul/Val_rdy_reg_1[0]                                              | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                4 |             32 |         8.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_mult2/mult_stepx[18].u_mult_step/rdy_t_18                     | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                8 |             32 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_mult/mult_stepx[18].u_mult_step/rdy_t_18                      | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |                7 |             32 |         4.57 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_minus/res_rdy                                                 | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               16 |             32 |         2.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].SampleX_reg_r2_128_191_0_2_i_1_n_0                                       |                                                               |               10 |             40 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].SampleX_reg_r2_64_127_0_2_i_1_n_0                                        |                                                               |               10 |             40 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].SampleX_reg_r2_128_191_0_2_i_1_n_0                                       |                                                               |               10 |             40 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].SampleX_reg_r2_0_63_0_2_i_1_n_0                                          |                                                               |               10 |             40 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].SampleX_reg_r2_64_127_0_2_i_1_n_0                                        |                                                               |               10 |             40 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].SampleX_reg_r2_0_63_0_2_i_1_n_0                                          |                                                               |               10 |             40 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/BLOCK[1].kr_cul_k_d01_0                                       |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/m_rdy_reg_1                                                   |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/m_rdy_reg_0                                                   |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/m_rdy_reg_1                                                   |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].b_reg_0_127_0_0_i_2_n_0                                                  |                                                               |               12 |             44 |         3.67 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/m_rdy_reg_0                                                   |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].b_reg_0_127_0_0_i_2_n_0                                                  |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/BLOCK[1].kr_cul_k_d01                                         |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/BLOCK[0].kr_cul_k_d01                                         |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/BLOCK[0].kr_cul_k_d01_0                                       |                                                               |               11 |             44 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/BLOCK[0].ABCD_cul_state_reg                                   | BLOCK[0].u_ABCD_cul/BLOCK[0].ABCD_cul_state_reg_0             |               14 |             46 |         3.29 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/BLOCK[1].ABCD_cul_state_reg                                   | BLOCK[1].u_ABCD_cul/BLOCK[1].ABCD_cul_state_reg_0             |               17 |             46 |         2.71 |
+|  sys_clk_IBUF_BUFG | CrossCorrelation[0].temp[0]_i_2_n_0                                               | CrossCorrelation[0].temp[0]_i_1_n_0                           |               10 |             48 |         4.80 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].SampleX_reg_r1_192_255_0_2_i_1_n_0                                       |                                                               |               15 |             60 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].SampleX_reg_r1_192_255_0_2_i_1_n_0                                       |                                                               |               15 |             60 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_data_cul/E[0]                                                          | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               17 |             64 |         3.76 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[1].u_ABCD_cul/m_d[31]_i_1__0_n_0                        |               20 |             64 |         3.20 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].kr_cul_k_d0[31]_i_2_n_0                                                  | BLOCK[1].kr_cul_k_d0[31]_i_1_n_0                              |               32 |             64 |         2.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].kr_cul_en_reg_n_0                                                        | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               16 |             64 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_ABCD_cul/m_d[31]_i_1_n_0                           |               16 |             64 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].kr_cul_en_reg_n_0                                                        | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               14 |             64 |         4.57 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].kr_cul_k_d0[31]_i_2_n_0                                                  | BLOCK[0].kr_cul_k_d0[31]_i_1_n_0                              |               28 |             64 |         2.29 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_minus2/res_rdy                                                | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               19 |             64 |         3.37 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_minus2/res_rdy                                                | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               26 |             64 |         2.46 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/FSM_sequential_BLOCK[0].state_reg[0]                          | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               28 |             66 |         2.36 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/m_rdy_reg_2                                                   | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               29 |             70 |         2.41 |
+|  sys_clk_IBUF_BUFG | CrossCorrelation[0].DebugOutput                                                   | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |               24 |             80 |         3.33 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_div/u_comple_encode/BLOCK[0].i_reg[6]                         |                                                               |               22 |             88 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_div/u_comple_encode/BLOCK[0].i_reg[7]                         |                                                               |               22 |             88 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_div/u_comple_encode/BLOCK[1].i_reg[7]                         |                                                               |               22 |             88 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_div/u_comple_encode/BLOCK[1].i_reg[6]_1                       |                                                               |               22 |             88 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_div/u_comple_encode/BLOCK[1].i_reg[6]_0                       |                                                               |               22 |             88 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_div/u_comple_encode/BLOCK[0].kr_cul_state_reg_0               |                                                               |               22 |             88 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_ABCD_cul/BLOCK[1].ABCD_cul_state_reg                                   |                                                               |               48 |            110 |         2.29 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_ABCD_cul/BLOCK[0].ABCD_cul_state_reg                                   |                                                               |               48 |            110 |         2.29 |
+|  sys_clk_IBUF_BUFG | BLOCK[1].u_kr_cul/u_div/u_comple_encode/BLOCK[1].i_reg[6]                         |                                                               |               44 |            176 |         4.00 |
+|  sys_clk_IBUF_BUFG | BLOCK[0].u_kr_cul/u_div/u_comple_encode/BLOCK[0].kr_cul_state_reg                 |                                                               |               44 |            176 |         4.00 |
+|  sys_clk_IBUF_BUFG |                                                                                   |                                                               |              179 |            599 |         3.35 |
+|  sys_clk_IBUF_BUFG |                                                                                   | BLOCK[0].u_kr_cul/u_mult/sys_rst_n                            |             3056 |          14247 |         4.66 |
++--------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+
+

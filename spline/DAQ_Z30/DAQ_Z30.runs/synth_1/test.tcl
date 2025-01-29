@@ -70,6 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 8
+set_param synth.incrementalSynthesisCache C:/Users/ZhangYijie/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-408-DESKTOP-V402F34/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z030ffg676-2
 
@@ -79,7 +83,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/Git/spline/DAQ_Z30/DAQ_Z30.cache/wt [current_project]
 set_property parent.project_path D:/Git/spline/DAQ_Z30/DAQ_Z30.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths d:/Git/spline/myip [current_project]
@@ -92,7 +96,19 @@ add_files D:/Git/spline/mycoe/test.coe
 add_files D:/Git/spline/mycoe/test1.coe
 add_files D:/Git/spline/mycoe/test2.coe
 add_files D:/Git/spline/mycoe/test3.coe
-read_verilog -library xil_defaultlib D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v
+read_verilog -library xil_defaultlib {
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/ABCD_cul.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/comple_decode.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/comple_encode.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/data_cul.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/div.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/div_cell.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/kr_cul.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/minus.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/mult.v
+  D:/FPGAproj/project_1/project_1.srcs/sources_1/new/mult_cell.v
+  D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/new/test.v
+}
 read_ip -quiet D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all d:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
@@ -108,6 +124,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/constrs_1/new/test.xdc
+set_property used_in_implementation false [get_files D:/Git/spline/DAQ_Z30/DAQ_Z30.srcs/constrs_1/new/test.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
